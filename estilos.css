@@ -1,0 +1,332 @@
+/* ==========================================================================
+   pamyroom.com — la casa pública de PamyRoom
+
+   Los colores son los de la app (Resources/Styles/Colors.xaml), con su nombre
+   al lado para poder rastrearlos. Un solo gesto propio: LA GRIETA — la línea
+   quebrada con el degradado de la casa que parte la portada del resto, como la
+   piedra de PAMY abierta con la luz dentro. Todo lo demás, callado.
+
+   Tipografía: Poppins (SIL OFL 1.1). La app titula en Gilroy, pero Gilroy es
+   comercial y su licencia de web no está comprobada: aquí titula Poppins Bold.
+   ========================================================================== */
+
+@font-face {
+  font-family: "Poppins";
+  src: url("fuentes/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("fuentes/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("fuentes/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+
+:root {
+  --noche: #0A0A0D;        /* PathBg */
+  --piedra: #14141B;       /* PathSurface */
+  --veta: #22222B;         /* PathBorder */
+  --texto: #CCCCEE;        /* PathTextBright */
+  --titulo: #FFFFFF;       /* PathTextPrimary — solo titulares */
+  --bruma: #8B8BA8;        /* PathTextTertiary */
+  --brasa: #FF6A00;        /* PathEmber */
+  --magenta: #FF2E88;      /* PathMagenta */
+  --violeta: #7B3FF2;      /* PathPrimary */
+  --violeta-claro: #A98BFF;/* PathPrimaryBright — enlaces: el violeta base no llega a AA */
+  --casa: linear-gradient(120deg, #FF6A00, #FF2E88 55%, #7B3FF2);
+
+  --ancho: 68rem;
+  --lectura: 42rem;
+  --radio: 20px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--noche);
+  color: var(--texto);
+  font-family: "Poppins", system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--violeta-claro); text-underline-offset: 3px; }
+a:hover { color: var(--titulo); }
+
+:focus-visible {
+  outline: 2px solid var(--violeta-claro);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.salto {
+  position: absolute; left: -999px; top: 0;
+  background: var(--piedra); color: var(--titulo); padding: .6rem 1rem; z-index: 10;
+}
+.salto:focus { left: 1rem; top: 1rem; }
+
+.contenedor { width: min(100% - 2.5rem, var(--ancho)); margin-inline: auto; }
+
+/* ── La barra de arriba ─────────────────────────────────────────────────── */
+
+.barra {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding-block: 1.25rem;
+}
+
+.marca {
+  font-weight: 700; font-size: 1.35rem; letter-spacing: -.01em;
+  text-decoration: none; line-height: 1;
+}
+.marca .pamy { color: var(--brasa); }
+.marca .room { color: var(--violeta); }
+
+.menu { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; }
+.menu a {
+  color: var(--bruma); text-decoration: none; font-size: .95rem;
+  padding: .5rem 0;            /* alto de dedo sin parecerlo */
+}
+.menu a:hover, .menu a[aria-current="page"] { color: var(--titulo); }
+
+/* ── La portada ─────────────────────────────────────────────────────────── */
+
+.portada {
+  display: grid; justify-items: center; text-align: center;
+  padding-block: 2.5rem 3.5rem;
+}
+
+/* PAMY con su luz detrás. La luz respira despacio: es la geoda encendida. */
+.geoda { position: relative; isolation: isolate; width: min(13rem, 56vw); margin-bottom: 1.75rem; }
+/* La luz muere en alfa 0 ANTES del borde de su caja (closest-side): si no, el
+   degradado se corta en seco y se ve el rectángulo — la misma regla de oro que
+   Brand.Glow en la app. */
+.geoda::before {
+  content: ""; position: absolute; inset: -45%;
+  background: radial-gradient(closest-side at 50% 58%,
+    rgba(255, 106, 0, .42), rgba(255, 46, 136, .22) 45%, rgba(123, 63, 242, .12) 70%, rgba(123, 63, 242, 0) 100%);
+  z-index: -1;
+  animation: respira 7s ease-in-out infinite;
+}
+@keyframes respira {
+  0%, 100% { opacity: .75; transform: scale(.96); }
+  50%      { opacity: 1;   transform: scale(1.04); }
+}
+
+.portada h1 {
+  margin: 0;
+  color: var(--titulo);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 6.2vw, 4.4rem);
+  line-height: 1.04;
+  letter-spacing: -.035em;
+  max-width: 16ch;
+  text-wrap: balance;
+}
+/* La segunda línea es la promesa, y es lo único de la página en el degradado. */
+.portada h1 .queda {
+  display: block;
+  background: var(--casa);
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+  padding-bottom: .08em;       /* que la «q» no se corte */
+}
+
+.portada .bajada {
+  max-width: 34rem; margin: 1.4rem 0 0; color: var(--texto); font-size: 1.125rem;
+}
+
+.descarga {
+  display: inline-flex; align-items: center; gap: .7rem;
+  margin-top: 2rem; padding: .85rem 1.4rem;
+  border: 1px solid var(--veta); border-radius: 999px;
+  background: var(--piedra);
+  color: var(--titulo); font-weight: 600; font-size: 1rem;
+}
+.descarga svg { width: 1.25rem; height: 1.25rem; flex: none; }
+.descarga-nota { margin: .7rem 0 0; color: var(--bruma); font-size: .9rem; }
+
+/* ── LA GRIETA ──────────────────────────────────────────────────────────── */
+
+.grieta { display: block; width: 100%; height: 30px; overflow: visible; }
+.grieta polyline {
+  fill: none; stroke: url(#casa); stroke-width: 2;
+  stroke-linejoin: round; stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+  filter: drop-shadow(0 0 6px rgba(255, 46, 136, .55));
+}
+.grieta.fina { height: 18px; opacity: .8; }
+
+/* ── Secciones ──────────────────────────────────────────────────────────── */
+
+.seccion { padding-block: 4rem; }
+
+.rotulo {
+  margin: 0 0 .6rem;
+  color: var(--bruma);
+  font-size: .8rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
+}
+
+.seccion h2 {
+  margin: 0 0 2rem;
+  color: var(--titulo);
+  font-size: clamp(1.6rem, 3.4vw, 2.3rem);
+  line-height: 1.15; letter-spacing: -.025em; font-weight: 700;
+  max-width: 22ch;
+}
+
+/* El recorrido: cuatro momentos EN ORDEN (es un bucle de verdad), unidos por
+   la constelación de la app — puntos y, al final, la luz. */
+.recorrido { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; max-width: var(--lectura); }
+.recorrido li {
+  position: relative; padding: 0 0 2.2rem 2.6rem;
+}
+.recorrido li::before {                       /* el punto */
+  content: ""; position: absolute; left: .35rem; top: .55rem;
+  width: .7rem; height: .7rem; border-radius: 50%;
+  background: var(--veta); box-shadow: 0 0 0 4px var(--noche);
+}
+.recorrido li::after {                        /* el hilo entre puntos, punteado */
+  content: ""; position: absolute; left: .67rem; top: 1.6rem; bottom: .2rem;
+  border-left: 2px dotted var(--veta);
+}
+.recorrido li:last-child { padding-bottom: 0; }
+.recorrido li:last-child::after { display: none; }
+.recorrido li:last-child::before {            /* el alma: la luz al final */
+  background: var(--brasa);
+  box-shadow: 0 0 0 4px var(--noche), 0 0 18px 4px rgba(255, 106, 0, .55);
+}
+.recorrido h3 { margin: 0; color: var(--titulo); font-size: 1.2rem; font-weight: 600; letter-spacing: -.01em; }
+.recorrido p { margin: .35rem 0 0; }
+
+/* Los papeles: cuatro puertas iguales. */
+.papeles { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+.papel {
+  display: flex; flex-direction: column; gap: .35rem;
+  padding: 1.4rem 1.5rem;
+  background: var(--piedra);
+  border: 1px solid var(--veta); border-radius: var(--radio);
+  color: var(--texto); text-decoration: none;
+  transition: border-color .2s ease, transform .2s ease;
+}
+.papel:hover { border-color: #33333F; transform: translateY(-2px); color: var(--texto); }
+.papel strong { color: var(--titulo); font-weight: 600; font-size: 1.1rem; }
+.papel span { font-size: .95rem; }
+.papel .flecha { margin-top: auto; padding-top: .8rem; color: var(--violeta-claro); font-weight: 600; font-size: .95rem; }
+
+.contacto { color: var(--texto); }
+
+/* ── El pie ─────────────────────────────────────────────────────────────── */
+
+.pie {
+  border-top: 1px solid var(--veta);
+  padding-block: 2rem 2.5rem;
+  color: var(--bruma); font-size: .9rem;
+}
+.pie .contenedor { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
+.pie nav { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; }
+.pie a { color: var(--bruma); text-decoration: none; padding: .35rem 0; }
+.pie a:hover { color: var(--titulo); }
+
+/* ── Los documentos ─────────────────────────────────────────────────────── */
+
+/* EL CENTRO LEGAL: el índice de documentos al lado —siempre a mano, como en los
+   centros de políticas de las empresas serias— y el documento a su anchura de lectura.
+   En el teléfono el índice sube arriba en fichas. */
+.centro { display: grid; gap: 2rem; padding-block: 2.5rem 4rem; }
+.indice ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .45rem; }
+.indice a {
+  display: block; padding: .5rem .95rem;
+  border: 1px solid var(--veta); border-radius: 999px;
+  color: var(--bruma); text-decoration: none; font-size: .92rem;
+}
+.indice a:hover { color: var(--titulo); border-color: #33333F; }
+.indice a[aria-current="page"] { color: var(--titulo); background: var(--piedra); border-color: var(--brasa); }
+.indice .rotulo a { display: inline; padding: 0; border: 0; font-size: inherit; }
+
+@media (min-width: 56rem) {
+  .centro { grid-template-columns: 14rem minmax(0, var(--lectura)); gap: 3.5rem; }
+  .indice { position: sticky; top: 1.5rem; align-self: start; }
+  .indice ul { display: grid; gap: .15rem; }
+  .indice a { border: 0; border-radius: 10px; padding: .55rem .8rem; font-size: .95rem; }
+  .indice a[aria-current="page"] { box-shadow: inset 3px 0 0 var(--brasa); }
+}
+
+.documento { min-width: 0; }
+
+.titulo-centro {
+  margin: 0; color: var(--titulo);
+  font-size: clamp(2.1rem, 5.4vw, 3.4rem); line-height: 1.05; letter-spacing: -.035em; font-weight: 700;
+}
+.entrada { max-width: 40rem; margin: 1rem 0 2.2rem; font-size: 1.1rem; }
+.entrada.pequena { margin: 2.2rem 0 0; font-size: .95rem; color: var(--bruma); }
+
+.documento h1 {
+  margin: 0; color: var(--titulo);
+  font-size: clamp(2rem, 5vw, 3rem); line-height: 1.08; letter-spacing: -.03em; font-weight: 700;
+}
+.fecha { margin: .5rem 0 0; color: var(--bruma); font-size: .95rem; }
+
+.acciones { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.5rem 0 1rem; }
+.boton {
+  display: inline-flex; align-items: center; gap: .5rem;
+  min-height: 48px; padding: .7rem 1.25rem;
+  border-radius: 999px; border: 1px solid var(--veta);
+  background: var(--piedra); color: var(--titulo);
+  font: inherit; font-weight: 600; font-size: .95rem;
+  text-decoration: none; cursor: pointer;
+}
+.boton:hover { border-color: #33333F; color: var(--titulo); }
+.boton.fuerte { background: var(--casa); border-color: transparent; color: #FFFFFF; }
+
+.documento h2 {
+  margin: 2.5rem 0 .6rem; color: var(--violeta-claro);
+  font-size: 1.2rem; font-weight: 600; letter-spacing: -.01em;
+}
+.documento p, .documento li { margin: .6rem 0; }
+.documento ul, .documento ol { padding-left: 1.3rem; }
+.documento li::marker { color: var(--bruma); }
+
+.nota {
+  margin: 2rem 0 0; padding: 1.1rem 1.3rem;
+  background: var(--piedra); border: 1px solid var(--veta); border-left: 3px solid var(--brasa);
+  border-radius: 12px;
+}
+
+.volver { display: inline-block; margin-top: 3rem; }
+
+/* ── Movimiento y pantallas pequeñas ────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .geoda::before { animation: none; }
+  .papel { transition: none; }
+  .papel:hover { transform: none; }
+}
+
+@media (max-width: 40rem) {
+  .barra { flex-direction: column; align-items: flex-start; }
+  .seccion { padding-block: 3rem; }
+}
+
+/* ── Imprimir / guardar en PDF ──────────────────────────────────────────── */
+
+@media print {
+  :root { --texto: #1B1B24; --titulo: #0A0A0D; --bruma: #55556E; --violeta-claro: #5B2FD0; }
+  body { background: #FFFFFF; font-size: 11pt; line-height: 1.55; }
+  .menu, .acciones, .volver, .pie nav, .salto, .grieta, .indice { display: none !important; }
+  .centro { display: block; padding: 0; }
+  .barra { padding-block: 0 1rem; }
+  .documento { padding-block: 0; }
+  .documento h2 { color: #5B2FD0; break-after: avoid; }
+  .nota { background: #F7F5FF; border-color: #E4E4EC; }
+  a { color: inherit; text-decoration: none; }
+}

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Confirmando tu correo · PamyRoom</title>
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="../img/favicon.png">
+<!--
+  EL ENLACE DE LOS CORREOS — pamyroom.com/confirmar/
+  ============================================================================
+  Los correos de confirmar cuenta enlazan AQUI (2026-09-24), para que quien los
+  recibe solo vea direcciones de PamyRoom. Esta pagina no confirma nada por si
+  misma: toma el codigo del correo y manda al navegador a Supabase, que confirma y
+  devuelve a pamyroom.com/cuenta-confirmada/.
+
+  Las plantillas que enlazan aqui (supabase/plantillas/, en el repo de la app):
+    · cambiar_correo.html   -> type=email_change  (el registro normal: la cuenta
+                                invisible que se convierte es un CAMBIO de correo)
+    · confirmar_correo.html -> type=signup        (el alta directa, casi nunca)
+
+  Lleva un script de pocas lineas, y es a proposito: sin el no hay forma de pasar
+  el codigo. No usa ninguna clave — la verificacion por enlace de Supabase es
+  publica, igual que el enlace que ya venia en el correo — y no guarda nada.
+
+  ORDEN AL SUBIRLA: primero la web en linea, despues el Site URL y las Redirect
+  URLs, y SOLO ENTONCES pegar las plantillas. Pegarlas antes deja los enlaces
+  apuntando a una pagina que no existe, y entonces nadie confirmaria.
+-->
+<style>
+  :root{
+    --tinta:#0A0A0D;        /* PathBg */
+    --brasa:#FF6A00;        /* PathEmber */
+    --magenta:#FF2E88;      /* PathMagenta */
+    --violeta:#7B3FF2;      /* PathPrimary */
+    --texto:#FFFFFF;
+    --apagado:#CCCCEE;      /* PathTextBright */
+    --tenue:#8B8BA8;        /* PathTextTertiary */
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{height:100%;}
+  body{
+    background:var(--tinta);
+    color:var(--texto);
+    font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+    display:flex;align-items:center;justify-content:center;
+    padding:32px 22px;
+    background-image:
+      radial-gradient(58% 42% at 50% 18%, rgba(255,106,0,.16) 0%, transparent 70%),
+      radial-gradient(46% 40% at 50% 12%, rgba(123,63,242,.14) 0%, transparent 72%);
+    background-repeat:no-repeat;
+  }
+  .hoja{width:100%;max-width:420px;text-align:center;}
+
+  /* El recorrido-alma EN CAMINO: los puntos se encienden uno tras otro, en bucle,
+     mientras Supabase contesta. En «cuenta confirmada» el ultimo se queda encendido. */
+  .recorrido{display:flex;align-items:center;justify-content:center;gap:14px;height:44px;margin-bottom:34px;}
+  .punto{width:7px;height:7px;border-radius:50%;background:var(--violeta);opacity:.25;
+         animation:late 1.4s ease-in-out infinite;}
+  .punto:nth-child(2){animation-delay:.14s;}
+  .punto:nth-child(3){animation-delay:.28s;background:var(--magenta);}
+  .punto:nth-child(4){animation-delay:.42s;background:var(--magenta);}
+  .punto:nth-child(5){animation-delay:.56s;background:var(--brasa);width:12px;height:12px;}
+  @keyframes late{0%,100%{opacity:.25;transform:scale(.8);}40%{opacity:1;transform:scale(1.15);}}
+
+  .rotulo{font-size:11.5px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--brasa);margin-bottom:14px;}
+  h1{font-size:clamp(30px,8vw,40px);line-height:1.08;letter-spacing:-.02em;font-weight:800;margin-bottom:16px;}
+  p.cuerpo{font-size:17px;line-height:1.55;color:var(--apagado);margin:0 auto;max-width:330px;}
+  .marca{margin-top:44px;font-size:12.5px;font-weight:700;letter-spacing:.22em;color:var(--tenue);}
+  .marca b{color:var(--brasa);font-weight:700;}
+  .marca i{color:var(--violeta);font-style:normal;}
+  @media (prefers-reduced-motion:reduce){.punto{animation:none;opacity:.8;}}
+</style>
+</head>
+<body>
+  <main class="hoja">
+    <div class="recorrido" aria-hidden="true">
+      <span class="punto"></span><span class="punto"></span><span class="punto"></span>
+      <span class="punto"></span><span class="punto"></span>
+    </div>
+
+    <div class="rotulo" id="rotulo">Un momento</div>
+    <h1 id="titulo">Confirmando tu correo</h1>
+    <p class="cuerpo" id="cuerpo">Te llevamos enseguida.</p>
+    <noscript>
+      <p class="cuerpo">Para confirmar hace falta que tu navegador tenga activado JavaScript.</p>
+    </noscript>
+
+    <div class="marca"><b>PAMY</b><i>ROOM</i></div>
+  </main>
+
+<script>
+  (function () {
+    // A donde vuelve Supabase al terminar. Tiene que estar en las Redirect URLs del
+    // proyecto (Authentication -> URL Configuration), o Supabase lo ignora.
+    var PROYECTO = "https://tmgoikrzyrcdcllncmey.supabase.co";
+    var VUELTA = "https://pamyroom.com/cuenta-confirmada/";
+    var TIPOS = { email_change: true, signup: true };
+
+    var q = new URLSearchParams(location.search);
+    var token = q.get("token") || "";
+    var tipo = q.get("type") || "";
+
+    // Un enlace cortado —el correo lo partio, o se copio a medias— no se manda a
+    // Supabase: se dice aqui lo que falta y como pedir otro.
+    if (!/^[A-Za-z0-9_-]{16,}$/.test(token) || !TIPOS[tipo]) {
+      document.getElementById("rotulo").textContent = "Enlace incompleto";
+      document.getElementById("titulo").textContent = "Este enlace no está entero";
+      document.getElementById("cuerpo").textContent =
+        "Pide otro desde la app: en la campana, «Reenviar el correo». Abre siempre el más reciente.";
+      return;
+    }
+
+    location.replace(PROYECTO + "/auth/v1/verify"
+      + "?token=" + encodeURIComponent(token)
+      + "&type=" + encodeURIComponent(tipo)
+      + "&redirect_to=" + encodeURIComponent(VUELTA));
+  })();
+</script>
+</body>
+</html>

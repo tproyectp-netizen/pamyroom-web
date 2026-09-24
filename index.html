@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PamyRoom — el lugar donde se queda lo que aprendes</title>
+  <meta name="description" content="PamyRoom convierte lo que quieres aprender en una ruta y guarda en tu cuarto lo que vas cerrando. Muy pronto en Google Play.">
+  <meta name="theme-color" content="#0A0A0D">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="preload" href="fuentes/Poppins-Bold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+
+  <header class="contenedor barra">
+    <a class="marca" href="./" aria-label="PamyRoom, inicio"><span class="pamy">PAMY</span><span class="room">ROOM</span></a>
+    <nav class="menu" aria-label="Principal">
+      <a href="legal/">Lo legal</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="contenedor portada">
+      <div class="geoda">
+        <picture>
+          <source srcset="img/pamy.webp" type="image/webp">
+          <img src="img/pamy.png" width="560" height="551"
+               alt="PAMY, la mascota de PamyRoom: una roca abierta con luz dentro">
+        </picture>
+      </div>
+
+      <h1>Lo que ves en el celular se te olvida. <span class="queda">Aquí se queda.</span></h1>
+
+      <p class="bajada">PamyRoom convierte lo que quieres aprender en una ruta, y guarda en tu
+        cuarto lo que vas cerrando.</p>
+
+      <!-- Todavía no es un enlace: la app no está publicada. Cuando lo esté, este
+           recuadro pasa a ser el botón a su ficha de Google Play. -->
+      <p class="descarga" role="status">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="#FF6A00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 3.5v17l14-8.5z"/></svg>
+        Muy pronto en Google Play
+      </p>
+      <p class="descarga-nota">Todavía no está publicada. Este es el sitio donde lo anunciaremos.</p>
+    </section>
+
+    <svg class="grieta" viewBox="0 0 1400 30" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="casa" x1="0" x2="1" y1="0" y2="0">
+          <stop offset="0" stop-color="#FF6A00"/>
+          <stop offset=".55" stop-color="#FF2E88"/>
+          <stop offset="1" stop-color="#7B3FF2"/>
+        </linearGradient>
+      </defs>
+      <polyline points="0,15 70,8 120,19 185,10 250,22 310,7 390,18 455,6 525,20 600,11 670,23 745,8 820,17 885,5 960,19 1030,9 1100,21 1170,8 1245,18 1320,10 1400,15"/>
+    </svg>
+
+    <section class="contenedor seccion" aria-labelledby="como">
+      <p class="rotulo">Cómo funciona</p>
+      <h2 id="como">Aprendes algo, lo cierras y se queda contigo.</h2>
+
+      <ol class="recorrido">
+        <li>
+          <h3>Dices qué quieres aprender</h3>
+          <p>Escribes un tema y PamyRoom arma una ruta con videos, pódcasts y libros, de lo
+            más básico a lo más avanzado.</p>
+        </li>
+        <li>
+          <h3>Guardas lo que encuentras</h3>
+          <p>¿Viste un video que te sirve? Compártelo con PamyRoom desde YouTube y queda en
+            tu vivero para cuando tengas tiempo.</p>
+        </li>
+        <li>
+          <h3>Te pones a prueba</h3>
+          <p>Cada módulo cierra con un examen que sale de lo que dicen los videos, y lo que
+            te cuesta vuelve en un repaso.</p>
+        </li>
+        <li>
+          <h3>Se queda en tu cuarto</h3>
+          <p>Lo que cierras llena tu cuarto: tus conceptos, tu pizarra y tus logros. Viven
+            en tu cuenta, así que siguen ahí aunque cambies de teléfono.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="contenedor seccion" aria-labelledby="legal">
+      <p class="rotulo">Lo legal, a la vista</p>
+      <h2 id="legal">Qué guardamos, cómo se usa y cómo irte.</h2>
+      <p class="entrada">Todo junto en <a href="legal/">Lo legal</a>, y cada documento con su
+        propia dirección.</p>
+
+      <div class="papeles">
+        <a class="papel" href="privacidad/">
+          <strong>Política de privacidad</strong>
+          <span>Qué guardamos, para qué y con quién.</span>
+          <span class="flecha">Leer →</span>
+        </a>
+        <a class="papel" href="terminos/">
+          <strong>Términos de uso</strong>
+          <span>Qué es PamyRoom y cómo se usa.</span>
+          <span class="flecha">Leer →</span>
+        </a>
+        <a class="papel" href="eliminar-cuenta/">
+          <strong>Eliminar tu cuenta</strong>
+          <span>Desde la app o, si ya no la tienes, por correo.</span>
+          <span class="flecha">Cómo hacerlo →</span>
+        </a>
+        <a class="papel" href="licencias/">
+          <strong>Licencias</strong>
+          <span>El código abierto y las fuentes con las que está hecha.</span>
+          <span class="flecha">Ver →</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="contenedor seccion" id="contacto" aria-labelledby="hablar">
+      <p class="rotulo">Contacto</p>
+      <h2 id="hablar">¿Una duda?</h2>
+      <p class="contacto">Escríbenos a <a href="mailto:pamyroomsupport@gmail.com">pamyroomsupport@gmail.com</a>.
+        Si ya tienes la app, también puedes escribirnos desde Perfil → Ayuda.</p>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <span>© 2026 PamyRoom</span>
+      <nav aria-label="Pie">
+        <a href="legal/">Lo legal</a>
+        <a href="privacidad/">Privacidad</a>
+        <a href="terminos/">Términos</a>
+        <a href="eliminar-cuenta/">Eliminar tu cuenta</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

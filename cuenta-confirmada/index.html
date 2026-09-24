@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cuenta confirmada · PamyRoom</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="../img/favicon.png">
+<!--
+  A DONDE LLEGA LA GENTE DESPUES DE CONFIRMAR SU CORREO — pamyroom.com/cuenta-confirmada/
+  ============================================================================
+  El MISMO archivo en dos sitios: supabase/plantillas/cuenta_confirmada.html
+  (en el repo de la app) y pamyroom-web/cuenta-confirmada/index.html (lo que
+  se sube). Si cambia uno, se copia al otro. Vivia en pamyroom.netlify.app;
+  desde el 2026-09-24 vive en pamyroom.com con el resto de la web (GitHub Pages).
+
+  QUE HAY QUE CAMBIAR EN SUPABASE, despues de subirla:
+    Authentication -> URL Configuration
+      · Site URL       -> https://pamyroom.com/cuenta-confirmada/
+      · Redirect URLs  -> anadir esa misma direccion y NO quitar
+                          pamyroom://auth-callback (es la vuelta de Google)
+
+  Supabase anade el token de la sesion DESPUES de un «#» en la direccion. Lo
+  que va detras de «#» no sale nunca del navegador: ni Hostinger ni nadie lo ve
+  en sus registros. Esta pagina NO lee el token: solo mira si ahi dice «error».
+
+  EL ENLACE CADUCADO (2026-09-24). Si el enlace ya no vale —se pidio otro correo
+  despues, que anula el anterior, o paso el plazo—, Supabase vuelve aqui igual,
+  con «#error=…». La pagina decia «Ya es tuya» sin haberse confirmado nada. Ahora
+  un script de pocas lineas cambia el texto a lo que de verdad paso, y borra lo
+  de detras de «#» de la barra y del historial, sea error o sesion.
+
+  POR QUE SIN FUENTES NI SCRIPTS: esto se ve durante cinco segundos, casi
+  siempre en el navegador del movil y a veces con mala conexion. Una fuente
+  aqui significa medio segundo de texto invisible justo en el unico momento
+  que importa.
+
+  EL GESTO: no hay un tic dentro de un circulo. El simbolo de progreso de la
+  app es el recorrido-alma —puntos y una luz con estela— y aqui se usa para lo
+  mismo que dentro: un paso que se completa. El ultimo punto se enciende.
+-->
+<style>
+  :root{
+    --tinta:#0A0A0D;        /* PathBg */
+    --superficie:#14141B;   /* PathSurface */
+    --brasa:#FF6A00;        /* PathEmber */
+    --magenta:#FF2E88;      /* PathMagenta */
+    --violeta:#7B3FF2;      /* PathPrimary */
+    --texto:#FFFFFF;
+    --apagado:#CCCCEE;      /* PathTextBright */
+    --tenue:#8B8BA8;        /* PathTextTertiary */
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+
+  html,body{height:100%;}
+
+  body{
+    background:var(--tinta);
+    color:var(--texto);
+    font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:32px 22px;
+    /* El resplandor de la geoda: la app entera nace de una piedra con luz
+       dentro, asi que el fondo no es negro plano, es negro con brasa. */
+    background-image:
+      radial-gradient(58% 42% at 50% 18%, rgba(255,106,0,.16) 0%, transparent 70%),
+      radial-gradient(46% 40% at 50% 12%, rgba(123,63,242,.14) 0%, transparent 72%);
+    background-repeat:no-repeat;
+  }
+
+  .hoja{width:100%;max-width:420px;text-align:center;}
+
+  /* ── EL RECORRIDO-ALMA ─────────────────────────────────────────────────
+     Cinco puntos. Los cuatro primeros ya recorridos; el quinto es este
+     momento y se enciende al cargar, con su halo. */
+  .recorrido{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    height:44px;
+    margin-bottom:34px;
+  }
+  .punto{
+    width:7px;height:7px;border-radius:50%;
+    background:var(--violeta);
+    opacity:0;
+    transform:scale(.4);
+    animation:asoma .42s cubic-bezier(.2,.7,.3,1) forwards;
+  }
+  .punto:nth-child(1){animation-delay:.05s;}
+  .punto:nth-child(2){animation-delay:.16s;}
+  .punto:nth-child(3){animation-delay:.27s;background:var(--magenta);}
+  .punto:nth-child(4){animation-delay:.38s;background:var(--magenta);}
+
+  .alma{
+    width:18px;height:18px;border-radius:50%;
+    background:var(--brasa);
+    opacity:0;
+    transform:scale(.3);
+    animation:enciende .7s cubic-bezier(.2,.7,.3,1) .52s forwards;
+  }
+
+  @keyframes asoma{to{opacity:.55;transform:scale(1);}}
+  @keyframes enciende{
+    0%  {opacity:0;transform:scale(.3);box-shadow:0 0 0 0 rgba(255,106,0,0);}
+    60% {opacity:1;transform:scale(1.25);box-shadow:0 0 34px 10px rgba(255,106,0,.45);}
+    100%{opacity:1;transform:scale(1);   box-shadow:0 0 26px 6px rgba(255,106,0,.32);}
+  }
+
+  /* ── TEXTO ─────────────────────────────────────────────────────────────
+     La jerarquia la hace el contraste de escala y de tracking, no un adorno:
+     rotulo diminuto y muy espaciado contra un titular grande y apretado. */
+  .rotulo{
+    font-size:11.5px;
+    font-weight:700;
+    letter-spacing:.3em;
+    text-transform:uppercase;
+    color:var(--brasa);
+    margin-bottom:14px;
+  }
+
+  h1{
+    font-size:clamp(34px,9vw,44px);
+    line-height:1.05;
+    letter-spacing:-.02em;
+    font-weight:800;
+    margin-bottom:16px;
+  }
+
+  p.cuerpo{
+    font-size:17px;
+    line-height:1.55;
+    color:var(--apagado);
+    margin:0 auto 30px;
+    max-width:330px;
+  }
+
+  /* ── VOLVER ────────────────────────────────────────────────────────────
+     Enlace profundo: en el movil reabre la app, que es donde estaba la
+     persona antes de irse al correo. En escritorio no hara nada, y por eso
+     debajo se dice que puede cerrar la pestana. */
+  .volver{
+    display:inline-block;
+    padding:16px 38px;
+    border-radius:26px;
+    font-size:16px;
+    font-weight:700;
+    color:#fff;
+    text-decoration:none;
+    background:linear-gradient(90deg,var(--brasa) 0%,var(--magenta) 55%,var(--violeta) 100%);
+    box-shadow:0 10px 30px -10px rgba(255,46,136,.6);
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .volver:hover{transform:translateY(-2px);box-shadow:0 16px 34px -10px rgba(255,46,136,.7);}
+  .volver:active{transform:translateY(0);}
+  .volver:focus-visible{outline:2px solid var(--brasa);outline-offset:4px;}
+
+  .nota{
+    margin-top:22px;
+    font-size:13px;
+    color:var(--tenue);
+  }
+
+  .marca{
+    margin-top:44px;
+    font-size:12.5px;
+    font-weight:700;
+    letter-spacing:.22em;
+    color:var(--tenue);
+  }
+  .marca b{color:var(--brasa);font-weight:700;}
+  .marca i{color:var(--violeta);font-style:normal;}
+
+  /* Quien pidió menos movimiento ve el estado final, no la animacion. */
+  @media (prefers-reduced-motion:reduce){
+    .punto,.alma{animation:none;opacity:1;transform:none;}
+    .alma{box-shadow:0 0 26px 6px rgba(255,106,0,.32);}
+    .volver{transition:none;}
+  }
+</style>
+</head>
+<body>
+  <main class="hoja">
+
+    <div class="recorrido" aria-hidden="true">
+      <span class="punto"></span>
+      <span class="punto"></span>
+      <span class="punto"></span>
+      <span class="punto"></span>
+      <span class="alma"></span>
+    </div>
+
+    <div class="rotulo" id="rotulo">Cuenta confirmada</div>
+
+    <h1 id="titulo">Ya es tuya</h1>
+
+    <p class="cuerpo" id="cuerpo">
+      Tus rutas y tu cuarto dejan de vivir en un solo teléfono. Vuelve a la app:
+      tu regalo de bienvenida te está esperando.
+    </p>
+
+    <a class="volver" href="pamyroom://">Abrir PamyRoom</a>
+
+    <p class="nota">Si no se abre sola, vuelve a la app desde tu teléfono.</p>
+
+    <div class="marca"><b>PAMY</b><i>ROOM</i></div>
+
+  </main>
+
+<script>
+  (function () {
+    var tras = location.hash.replace(/^#/, "");
+    if (!tras) return;
+    var p = new URLSearchParams(tras);
+
+    // Lo de detras de «#» (la sesion, o el error) no se queda en la barra ni en el
+    // historial: nadie lo necesita aqui.
+    try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {}
+
+    if (!p.get("error") && !p.get("error_code")) return;
+
+    document.getElementById("rotulo").textContent = "Enlace caducado";
+    document.getElementById("titulo").textContent = "Este enlace ya no vale";
+    document.getElementById("cuerpo").textContent =
+      "Cada correo nuevo anula el anterior. Abre el más reciente, o pide otro desde la app: en la campana, «Reenviar el correo».";
+    // El alma no se enciende: no se completo ningun paso.
+    var alma = document.querySelector(".alma");
+    if (alma) alma.style.display = "none";
+  })();
+</script>
+</body>
+</html>
