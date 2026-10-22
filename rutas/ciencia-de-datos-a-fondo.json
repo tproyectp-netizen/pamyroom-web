@@ -1,0 +1,130 @@
+{
+  "slug": "ciencia-de-datos-a-fondo",
+  "titulo": "Ciencia de datos, a fondo",
+  "resumen": "Clases largas para entrar en serio: fundamentos, Python y SQL, estadística, visualización y un proyecto completo de análisis.",
+  "nivel": "Principiante",
+  "ritmo": "obsidiana",
+  "estante": "futuro",
+  "revisada": "2026-10-22",
+  "time_advice": "Una hora al día, tres días por semana: cada video en una o dos sesiones.",
+  "recommended_method": {
+    "name": "Método 2357",
+    "reason": "Repasar los días 2, 3, 5 y 7 fija lo que ves."
+  },
+  "criterios": {
+    "Fundamentos": "Puedo explicar el ciclo de un proyecto de ciencia de datos.",
+    "Herramientas": "Puedo escribir mis primeras líneas de Python y consultas SQL.",
+    "Analizar y mostrar": "Puedo resumir unos datos y mostrarlos en un gráfico honesto.",
+    "Un proyecto": "Puedo llevar un análisis de datos de la pregunta a la conclusión."
+  },
+  "fuentes": [
+    {
+      "titulo": "BLS (EE. UU.), Employment Projections 2025-2035, nota USDL-26-1422",
+      "url": "https://www.bls.gov/news.release/ecopro.nr0.htm",
+      "fecha": "2026-08-27"
+    },
+    {
+      "titulo": "Cedefop, Skills forecast: Spain — crece el peso de los profesionales de TIC",
+      "url": "https://www.cedefop.europa.eu/files/skills_forecast_-_spain_2025.pdf",
+      "fecha": "2025"
+    }
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "section": "Fundamentos",
+      "type": "video",
+      "title": "Introducción a la ciencia de los datos",
+      "author": "UPM",
+      "why": "Una clase de la Universidad Politécnica de Madrid.",
+      "concepts": [
+        "ciencia de datos",
+        "ciclo"
+      ],
+      "video_id": "2xkcgRYqGHs",
+      "minutos": 70.3
+    },
+    {
+      "order": 2,
+      "section": "Fundamentos",
+      "type": "video",
+      "title": "Introducción a la ciencia de datos",
+      "author": "Data Growth Community",
+      "why": "Una clase magistral para ver el campo entero.",
+      "concepts": [
+        "panorama",
+        "roles"
+      ],
+      "video_id": "UPnysyud4tI",
+      "minutos": 100.0
+    },
+    {
+      "order": 3,
+      "section": "Herramientas",
+      "type": "video",
+      "title": "Python para ciencia de datos",
+      "author": "A2 Capacitación: Excel",
+      "why": "El lenguaje del análisis, desde cero.",
+      "concepts": [
+        "Python",
+        "pandas"
+      ],
+      "video_id": "PpLtEo3TvFw",
+      "minutos": 65.7
+    },
+    {
+      "order": 4,
+      "section": "Herramientas",
+      "type": "video",
+      "title": "SQL desde cero",
+      "author": "HolaMundo",
+      "why": "Consultar bases de datos, paso a paso.",
+      "concepts": [
+        "SQL",
+        "consultas"
+      ],
+      "video_id": "uUdKAYl-F7g",
+      "minutos": 117.0
+    },
+    {
+      "order": 5,
+      "section": "Analizar y mostrar",
+      "type": "video",
+      "title": "Estadística descriptiva para ciencia de datos",
+      "author": "PyData San José, CR",
+      "why": "Medias, dispersión y lo que esconden.",
+      "concepts": [
+        "estadística descriptiva"
+      ],
+      "video_id": "ccMLKIg0K_Q",
+      "minutos": 68.7
+    },
+    {
+      "order": 6,
+      "section": "Analizar y mostrar",
+      "type": "video",
+      "title": "Principios de la visualización de datos",
+      "author": "EOI Escuela de Organización Industrial",
+      "why": "Gráficos que cuentan la verdad.",
+      "concepts": [
+        "visualización"
+      ],
+      "video_id": "guqhFrCwdlg",
+      "minutos": 93.5
+    },
+    {
+      "order": 7,
+      "section": "Un proyecto",
+      "type": "video",
+      "title": "Un proyecto de análisis de datos desde cero",
+      "author": "Gaston Martos",
+      "why": "Todo lo anterior, junto en un caso.",
+      "concepts": [
+        "proyecto",
+        "conclusiones"
+      ],
+      "video_id": "o9t3jIxe8TA",
+      "minutos": 87.3
+    }
+  ]
+}

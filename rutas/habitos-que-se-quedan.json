@@ -1,0 +1,189 @@
+{
+  "slug": "habitos-que-se-quedan",
+  "titulo": "Hábitos que se quedan",
+  "resumen": "Por qué casi todos los propósitos se caen y cómo construir hábitos pequeños que aguantan los días sin ganas.",
+  "nivel": "Principiante",
+  "ritmo": "oro",
+  "estante": "fundamentos",
+  "revisada": "2026-10-22",
+  "time_advice": "Veinte minutos al día, cuatro días por semana.",
+  "recommended_method": {
+    "name": "Técnica Pomodoro",
+    "reason": "Bloques cortos para practicar sin cansarte."
+  },
+  "criterios": {
+    "Cómo funciona un hábito": "Puedo señalar la señal, la rutina y la recompensa de un hábito mío.",
+    "Empezar pequeño": "Puedo convertir un propósito grande en un hábito de dos minutos.",
+    "Sistemas, no metas": "Puedo diseñar mi entorno para que el hábito cueste menos.",
+    "Sostenerlo": "Puedo seguir con un hábito los días que no tengo ganas."
+  },
+  "steps": [
+    {
+      "order": 1,
+      "section": "Cómo funciona un hábito",
+      "type": "video",
+      "title": "La neurobiología del hábito",
+      "author": "Jorge Benito",
+      "why": "Qué pasa en el cerebro cuando repites algo.",
+      "concepts": [
+        "bucle del hábito",
+        "señal",
+        "recompensa"
+      ],
+      "video_id": "Fo2YKqByXPo",
+      "minutos": 13.8
+    },
+    {
+      "order": 2,
+      "section": "Cómo funciona un hábito",
+      "type": "video",
+      "title": "Hábitos basados en neurociencia",
+      "author": "Estefany Rivv",
+      "why": "Ejemplos de hábitos con su porqué.",
+      "concepts": [
+        "neurociencia",
+        "rutina"
+      ],
+      "video_id": "IOyE44jT8CE",
+      "minutos": 18.1
+    },
+    {
+      "order": 3,
+      "section": "Cómo funciona un hábito",
+      "type": "video",
+      "title": "Por qué leer Hábitos atómicos",
+      "author": "Psi Mammoliti",
+      "why": "Las ideas del libro más leído sobre hábitos.",
+      "concepts": [
+        "mejora del 1 %",
+        "identidad"
+      ],
+      "video_id": "rxYOcy9Fgsw",
+      "minutos": 12.7
+    },
+    {
+      "order": 4,
+      "section": "Empezar pequeño",
+      "type": "video",
+      "title": "Crear cualquier hábito desde cero",
+      "author": "Mariano Trejo",
+      "why": "El primer paso tiene que ser ridículamente fácil.",
+      "concepts": [
+        "empezar pequeño",
+        "constancia"
+      ],
+      "video_id": "0FVqp7JkLC0",
+      "minutos": 13.3
+    },
+    {
+      "order": 5,
+      "section": "Empezar pequeño",
+      "type": "video",
+      "title": "Hábitos atómicos: cómo ponerlo en práctica",
+      "author": "Nancy Loaiza",
+      "why": "Del libro a tu semana.",
+      "concepts": [
+        "hábito atómico",
+        "apilar hábitos"
+      ],
+      "video_id": "OFDqnz67nwQ",
+      "minutos": 13.7
+    },
+    {
+      "order": 6,
+      "section": "Empezar pequeño",
+      "type": "video",
+      "title": "Treinta mini hábitos",
+      "author": "Nancy Loaiza",
+      "why": "Ideas pequeñas para elegir por dónde empezar.",
+      "concepts": [
+        "mini hábitos"
+      ],
+      "video_id": "lCrJxsLELyU",
+      "minutos": 15.9
+    },
+    {
+      "order": 7,
+      "section": "Sistemas, no metas",
+      "type": "video",
+      "title": "Mantener los hábitos sin motivación",
+      "author": "Milagros Alvarez",
+      "why": "Los sistemas aguantan cuando la motivación se va.",
+      "concepts": [
+        "sistemas",
+        "metas"
+      ],
+      "video_id": "SxIqUET8Aeg",
+      "minutos": 12.2
+    },
+    {
+      "order": 8,
+      "section": "Sistemas, no metas",
+      "type": "video",
+      "title": "Crear tu rutina diaria",
+      "author": "Sergio Begueria",
+      "why": "Cómo encajar los hábitos en un día real.",
+      "concepts": [
+        "rutina",
+        "planificación"
+      ],
+      "video_id": "GOeTvPiN9Tw",
+      "minutos": 19.4
+    },
+    {
+      "order": 9,
+      "section": "Sistemas, no metas",
+      "type": "video",
+      "title": "Hábitos de desarrollo personal según la ciencia",
+      "author": "Adrià Solà Pastor",
+      "why": "Qué hábitos tienen respaldo y por qué.",
+      "concepts": [
+        "evidencia",
+        "rendimiento"
+      ],
+      "video_id": "klRnXmW4PF0",
+      "minutos": 15.5
+    },
+    {
+      "order": 10,
+      "section": "Sostenerlo",
+      "type": "video",
+      "title": "Por qué tus hábitos no duran y cómo arreglarlo",
+      "author": "DECIDO VIVIR MEJOR",
+      "why": "Los tres errores que hacen abandonar.",
+      "concepts": [
+        "abandono",
+        "ajuste"
+      ],
+      "video_id": "g3OGxk87Z3E",
+      "minutos": 13.4
+    },
+    {
+      "order": 11,
+      "section": "Sostenerlo",
+      "type": "video",
+      "title": "El poder de la disciplina para crear hábitos",
+      "author": "Pedro Buerbaum",
+      "why": "La disciplina como herramienta, no como castigo.",
+      "concepts": [
+        "disciplina"
+      ],
+      "video_id": "YCKvJMsvs-Q",
+      "minutos": 14.5
+    },
+    {
+      "order": 12,
+      "section": "Sostenerlo",
+      "type": "video",
+      "title": "Consejos para tener más disciplina",
+      "author": "DR LA ROSA",
+      "why": "Sostener el hábito cuando cuesta.",
+      "concepts": [
+        "disciplina",
+        "autocontrol"
+      ],
+      "video_id": "AAgqYPZZiPA",
+      "minutos": 13.6
+    }
+  ]
+}

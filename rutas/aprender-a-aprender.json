@@ -1,0 +1,190 @@
+{
+  "slug": "aprender-a-aprender",
+  "titulo": "Aprender a aprender",
+  "resumen": "Cómo funciona tu memoria y las técnicas con más respaldo para que lo que estudias se quede: repasar a tiempo, sacarlo de memoria, explicarlo y no dejarlo para mañana.",
+  "nivel": "Principiante",
+  "ritmo": "oro",
+  "estante": "fundamentos",
+  "revisada": "2026-10-22",
+  "time_advice": "Veinte minutos al día, cuatro días por semana.",
+  "recommended_method": {
+    "name": "Método 2357",
+    "reason": "Repasar los días 2, 3, 5 y 7 fija lo que ves."
+  },
+  "criterios": {
+    "Cómo aprendes": "Puedo explicar por qué releer no basta y qué hace que algo se quede.",
+    "Recordar más": "Puedo armar un calendario de repaso para lo que estudio.",
+    "Sacarlo de memoria": "Puedo estudiar haciéndome preguntas en vez de releer.",
+    "No dejarlo": "Puedo empezar a estudiar aunque no tenga ganas."
+  },
+  "steps": [
+    {
+      "order": 1,
+      "section": "Cómo aprendes",
+      "type": "video",
+      "title": "Cómo aprender más rápido y mejor",
+      "author": "CuriosaMente",
+      "why": "Lo esencial de aprender, explicado con calma.",
+      "concepts": [
+        "aprendizaje",
+        "práctica"
+      ],
+      "video_id": "Wm9WYbvVxaI",
+      "minutos": 12.1
+    },
+    {
+      "order": 2,
+      "section": "Cómo aprendes",
+      "type": "video",
+      "title": "Un neurocientífico explica cómo funciona la memoria",
+      "author": "CNN Chile",
+      "why": "Qué pasa en el cerebro cuando recuerdas.",
+      "concepts": [
+        "memoria",
+        "consolidación"
+      ],
+      "video_id": "pyHhZdDkGDo",
+      "minutos": 12.8
+    },
+    {
+      "order": 3,
+      "section": "Cómo aprendes",
+      "type": "video",
+      "title": "Qué papel tiene el sueño en la memoria",
+      "author": "Clínica Eduardo Anitua",
+      "why": "Dormir es la parte del estudio que no se ve.",
+      "concepts": [
+        "sueño",
+        "consolidación"
+      ],
+      "video_id": "27ZLOFhtdoU",
+      "minutos": 15.3
+    },
+    {
+      "order": 4,
+      "section": "Recordar más",
+      "type": "video",
+      "title": "Cómo aplicar la repetición espaciada",
+      "author": "Adrià Solà Pastor",
+      "why": "Repasar menos veces y mejor puestas.",
+      "concepts": [
+        "repetición espaciada",
+        "intervalos"
+      ],
+      "video_id": "fp_YbxuJJkQ",
+      "minutos": 12.3
+    },
+    {
+      "order": 5,
+      "section": "Recordar más",
+      "type": "video",
+      "title": "Recordar a largo plazo con la repetición espaciada",
+      "author": "Pablo Lomeli",
+      "why": "Cómo se arma un calendario de repaso de verdad.",
+      "concepts": [
+        "curva del olvido",
+        "repaso"
+      ],
+      "video_id": "PVj3DjuFGs4",
+      "minutos": 14.0
+    },
+    {
+      "order": 6,
+      "section": "Recordar más",
+      "type": "video",
+      "title": "Entrenar el cerebro para recordar lo que aprendes",
+      "author": "Cerebro Ilimitado",
+      "why": "Técnicas para que el recuerdo dure.",
+      "concepts": [
+        "retención",
+        "asociación"
+      ],
+      "video_id": "qRQ56azJPic",
+      "minutos": 16.9
+    },
+    {
+      "order": 7,
+      "section": "Sacarlo de memoria",
+      "type": "video",
+      "title": "Cómo aplicar el recuerdo activo",
+      "author": "Adrià Solà Pastor",
+      "why": "Intentar recordar enseña más que volver a leer.",
+      "concepts": [
+        "recuerdo activo",
+        "efecto de la prueba"
+      ],
+      "video_id": "QD-zwXc3dtQ",
+      "minutos": 14.9
+    },
+    {
+      "order": 8,
+      "section": "Sacarlo de memoria",
+      "type": "video",
+      "title": "El recuerdo activo puesto en práctica",
+      "author": "Carlos Reyes - Estudio y Productividad",
+      "why": "De la idea a una sesión de estudio real.",
+      "concepts": [
+        "preguntas propias",
+        "autoevaluación"
+      ],
+      "video_id": "gDhb5ICU1Cs",
+      "minutos": 15.4
+    },
+    {
+      "order": 9,
+      "section": "Sacarlo de memoria",
+      "type": "video",
+      "title": "La técnica Feynman en cinco pasos",
+      "author": "Pablo Lomeli",
+      "why": "Si no lo puedes explicar simple, aún no lo sabes.",
+      "concepts": [
+        "técnica Feynman",
+        "lagunas"
+      ],
+      "video_id": "1A1sLzNNa-4",
+      "minutos": 16.0
+    },
+    {
+      "order": 10,
+      "section": "No dejarlo",
+      "type": "video",
+      "title": "Neurobiología de la procrastinación",
+      "author": "The_NeuroSapiens",
+      "why": "Por qué el cerebro aplaza lo que importa.",
+      "concepts": [
+        "procrastinación",
+        "recompensa"
+      ],
+      "video_id": "zhWt6aWGaN0",
+      "minutos": 18.8
+    },
+    {
+      "order": 11,
+      "section": "No dejarlo",
+      "type": "video",
+      "title": "La procrastinación no es pereza",
+      "author": "Dra Alicia Vargas",
+      "why": "Entender el bloqueo quita la culpa y abre salida.",
+      "concepts": [
+        "emoción",
+        "bloqueo"
+      ],
+      "video_id": "r_SrfmSzFno",
+      "minutos": 17.5
+    },
+    {
+      "order": 12,
+      "section": "No dejarlo",
+      "type": "video",
+      "title": "Cómo dejar de procrastinar",
+      "author": "Tengo un Plan",
+      "why": "Estrategias concretas para empezar hoy.",
+      "concepts": [
+        "primer paso",
+        "sistema"
+      ],
+      "video_id": "9RA1UMAgD1U",
+      "minutos": 19.9
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "slug": "hablar-con-claridad",
+  "titulo": "Hablar con claridad",
+  "resumen": "Ordenar lo que quieres decir, hablar con fluidez, manejar los nervios y contar historias que la gente recuerde.",
+  "nivel": "Principiante",
+  "ritmo": "oro",
+  "estante": "fundamentos",
+  "revisada": "2026-10-22",
+  "time_advice": "Veinte minutos al día, cuatro días por semana.",
+  "recommended_method": {
+    "name": "Técnica Pomodoro",
+    "reason": "Bloques cortos para practicar sin cansarte."
+  },
+  "criterios": {
+    "Ordenar la idea": "Puedo decir mi idea principal en una frase antes de hablar.",
+    "Tu voz": "Puedo hablar dos minutos con fluidez y sin muletillas.",
+    "Los nervios": "Puedo calmar los nervios antes y durante una exposición.",
+    "Contar una historia": "Puedo contar una historia breve que la gente recuerde."
+  },
+  "steps": [
+    {
+      "order": 1,
+      "section": "Ordenar la idea",
+      "type": "video",
+      "title": "Cómo articular tus ideas con más claridad",
+      "author": "Irene Albacete",
+      "why": "Pensar claro antes de hablar claro.",
+      "concepts": [
+        "claridad",
+        "estructura"
+      ],
+      "video_id": "v1EfGu9Dc1Q",
+      "minutos": 17.9
+    },
+    {
+      "order": 2,
+      "section": "Ordenar la idea",
+      "type": "video",
+      "title": "Transforma tu comunicación en diez pasos",
+      "author": "Adrià Solà Pastor",
+      "why": "Un repaso completo de cómo hablar mejor.",
+      "concepts": [
+        "comunicación"
+      ],
+      "video_id": "C3pv7S_MUd0",
+      "minutos": 18.3
+    },
+    {
+      "order": 3,
+      "section": "Ordenar la idea",
+      "type": "video",
+      "title": "Cómo mejorar tu forma de hablar",
+      "author": "Just Lessons",
+      "why": "Ideas de Brian Tracy para hablar con intención.",
+      "concepts": [
+        "persuasión",
+        "intención"
+      ],
+      "video_id": "_PW2KctHi20",
+      "minutos": 17.3
+    },
+    {
+      "order": 4,
+      "section": "Tu voz",
+      "type": "video",
+      "title": "Hablar con fluidez y sin trabarte",
+      "author": "Fernando Miralles",
+      "why": "Trucos para que la palabra salga sola.",
+      "concepts": [
+        "fluidez",
+        "muletillas"
+      ],
+      "video_id": "Ot_gG5sP9wE",
+      "minutos": 14.2
+    },
+    {
+      "order": 5,
+      "section": "Tu voz",
+      "type": "video",
+      "title": "Diez consejos para mejorar tu oratoria",
+      "author": "Fernando Miralles",
+      "why": "Voz, ritmo y presencia al hablar en público.",
+      "concepts": [
+        "oratoria",
+        "voz"
+      ],
+      "video_id": "dhQHPjmk0-k",
+      "minutos": 13.4
+    },
+    {
+      "order": 6,
+      "section": "Tu voz",
+      "type": "video",
+      "title": "Cinco claves para hablar en público",
+      "author": "Andry Carías | Estudios Bíblicos y Predicación",
+      "why": "Una clase completa sobre hablar bien en público.",
+      "concepts": [
+        "oratoria",
+        "claves"
+      ],
+      "video_id": "t0NL98xrbTo",
+      "minutos": 17.5
+    },
+    {
+      "order": 7,
+      "section": "Los nervios",
+      "type": "video",
+      "title": "Siete trucos para controlar los nervios",
+      "author": "Nacho Tellez",
+      "why": "Qué hacer con los nervios en el momento.",
+      "concepts": [
+        "nervios",
+        "miedo escénico"
+      ],
+      "video_id": "oRkP1m6e2Ms",
+      "minutos": 12.1
+    },
+    {
+      "order": 8,
+      "section": "Los nervios",
+      "type": "video",
+      "title": "Hablar en público sin miedo",
+      "author": "Paola Herrera",
+      "why": "Cambiar la relación con el miedo.",
+      "concepts": [
+        "miedo",
+        "confianza"
+      ],
+      "video_id": "5_EI7EjWkPs",
+      "minutos": 12.9
+    },
+    {
+      "order": 9,
+      "section": "Los nervios",
+      "type": "video",
+      "title": "Exponer en clase fácilmente y sin nervios",
+      "author": "Pablo Lomeli",
+      "why": "Un método en cinco pasos para exponer.",
+      "concepts": [
+        "exposición",
+        "preparación"
+      ],
+      "video_id": "BwAtqPAnHu4",
+      "minutos": 13.8
+    },
+    {
+      "order": 10,
+      "section": "Contar una historia",
+      "type": "video",
+      "title": "Storytelling: el personaje eres tú",
+      "author": "TEDx Talks",
+      "why": "Rodrigo Patiño, sobre contar desde lo propio.",
+      "concepts": [
+        "storytelling",
+        "personaje"
+      ],
+      "video_id": "g-LTY-2pO28",
+      "minutos": 17.6
+    },
+    {
+      "order": 11,
+      "section": "Contar una historia",
+      "type": "video",
+      "title": "Recursos narrativos: cómo contar una historia",
+      "author": "Aprendercine.com",
+      "why": "Las piezas que hacen interesante un relato.",
+      "concepts": [
+        "narrativa",
+        "conflicto"
+      ],
+      "video_id": "2sj8gecwe7E",
+      "minutos": 14.2
+    },
+    {
+      "order": 12,
+      "section": "Contar una historia",
+      "type": "video",
+      "title": "Comunica, conecta y hazte recordar",
+      "author": "TEDx Talks",
+      "why": "Adrià Solà Pastor en TEDx: hablar para que se quede.",
+      "concepts": [
+        "conexión",
+        "memorable"
+      ],
+      "video_id": "XUqrvbsTfck",
+      "minutos": 19.9
+    }
+  ]
+}

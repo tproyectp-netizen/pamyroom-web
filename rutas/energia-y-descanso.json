@@ -1,0 +1,189 @@
+{
+  "slug": "energia-y-descanso",
+  "titulo": "Energía y descanso",
+  "resumen": "Lo que la ciencia sabe sobre dormir, moverte y manejar el estrés para tener energía para aprender. Divulgación: no sustituye una consulta médica.",
+  "nivel": "Principiante",
+  "ritmo": "oro",
+  "estante": "fundamentos",
+  "revisada": "2026-10-22",
+  "time_advice": "Veinte minutos al día, cuatro días por semana.",
+  "recommended_method": {
+    "name": "Técnica Pomodoro",
+    "reason": "Bloques cortos para practicar sin cansarte."
+  },
+  "criterios": {
+    "Por qué dormimos": "Puedo explicar qué hace el sueño por mi memoria y mi energía.",
+    "Dormir mejor": "Puedo armar una rutina de noche que me ayude a dormir.",
+    "Moverte": "Puedo explicar qué hace el ejercicio en mi cerebro.",
+    "El estrés": "Puedo reconocer el estrés en mi cuerpo y ayudarme a bajarlo."
+  },
+  "steps": [
+    {
+      "order": 1,
+      "section": "Por qué dormimos",
+      "type": "video",
+      "title": "El sueño es más importante de lo que crees",
+      "author": "DR LA ROSA",
+      "why": "Para qué sirve dormir, contado por un médico.",
+      "concepts": [
+        "sueño",
+        "salud"
+      ],
+      "video_id": "3x3nB3pOF4E",
+      "minutos": 16.0
+    },
+    {
+      "order": 2,
+      "section": "Por qué dormimos",
+      "type": "video",
+      "title": "La siesta perfecta según la ciencia",
+      "author": "La Hiperactina",
+      "why": "Cuándo una siesta ayuda y cuándo no.",
+      "concepts": [
+        "siesta",
+        "ritmo circadiano"
+      ],
+      "video_id": "Eq69iG2k_C0",
+      "minutos": 12.1
+    },
+    {
+      "order": 3,
+      "section": "Por qué dormimos",
+      "type": "video",
+      "title": "Dormir bien y despertar con energía",
+      "author": "Tengo un Plan",
+      "why": "Conversación con un experto en descanso.",
+      "concepts": [
+        "descanso",
+        "energía"
+      ],
+      "video_id": "i56Wwx0_VRI",
+      "minutos": 19.2
+    },
+    {
+      "order": 4,
+      "section": "Dormir mejor",
+      "type": "video",
+      "title": "Diez consejos para dormir mejor según la ciencia",
+      "author": "Adrià Solà Pastor",
+      "why": "Hábitos concretos para la noche.",
+      "concepts": [
+        "higiene del sueño"
+      ],
+      "video_id": "Hmga0Ea5SlM",
+      "minutos": 13.0
+    },
+    {
+      "order": 5,
+      "section": "Dormir mejor",
+      "type": "video",
+      "title": "Diez claves para optimizar tu descanso",
+      "author": "Dr. Borja Bandera",
+      "why": "Un médico repasa lo que ayuda a dormir.",
+      "concepts": [
+        "descanso",
+        "rutina"
+      ],
+      "video_id": "40vvSNr0Jl4",
+      "minutos": 13.7
+    },
+    {
+      "order": 6,
+      "section": "Dormir mejor",
+      "type": "video",
+      "title": "La rutina ideal para tener más energía",
+      "author": "DR LA ROSA",
+      "why": "Cómo el día prepara la noche.",
+      "concepts": [
+        "rutina",
+        "energía"
+      ],
+      "video_id": "ADiHiQ2UC8Q",
+      "minutos": 16.3
+    },
+    {
+      "order": 7,
+      "section": "Moverte",
+      "type": "video",
+      "title": "Así transforma el deporte nuestro cuerpo",
+      "author": "La Hiperactina",
+      "why": "Qué cambia por dentro cuando te mueves.",
+      "concepts": [
+        "ejercicio",
+        "fisiología"
+      ],
+      "video_id": "LbD1Cmo3zRQ",
+      "minutos": 14.4
+    },
+    {
+      "order": 8,
+      "section": "Moverte",
+      "type": "video",
+      "title": "Actividad física, salud y cerebro",
+      "author": "UGRmedia",
+      "why": "La Universidad de Granada lo explica.",
+      "concepts": [
+        "actividad física",
+        "cerebro"
+      ],
+      "video_id": "2ldDvFbm7qc",
+      "minutos": 12.4
+    },
+    {
+      "order": 9,
+      "section": "Moverte",
+      "type": "video",
+      "title": "Cómo el ejercicio transforma tu cerebro",
+      "author": "Secretos del Cuerpo",
+      "why": "Memoria, ánimo y ejercicio.",
+      "concepts": [
+        "neurogénesis",
+        "ánimo"
+      ],
+      "video_id": "InfTxkSInWk",
+      "minutos": 18.9
+    },
+    {
+      "order": 10,
+      "section": "El estrés",
+      "type": "video",
+      "title": "Así afecta el estrés a nuestro cuerpo",
+      "author": "La Hiperactina",
+      "why": "Qué hace el estrés, explicado por una bioquímica.",
+      "concepts": [
+        "estrés",
+        "cortisol"
+      ],
+      "video_id": "Ox7_4rNkLHk",
+      "minutos": 14.6
+    },
+    {
+      "order": 11,
+      "section": "El estrés",
+      "type": "video",
+      "title": "El cortisol y la ansiedad",
+      "author": "Fanny Psiquiatra",
+      "why": "Una psiquiatra separa lo cierto de lo exagerado.",
+      "concepts": [
+        "cortisol",
+        "ansiedad"
+      ],
+      "video_id": "RRcZNlsgnoU",
+      "minutos": 15.8
+    },
+    {
+      "order": 12,
+      "section": "El estrés",
+      "type": "video",
+      "title": "Cómo bajar los niveles de cortisol",
+      "author": "Desansiedad",
+      "why": "Gestos diarios que bajan la tensión.",
+      "concepts": [
+        "calma",
+        "hábitos"
+      ],
+      "video_id": "uxH5jLEKotQ",
+      "minutos": 13.2
+    }
+  ]
+}

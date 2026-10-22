@@ -1,0 +1,186 @@
+{
+  "slug": "finanzas-personales",
+  "titulo": "Finanzas personales desde cero",
+  "resumen": "Saber a dónde va tu dinero, ahorrar un colchón, salir de deudas y entender por qué empezar antes cambia todo. Educación financiera básica, no asesoramiento de inversión.",
+  "nivel": "Principiante",
+  "ritmo": "oro",
+  "estante": "fundamentos",
+  "revisada": "2026-10-22",
+  "time_advice": "Veinte minutos al día, cuatro días por semana.",
+  "recommended_method": {
+    "name": "Método 2357",
+    "reason": "Repasar los días 2, 3, 5 y 7 fija lo que ves."
+  },
+  "criterios": {
+    "A dónde va tu dinero": "Puedo hacer un presupuesto con mis ingresos y gastos reales.",
+    "Ahorrar sin sufrir": "Puedo calcular y empezar mi fondo de emergencia.",
+    "Salir de deudas": "Puedo ordenar mis deudas y elegir cuál pagar primero.",
+    "El tiempo a tu favor": "Puedo explicar el interés compuesto y por qué conviene empezar pronto."
+  },
+  "steps": [
+    {
+      "order": 1,
+      "section": "A dónde va tu dinero",
+      "type": "video",
+      "title": "Cómo crear un presupuesto personal",
+      "author": "Andres Garza",
+      "why": "La herramienta básica, paso a paso.",
+      "concepts": [
+        "presupuesto",
+        "gastos"
+      ],
+      "video_id": "f2O4Q-T12FI",
+      "minutos": 13.8
+    },
+    {
+      "order": 2,
+      "section": "A dónde va tu dinero",
+      "type": "video",
+      "title": "Hacer un presupuesto desde cero",
+      "author": "Luis Mi Negocios",
+      "why": "Una clase práctica para armarlo.",
+      "concepts": [
+        "ingresos",
+        "categorías"
+      ],
+      "video_id": "E0ZZQKa5Y5s",
+      "minutos": 15.3
+    },
+    {
+      "order": 3,
+      "section": "A dónde va tu dinero",
+      "type": "video",
+      "title": "Cómo organizo mi dinero",
+      "author": "Finanzas con Ross",
+      "why": "Un ejemplo real de cómo se reparte.",
+      "concepts": [
+        "organización",
+        "reparto"
+      ],
+      "video_id": "Rir3GoHwgVs",
+      "minutos": 12.0
+    },
+    {
+      "order": 4,
+      "section": "Ahorrar sin sufrir",
+      "type": "video",
+      "title": "Cómo hacer un fondo de emergencia paso a paso",
+      "author": "Sergi Torrens",
+      "why": "El colchón que te protege de los imprevistos.",
+      "concepts": [
+        "fondo de emergencia"
+      ],
+      "video_id": "koREPU_3EpY",
+      "minutos": 14.1
+    },
+    {
+      "order": 5,
+      "section": "Ahorrar sin sufrir",
+      "type": "video",
+      "title": "Crear tu fondo de emergencia en menos de un año",
+      "author": "Karem Suarez",
+      "why": "Un plan para llegar a la meta.",
+      "concepts": [
+        "ahorro",
+        "plan"
+      ],
+      "video_id": "zA67rkRiGXI",
+      "minutos": 13.6
+    },
+    {
+      "order": 6,
+      "section": "Ahorrar sin sufrir",
+      "type": "video",
+      "title": "Romper con los malos hábitos financieros",
+      "author": "Luis Mi Negocios",
+      "why": "Los hábitos que se comen el ahorro.",
+      "concepts": [
+        "hábitos financieros"
+      ],
+      "video_id": "7LAQBeEi_C4",
+      "minutos": 14.0
+    },
+    {
+      "order": 7,
+      "section": "Salir de deudas",
+      "type": "video",
+      "title": "Bola de nieve o avalancha: cómo salir de deudas",
+      "author": "Educa tu Billetera",
+      "why": "Dos métodos comparados con números.",
+      "concepts": [
+        "bola de nieve",
+        "avalancha"
+      ],
+      "video_id": "xo4v-oa7m6s",
+      "minutos": 13.1
+    },
+    {
+      "order": 8,
+      "section": "Salir de deudas",
+      "type": "video",
+      "title": "El método bola de nieve en tres pasos",
+      "author": "Sergi Torrens",
+      "why": "Cómo aplicarlo a tus deudas.",
+      "concepts": [
+        "deudas",
+        "prioridad"
+      ],
+      "video_id": "X9MJQpPIpbw",
+      "minutos": 12.5
+    },
+    {
+      "order": 9,
+      "section": "Salir de deudas",
+      "type": "video",
+      "title": "Pagar deudas con una hoja de cálculo",
+      "author": "Camila Martinez",
+      "why": "Llevar el plan a una hoja que puedes seguir.",
+      "concepts": [
+        "hoja de cálculo",
+        "seguimiento"
+      ],
+      "video_id": "NjzLXpTNlvg",
+      "minutos": 13.7
+    },
+    {
+      "order": 10,
+      "section": "El tiempo a tu favor",
+      "type": "video",
+      "title": "El interés compuesto, explicado",
+      "author": "Juan Ramón Rallo",
+      "why": "Por qué el tiempo multiplica el ahorro.",
+      "concepts": [
+        "interés compuesto"
+      ],
+      "video_id": "5SAzEtpl35M",
+      "minutos": 14.3
+    },
+    {
+      "order": 11,
+      "section": "El tiempo a tu favor",
+      "type": "video",
+      "title": "Interés simple frente a interés compuesto",
+      "author": "Andres Garza",
+      "why": "La diferencia, con ejemplos.",
+      "concepts": [
+        "interés simple",
+        "interés compuesto"
+      ],
+      "video_id": "JK3mFKT8nss",
+      "minutos": 14.8
+    },
+    {
+      "order": 12,
+      "section": "El tiempo a tu favor",
+      "type": "video",
+      "title": "Arreglar tus finanzas en seis meses",
+      "author": "Júlia Marva",
+      "why": "Un plan para juntar todo lo aprendido.",
+      "concepts": [
+        "plan financiero"
+      ],
+      "video_id": "ogS0c3FmSVw",
+      "minutos": 13.2
+    }
+  ]
+}

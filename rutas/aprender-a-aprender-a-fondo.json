@@ -1,0 +1,106 @@
+{
+  "slug": "aprender-a-aprender-a-fondo",
+  "titulo": "Aprender a aprender, a fondo",
+  "resumen": "La misma pregunta en charlas largas con quienes investigan cómo aprende el cerebro: atención, memoria, sueño y motivación, contados a fondo.",
+  "nivel": "Principiante",
+  "ritmo": "obsidiana",
+  "estante": "fundamentos",
+  "revisada": "2026-10-22",
+  "time_advice": "Una hora al día, tres días por semana: cada video en una o dos sesiones.",
+  "recommended_method": {
+    "name": "Método 2357",
+    "reason": "Repasar los días 2, 3, 5 y 7 fija lo que ves."
+  },
+  "criterios": {
+    "Cómo aprende el cerebro": "Puedo explicar los pilares que hacen que el cerebro aprenda.",
+    "Memoria y estudio": "Puedo elegir cómo estudiar según cómo funciona la memoria.",
+    "Motivación y constancia": "Puedo sostener el estudio cuando la motivación baja."
+  },
+  "steps": [
+    {
+      "order": 1,
+      "section": "Cómo aprende el cerebro",
+      "type": "video",
+      "title": "Los cuatro pilares del aprendizaje, con Stanislas Dehaene",
+      "author": "AprendemosJuntos",
+      "why": "Uno de los neurocientíficos del aprendizaje más citados.",
+      "concepts": [
+        "atención",
+        "error",
+        "consolidación"
+      ],
+      "video_id": "j9EImcqgnE4",
+      "minutos": 96.0
+    },
+    {
+      "order": 2,
+      "section": "Cómo aprende el cerebro",
+      "type": "video",
+      "title": "Neurociencia y educación, con David Bueno",
+      "author": "ISEP ",
+      "why": "Qué cambia en cómo enseñamos y aprendemos.",
+      "concepts": [
+        "neuroeducación",
+        "emoción"
+      ],
+      "video_id": "M6atHssVQXQ",
+      "minutos": 62.3
+    },
+    {
+      "order": 3,
+      "section": "Memoria y estudio",
+      "type": "video",
+      "title": "Pensar es olvidar: la neurociencia de la memoria",
+      "author": "AprendemosJuntos",
+      "why": "Rodrigo Quian Quiroga, investigador de la memoria.",
+      "concepts": [
+        "memoria",
+        "abstracción"
+      ],
+      "video_id": "QDWiNl7khTI",
+      "minutos": 87.5
+    },
+    {
+      "order": 4,
+      "section": "Memoria y estudio",
+      "type": "video",
+      "title": "Técnicas de estudio con una experta en aprendizaje",
+      "author": "Tiene Sentido Pódcast",
+      "why": "Cómo estudiar para no olvidar lo que aprendes.",
+      "concepts": [
+        "técnicas de estudio",
+        "olvido"
+      ],
+      "video_id": "sKoDW_giiP4",
+      "minutos": 73.8
+    },
+    {
+      "order": 5,
+      "section": "Motivación y constancia",
+      "type": "video",
+      "title": "La motivación por aprender, con Héctor Ruiz Martín",
+      "author": "Fundación Promaestro",
+      "why": "Qué despierta y qué apaga las ganas de aprender.",
+      "concepts": [
+        "motivación",
+        "autoeficacia"
+      ],
+      "video_id": "K6VETkoVSUw",
+      "minutos": 65.7
+    },
+    {
+      "order": 6,
+      "section": "Motivación y constancia",
+      "type": "video",
+      "title": "Cómo dejar de procrastinar: conversación con un experto en foco",
+      "author": "Tengo un Plan",
+      "why": "Hábitos para que el estudio no dependa del ánimo.",
+      "concepts": [
+        "procrastinación",
+        "foco"
+      ],
+      "video_id": "AUZT63c8avw",
+      "minutos": 110.2
+    }
+  ]
+}

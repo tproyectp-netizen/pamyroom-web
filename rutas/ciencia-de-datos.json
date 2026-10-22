@@ -1,0 +1,200 @@
+{
+  "slug": "ciencia-de-datos",
+  "titulo": "Ciencia de datos desde cero",
+  "resumen": "Qué hace quien trabaja con datos, por dónde empezar, para qué sirven Excel, SQL y Python y cómo es el trabajo. Un primer paso hacia una de las profesiones que más crecen.",
+  "nivel": "Principiante",
+  "ritmo": "oro",
+  "estante": "futuro",
+  "revisada": "2026-10-22",
+  "time_advice": "Veinte minutos al día, cuatro días por semana.",
+  "recommended_method": {
+    "name": "Método 2357",
+    "reason": "Repasar los días 2, 3, 5 y 7 fija lo que ves."
+  },
+  "criterios": {
+    "Qué es": "Puedo explicar qué hace alguien que trabaja con datos.",
+    "Por dónde empezar": "Puedo armar mi plan para aprender análisis de datos.",
+    "Las herramientas": "Puedo decir para qué sirven Excel, SQL y Python en un análisis.",
+    "El trabajo": "Puedo describir un proyecto de datos de principio a fin."
+  },
+  "fuentes": [
+    {
+      "titulo": "BLS (EE. UU.), Employment Projections 2025-2035, nota USDL-26-1422",
+      "url": "https://www.bls.gov/news.release/ecopro.nr0.htm",
+      "fecha": "2026-08-27"
+    },
+    {
+      "titulo": "Cedefop, Skills forecast: Spain — crece el peso de los profesionales de TIC",
+      "url": "https://www.cedefop.europa.eu/files/skills_forecast_-_spain_2025.pdf",
+      "fecha": "2025"
+    }
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "section": "Qué es",
+      "type": "video",
+      "title": "La ciencia de datos tiene más que ver con personas que con datos",
+      "author": "TEDx Talks",
+      "why": "Ivo Giulietti, sobre el lado humano del oficio.",
+      "concepts": [
+        "ciencia de datos",
+        "preguntas"
+      ],
+      "video_id": "wfWWWhVsv78",
+      "minutos": 12.0
+    },
+    {
+      "order": 2,
+      "section": "Qué es",
+      "type": "video",
+      "title": "Cómo trabajar en ciencia de datos en la era de la IA",
+      "author": "Platzi",
+      "why": "Qué pide hoy el mercado.",
+      "concepts": [
+        "mercado",
+        "IA"
+      ],
+      "video_id": "lRGyNLymkAQ",
+      "minutos": 18.9
+    },
+    {
+      "order": 3,
+      "section": "Qué es",
+      "type": "video",
+      "title": "Seis cosas que saber antes de empezar en ciencia de datos",
+      "author": "Luigi Analytics",
+      "why": "Lo que nadie te cuenta al principio.",
+      "concepts": [
+        "expectativas"
+      ],
+      "video_id": "aJaDmDt1aMo",
+      "minutos": 13.9
+    },
+    {
+      "order": 4,
+      "section": "Por dónde empezar",
+      "type": "video",
+      "title": "La ruta para aprender ciencia de datos",
+      "author": "Platzi",
+      "why": "El orden en que conviene aprender.",
+      "concepts": [
+        "ruta",
+        "habilidades"
+      ],
+      "video_id": "PpknKpjrM18",
+      "minutos": 14.0
+    },
+    {
+      "order": 5,
+      "section": "Por dónde empezar",
+      "type": "video",
+      "title": "Cómo empezar en ciencia de datos desde cero",
+      "author": "Álvaro Ramos",
+      "why": "Un plan actualizado para empezar.",
+      "concepts": [
+        "plan",
+        "principiante"
+      ],
+      "video_id": "jRKAP_YqrvE",
+      "minutos": 15.1
+    },
+    {
+      "order": 6,
+      "section": "Por dónde empezar",
+      "type": "video",
+      "title": "Cuánta matemática necesitas para ciencia de datos",
+      "author": "Luigi Analytics",
+      "why": "Mitos y lo que de verdad se usa.",
+      "concepts": [
+        "matemáticas",
+        "estadística"
+      ],
+      "video_id": "QPsOrOnQxvE",
+      "minutos": 16.0
+    },
+    {
+      "order": 7,
+      "section": "Las herramientas",
+      "type": "video",
+      "title": "Excel para análisis de datos en dieciocho minutos",
+      "author": "DataScience ForBusiness",
+      "why": "La primera herramienta, en práctica.",
+      "concepts": [
+        "Excel",
+        "tablas dinámicas"
+      ],
+      "video_id": "xq8MF-7P6DI",
+      "minutos": 17.7
+    },
+    {
+      "order": 8,
+      "section": "Las herramientas",
+      "type": "video",
+      "title": "Cómo usa SQL un analista de datos",
+      "author": "Eze Talamona",
+      "why": "Preguntarle cosas a una base de datos.",
+      "concepts": [
+        "SQL",
+        "consultas"
+      ],
+      "video_id": "6i670_GQQGA",
+      "minutos": 13.8
+    },
+    {
+      "order": 9,
+      "section": "Las herramientas",
+      "type": "video",
+      "title": "Cómo usa Python un analista de datos",
+      "author": "Eze Talamona",
+      "why": "Para qué sirve programar en un análisis.",
+      "concepts": [
+        "Python",
+        "análisis"
+      ],
+      "video_id": "uVm9VWvC3_A",
+      "minutos": 17.0
+    },
+    {
+      "order": 10,
+      "section": "El trabajo",
+      "type": "video",
+      "title": "Guía para empezar en análisis de datos",
+      "author": "DataScience ForBusiness",
+      "why": "Cómo es el día a día del oficio.",
+      "concepts": [
+        "analista de datos"
+      ],
+      "video_id": "v7zEti5-9NA",
+      "minutos": 13.6
+    },
+    {
+      "order": 11,
+      "section": "El trabajo",
+      "type": "video",
+      "title": "Qué aprender de verdad en ciencia de datos con IA",
+      "author": "DataScience ForBusiness",
+      "why": "Lo que la IA cambia y lo que no.",
+      "concepts": [
+        "IA",
+        "habilidades"
+      ],
+      "video_id": "GRss6i3ioKU",
+      "minutos": 14.5
+    },
+    {
+      "order": 12,
+      "section": "El trabajo",
+      "type": "video",
+      "title": "Diez cursos para iniciarse en ciencia de datos",
+      "author": "Laureano Nisenbaum",
+      "why": "Cómo seguir después de esta ruta.",
+      "concepts": [
+        "cursos",
+        "siguiente paso"
+      ],
+      "video_id": "AMwlkQd2ClQ",
+      "minutos": 16.6
+    }
+  ]
+}

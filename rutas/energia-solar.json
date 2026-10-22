@@ -1,0 +1,206 @@
+{
+  "slug": "energia-solar",
+  "titulo": "Energía solar: el oficio que crece",
+  "resumen": "Cómo funciona un panel, qué piezas tiene una instalación, cómo se calcula y qué hace un instalador. Una ruta no habilita para instalar: hacerlo exige formación y habilitación oficial.",
+  "nivel": "Principiante",
+  "ritmo": "oro",
+  "estante": "futuro",
+  "revisada": "2026-10-22",
+  "time_advice": "Veinte minutos al día, cuatro días por semana.",
+  "recommended_method": {
+    "name": "Método 2357",
+    "reason": "Repasar los días 2, 3, 5 y 7 fija lo que ves."
+  },
+  "criterios": {
+    "Cómo funciona": "Puedo explicar cómo un panel convierte la luz en electricidad.",
+    "Los componentes": "Puedo nombrar cada pieza de una instalación y para qué sirve.",
+    "Diseñar y calcular": "Puedo seguir el cálculo básico de una instalación.",
+    "El oficio": "Puedo describir qué hace un instalador y qué formación pide."
+  },
+  "fuentes": [
+    {
+      "titulo": "BLS (EE. UU.), Employment Projections 2025-2035, nota USDL-26-1422",
+      "url": "https://www.bls.gov/news.release/ecopro.nr0.htm",
+      "fecha": "2026-08-27"
+    },
+    {
+      "titulo": "UNEF, Informe Anual 2025: 146.764 empleos ligados a la fotovoltaica en España en 2024 (vía energias-renovables.com)",
+      "url": "https://www.energias-renovables.com/fotovoltaica/la-energ-a-fotovoltaica-motor-de-industrializaci-20251007",
+      "fecha": "2025-10-07"
+    },
+    {
+      "titulo": "IRENA y OIT, Renewable Energy and Jobs 2025: la fotovoltaica es el mayor empleador renovable del mundo, aunque en 2024 creció poco (vía pv magazine)",
+      "url": "https://www.pv-magazine.com/2026/01/22/photovoltaics-and-jobs-the-solar-pv-sector-is-the-largest-employer-in-the-renewable-energy-industry/",
+      "fecha": "2026-01-22"
+    }
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "section": "Cómo funciona",
+      "type": "video",
+      "title": "Cómo funciona la energía solar: el efecto fotovoltaico",
+      "author": "Sígueme la Corriente",
+      "why": "La física detrás del panel, sin fórmulas.",
+      "concepts": [
+        "efecto fotovoltaico"
+      ],
+      "video_id": "ITcDOudqPJw",
+      "minutos": 13.1
+    },
+    {
+      "order": 2,
+      "section": "Cómo funciona",
+      "type": "video",
+      "title": "Cómo funciona un panel solar",
+      "author": "Profesor Sergio Llanos",
+      "why": "Las celdas, por dentro.",
+      "concepts": [
+        "celda fotovoltaica",
+        "silicio"
+      ],
+      "video_id": "mYqTu3QFRtA",
+      "minutos": 14.4
+    },
+    {
+      "order": 3,
+      "section": "Cómo funciona",
+      "type": "video",
+      "title": "Introducción a la energía solar",
+      "author": "Borja - Academia Energía Solar",
+      "why": "La primera clase de un curso del sector.",
+      "concepts": [
+        "energía solar",
+        "conceptos"
+      ],
+      "video_id": "8iKctaBpLBI",
+      "minutos": 14.8
+    },
+    {
+      "order": 4,
+      "section": "Los componentes",
+      "type": "video",
+      "title": "Componentes de una instalación solar",
+      "author": "Quetzal Ingeniería",
+      "why": "Panel, regulador, inversor y baterías.",
+      "concepts": [
+        "componentes",
+        "inversor"
+      ],
+      "video_id": "CQXQRhArFhg",
+      "minutos": 18.1
+    },
+    {
+      "order": 5,
+      "section": "Los componentes",
+      "type": "video",
+      "title": "Cómo funciona un inversor solar",
+      "author": "Rincon Renovable",
+      "why": "La pieza que hace útil la energía del panel.",
+      "concepts": [
+        "inversor",
+        "corriente alterna"
+      ],
+      "video_id": "wTYfYYm77g0",
+      "minutos": 15.8
+    },
+    {
+      "order": 6,
+      "section": "Los componentes",
+      "type": "video",
+      "title": "Lo que debes saber antes de comprar un kit solar",
+      "author": "CambioEnergetico.com",
+      "why": "Cómo se elige lo que se instala.",
+      "concepts": [
+        "kit solar",
+        "dimensionado"
+      ],
+      "video_id": "L2ZS-9-0B_A",
+      "minutos": 13.2
+    },
+    {
+      "order": 7,
+      "section": "Diseñar y calcular",
+      "type": "video",
+      "title": "Esquemas de una instalación fotovoltaica",
+      "author": "Quetzal Ingeniería",
+      "why": "Aislada o conectada a la red.",
+      "concepts": [
+        "esquemas",
+        "conexión a red"
+      ],
+      "video_id": "5SvhmKKOzOc",
+      "minutos": 17.9
+    },
+    {
+      "order": 8,
+      "section": "Diseñar y calcular",
+      "type": "video",
+      "title": "Conexión de paneles en serie y en paralelo",
+      "author": "Solar Fácil",
+      "why": "Cómo cambian la tensión y la corriente.",
+      "concepts": [
+        "serie",
+        "paralelo"
+      ],
+      "video_id": "75zq3antUmo",
+      "minutos": 15.7
+    },
+    {
+      "order": 9,
+      "section": "Diseñar y calcular",
+      "type": "video",
+      "title": "Los cálculos que lleva un sistema fotovoltaico",
+      "author": "MPV Solar Reference",
+      "why": "Los números de un diseño real.",
+      "concepts": [
+        "cálculo",
+        "consumo"
+      ],
+      "video_id": "mNu6hlN1vGE",
+      "minutos": 16.3
+    },
+    {
+      "order": 10,
+      "section": "El oficio",
+      "type": "video",
+      "title": "Guía de instalación de placas solares, paso a paso",
+      "author": "Pedro Ortega",
+      "why": "Un instalador autorizado enseña el trabajo.",
+      "concepts": [
+        "instalación",
+        "seguridad"
+      ],
+      "video_id": "n157tKwbYNM",
+      "minutos": 16.4
+    },
+    {
+      "order": 11,
+      "section": "El oficio",
+      "type": "video",
+      "title": "Dónde se conecta la energía de los paneles en el cuadro",
+      "author": "Domo Electra Manuel Amate",
+      "why": "La parte eléctrica que hace un profesional.",
+      "concepts": [
+        "cuadro eléctrico",
+        "protecciones"
+      ],
+      "video_id": "G2GhHrELdA0",
+      "minutos": 16.9
+    },
+    {
+      "order": 12,
+      "section": "El oficio",
+      "type": "video",
+      "title": "Certificarte en instalación de paneles solares",
+      "author": "Politecnico Industrial Nueva Colombia",
+      "why": "Qué formación pide el oficio.",
+      "concepts": [
+        "certificación",
+        "formación"
+      ],
+      "video_id": "Or9PJbtkaC4",
+      "minutos": 13.3
+    }
+  ]
+}

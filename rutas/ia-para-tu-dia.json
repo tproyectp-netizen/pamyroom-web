@@ -1,0 +1,189 @@
+{
+  "slug": "ia-para-tu-dia",
+  "titulo": "IA para tu día a día",
+  "resumen": "Qué es la inteligencia artificial, cómo pedirle bien las cosas, cómo usarla para estudiar o trabajar y cómo comprobar lo que te dice.",
+  "nivel": "Principiante",
+  "ritmo": "oro",
+  "estante": "tendencia",
+  "revisada": "2026-10-22",
+  "time_advice": "Veinte minutos al día, cuatro días por semana.",
+  "recommended_method": {
+    "name": "Técnica Pomodoro",
+    "reason": "Bloques cortos para practicar sin cansarte."
+  },
+  "criterios": {
+    "Qué es la IA": "Puedo explicar qué es la IA y qué no es.",
+    "Pedir bien": "Puedo escribir una instrucción clara que dé una buena respuesta.",
+    "Para tu día": "Puedo usar la IA para estudiar, escribir o planear algo real.",
+    "Con criterio": "Puedo comprobar lo que dice la IA y cuidar mis datos."
+  },
+  "steps": [
+    {
+      "order": 1,
+      "section": "Qué es la IA",
+      "type": "video",
+      "title": "Qué es la inteligencia artificial (y qué no es)",
+      "author": "Taramona",
+      "why": "Explicada sin mitos.",
+      "concepts": [
+        "inteligencia artificial",
+        "mitos"
+      ],
+      "video_id": "0rGSCsH_2kE",
+      "minutos": 16.1
+    },
+    {
+      "order": 2,
+      "section": "Qué es la IA",
+      "type": "video",
+      "title": "Toda la inteligencia artificial explicada",
+      "author": "Cómo Funciona El Mundo",
+      "why": "Un mapa del campo en dieciséis minutos.",
+      "concepts": [
+        "aprendizaje automático",
+        "modelos"
+      ],
+      "video_id": "PEmvLE4fTsY",
+      "minutos": 16.5
+    },
+    {
+      "order": 3,
+      "section": "Qué es la IA",
+      "type": "video",
+      "title": "Cómo funciona la IA y para qué te sirve hoy",
+      "author": "Objetivo IA ",
+      "why": "Del concepto al uso diario.",
+      "concepts": [
+        "usos",
+        "funcionamiento"
+      ],
+      "video_id": "cOLiSe8Xq4M",
+      "minutos": 12.5
+    },
+    {
+      "order": 4,
+      "section": "Pedir bien",
+      "type": "video",
+      "title": "Cómo escribir buenas instrucciones para la IA",
+      "author": "Xavier Mitjana",
+      "why": "Un método para escribir lo que pides.",
+      "concepts": [
+        "instrucciones",
+        "contexto"
+      ],
+      "video_id": "BRy7Z3ZoQZk",
+      "minutos": 14.6
+    },
+    {
+      "order": 5,
+      "section": "Pedir bien",
+      "type": "video",
+      "title": "Usar ChatGPT correctamente y mejorar sus respuestas",
+      "author": "ChicaGeek",
+      "why": "Errores comunes al pedir y cómo evitarlos.",
+      "concepts": [
+        "ChatGPT",
+        "respuestas"
+      ],
+      "video_id": "t63MpgH49cs",
+      "minutos": 13.0
+    },
+    {
+      "order": 6,
+      "section": "Pedir bien",
+      "type": "video",
+      "title": "Una fórmula para pedirle cosas a ChatGPT",
+      "author": "Daxus Latam",
+      "why": "Una estructura fácil de recordar.",
+      "concepts": [
+        "fórmula",
+        "rol"
+      ],
+      "video_id": "pDGttsIHY9k",
+      "minutos": 14.8
+    },
+    {
+      "order": 7,
+      "section": "Para tu día",
+      "type": "video",
+      "title": "Tutorial de inteligencia artificial para cualquier persona",
+      "author": "Platzi",
+      "why": "Usos prácticos para el día a día.",
+      "concepts": [
+        "herramientas",
+        "práctica"
+      ],
+      "video_id": "cmep2mdip3k",
+      "minutos": 19.3
+    },
+    {
+      "order": 8,
+      "section": "Para tu día",
+      "type": "video",
+      "title": "Usar ChatGPT para aprender cualquier habilidad",
+      "author": "Adrián Sáenz",
+      "why": "La IA como tutor personal.",
+      "concepts": [
+        "aprender con IA"
+      ],
+      "video_id": "Ph-e3klU6KE",
+      "minutos": 13.0
+    },
+    {
+      "order": 9,
+      "section": "Para tu día",
+      "type": "video",
+      "title": "Instrucciones para estudiar con IA",
+      "author": "Pablo Lomeli",
+      "why": "Ejemplos listos para tus estudios.",
+      "concepts": [
+        "estudio",
+        "ejemplos"
+      ],
+      "video_id": "gkngIIMz4ew",
+      "minutos": 16.6
+    },
+    {
+      "order": 10,
+      "section": "Con criterio",
+      "type": "video",
+      "title": "Cinco errores que no debes cometer con la IA",
+      "author": "Raúl Ordóñez - Inteligencia Artificial",
+      "why": "Lo que sale mal cuando te fías sin mirar.",
+      "concepts": [
+        "errores",
+        "comprobar"
+      ],
+      "video_id": "ZPppY7T6IYQ",
+      "minutos": 17.3
+    },
+    {
+      "order": 11,
+      "section": "Con criterio",
+      "type": "video",
+      "title": "Sesgos, alucinaciones y riesgos de la IA",
+      "author": "24 Horas - TVN Chile",
+      "why": "Cómo usarla de forma ética y segura.",
+      "concepts": [
+        "alucinaciones",
+        "sesgos"
+      ],
+      "video_id": "2DOVngDi_Oo",
+      "minutos": 16.8
+    },
+    {
+      "order": 12,
+      "section": "Con criterio",
+      "type": "video",
+      "title": "Errores, privacidad, ética y seguridad en la IA",
+      "author": "Aprende en Ruta",
+      "why": "Qué datos no compartir y por qué.",
+      "concepts": [
+        "privacidad",
+        "ética"
+      ],
+      "video_id": "tNWxIrspNwI",
+      "minutos": 19.8
+    }
+  ]
+}

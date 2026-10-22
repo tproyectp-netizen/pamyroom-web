@@ -1,0 +1,189 @@
+{
+  "slug": "foco-y-atencion",
+  "titulo": "Foco y atención",
+  "resumen": "Qué le hace el móvil a tu atención y cómo recuperar ratos de concentración profunda para estudiar o trabajar.",
+  "nivel": "Principiante",
+  "ritmo": "oro",
+  "estante": "fundamentos",
+  "revisada": "2026-10-22",
+  "time_advice": "Veinte minutos al día, cuatro días por semana.",
+  "recommended_method": {
+    "name": "Técnica Pomodoro",
+    "reason": "Bloques cortos para practicar sin cansarte."
+  },
+  "criterios": {
+    "Por qué te distraes": "Puedo explicar qué le pasa a mi atención con el móvil y las redes.",
+    "Tu entorno": "Puedo preparar mi espacio y mi móvil para una hora sin interrupciones.",
+    "Trabajo profundo": "Puedo reservar y proteger un rato de trabajo profundo.",
+    "Volver al foco": "Puedo recuperar la concentración cuando la pierdo."
+  },
+  "steps": [
+    {
+      "order": 1,
+      "section": "Por qué te distraes",
+      "type": "video",
+      "title": "Cómo recuperar tu atención según la neurociencia",
+      "author": "DR LA ROSA",
+      "why": "Qué desgasta la atención y cómo se recupera.",
+      "concepts": [
+        "atención",
+        "dopamina"
+      ],
+      "video_id": "EuWc4Q2OBts",
+      "minutos": 13.1
+    },
+    {
+      "order": 2,
+      "section": "Por qué te distraes",
+      "type": "video",
+      "title": "La adicción al celular explicada por la neurociencia",
+      "author": "Dra Alicia Vargas",
+      "why": "Por qué cuesta tanto soltar el teléfono.",
+      "concepts": [
+        "recompensa",
+        "hábito"
+      ],
+      "video_id": "Q3zYpuruYYw",
+      "minutos": 13.2
+    },
+    {
+      "order": 3,
+      "section": "Por qué te distraes",
+      "type": "video",
+      "title": "Cómo nos manipulan en las redes sociales",
+      "author": "TEDx Talks",
+      "why": "Santiago Bilinkis, sobre cómo se diseñan para atraparte.",
+      "concepts": [
+        "diseño persuasivo",
+        "redes"
+      ],
+      "video_id": "8nKCA9h-7BA",
+      "minutos": 17.9
+    },
+    {
+      "order": 4,
+      "section": "Tu entorno",
+      "type": "video",
+      "title": "Diez formas de dejar de distraerte para estudiar",
+      "author": "Pablo Lomeli",
+      "why": "Cambios concretos en tu espacio y tu móvil.",
+      "concepts": [
+        "entorno",
+        "notificaciones"
+      ],
+      "video_id": "zv_SwJX7OY8",
+      "minutos": 16.6
+    },
+    {
+      "order": 5,
+      "section": "Tu entorno",
+      "type": "video",
+      "title": "Ayuno de dopamina: ¿funciona según la ciencia?",
+      "author": "La Hiperactina",
+      "why": "Qué hay de cierto en la moda del ayuno de dopamina.",
+      "concepts": [
+        "dopamina",
+        "evidencia"
+      ],
+      "video_id": "98zc_79L7Xk",
+      "minutos": 13.5
+    },
+    {
+      "order": 6,
+      "section": "Tu entorno",
+      "type": "video",
+      "title": "Cómo dejar las redes sociales",
+      "author": "Adrià Solà Pastor",
+      "why": "Reducir las redes sin pelearte contigo.",
+      "concepts": [
+        "redes sociales",
+        "desintoxicación"
+      ],
+      "video_id": "GCUf4fKwZmw",
+      "minutos": 13.8
+    },
+    {
+      "order": 7,
+      "section": "Trabajo profundo",
+      "type": "video",
+      "title": "Deep Work: resumen en español",
+      "author": "Mariano Trejo",
+      "why": "La idea de Cal Newport, en quince minutos.",
+      "concepts": [
+        "trabajo profundo",
+        "Cal Newport"
+      ],
+      "video_id": "b3bAseLnrt4",
+      "minutos": 16.3
+    },
+    {
+      "order": 8,
+      "section": "Trabajo profundo",
+      "type": "video",
+      "title": "Trabajo profundo, de Cal Newport",
+      "author": "Arata Academy SPANISH",
+      "why": "Las reglas del libro, una a una.",
+      "concepts": [
+        "concentración",
+        "reglas"
+      ],
+      "video_id": "E3TmrarYwFo",
+      "minutos": 18.4
+    },
+    {
+      "order": 9,
+      "section": "Trabajo profundo",
+      "type": "video",
+      "title": "Céntrate (Deep Work): reseña y resumen",
+      "author": "Libros para Cambiar de Vida",
+      "why": "Otra mirada al mismo método, con ejemplos.",
+      "concepts": [
+        "bloques de tiempo"
+      ],
+      "video_id": "kEcFJPP8VBw",
+      "minutos": 13.4
+    },
+    {
+      "order": 10,
+      "section": "Volver al foco",
+      "type": "video",
+      "title": "Cómo aumentar tu concentración",
+      "author": "DR LA ROSA",
+      "why": "Hábitos que mejoran la concentración.",
+      "concepts": [
+        "concentración",
+        "descanso"
+      ],
+      "video_id": "EmHIoI-ceoI",
+      "minutos": 12.3
+    },
+    {
+      "order": 11,
+      "section": "Volver al foco",
+      "type": "video",
+      "title": "Cómo evitar las distracciones en el trabajo",
+      "author": "Daniel Colombo",
+      "why": "Llevar el foco al trabajo diario.",
+      "concepts": [
+        "distracciones",
+        "prioridades"
+      ],
+      "video_id": "0yvDPlQWNoQ",
+      "minutos": 13.2
+    },
+    {
+      "order": 12,
+      "section": "Volver al foco",
+      "type": "video",
+      "title": "La multitarea sabotea tu cerebro",
+      "author": "Tu Rincón Mental con Xoa",
+      "why": "Por qué hacer dos cosas a la vez sale peor.",
+      "concepts": [
+        "multitarea",
+        "cambio de tarea"
+      ],
+      "video_id": "zsjEHi_pXKw",
+      "minutos": 18.2
+    }
+  ]
+}

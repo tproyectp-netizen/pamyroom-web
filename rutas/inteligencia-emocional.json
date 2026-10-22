@@ -1,0 +1,186 @@
+{
+  "slug": "inteligencia-emocional",
+  "titulo": "Inteligencia emocional",
+  "resumen": "Reconocer lo que sientes, regularlo antes de reaccionar, entender a los demás y decir lo que piensas sin herir ni callarte.",
+  "nivel": "Principiante",
+  "ritmo": "oro",
+  "estante": "fundamentos",
+  "revisada": "2026-10-22",
+  "time_advice": "Veinte minutos al día, cuatro días por semana.",
+  "recommended_method": {
+    "name": "Método 2357",
+    "reason": "Repasar los días 2, 3, 5 y 7 fija lo que ves."
+  },
+  "criterios": {
+    "Qué es": "Puedo explicar qué es la inteligencia emocional y para qué me sirve.",
+    "Regular lo que sientes": "Puedo bajar la intensidad de una emoción antes de reaccionar.",
+    "Ponerte en su lugar": "Puedo escuchar a alguien entendiendo lo que siente.",
+    "Decirlo bien": "Puedo decir lo que pienso, o un no, sin herir ni callarme."
+  },
+  "steps": [
+    {
+      "order": 1,
+      "section": "Qué es",
+      "type": "video",
+      "title": "Inteligencia emocional: qué es y cómo utilizarla",
+      "author": "Psicoactiva",
+      "why": "El concepto, claro y sin mitos.",
+      "concepts": [
+        "inteligencia emocional",
+        "autoconocimiento"
+      ],
+      "video_id": "EC6y0MXADd4",
+      "minutos": 16.1
+    },
+    {
+      "order": 2,
+      "section": "Qué es",
+      "type": "video",
+      "title": "Inteligencia emocional a través de pequeños hábitos",
+      "author": "TEDx Talks",
+      "why": "Renata Roa: la emoción se entrena cada día.",
+      "concepts": [
+        "hábitos emocionales"
+      ],
+      "video_id": "EEaeGgDNDfM",
+      "minutos": 16.1
+    },
+    {
+      "order": 3,
+      "section": "Qué es",
+      "type": "video",
+      "title": "Seis pasos para aumentar tu inteligencia emocional",
+      "author": "Irene Albacete",
+      "why": "Un camino práctico para empezar.",
+      "concepts": [
+        "autoconciencia",
+        "pasos"
+      ],
+      "video_id": "5od8UrVfpm8",
+      "minutos": 15.7
+    },
+    {
+      "order": 4,
+      "section": "Regular lo que sientes",
+      "type": "video",
+      "title": "Regulación emocional: cómo manejar las emociones",
+      "author": "Píldoras de Psicología",
+      "why": "Qué es regular una emoción y cómo se hace.",
+      "concepts": [
+        "regulación emocional"
+      ],
+      "video_id": "9M-cA1aoEbY",
+      "minutos": 12.0
+    },
+    {
+      "order": 5,
+      "section": "Regular lo que sientes",
+      "type": "video",
+      "title": "Autorregulación de tus emociones",
+      "author": "TEDx Talks",
+      "why": "Vero Marcos, sobre no dejar que la emoción decida.",
+      "concepts": [
+        "autorregulación"
+      ],
+      "video_id": "MiZ3DW4RG4Q",
+      "minutos": 16.9
+    },
+    {
+      "order": 6,
+      "section": "Regular lo que sientes",
+      "type": "video",
+      "title": "Usar la respiración para calmar la mente",
+      "author": "Jorge Benito",
+      "why": "Una herramienta que siempre llevas encima.",
+      "concepts": [
+        "respiración",
+        "calma"
+      ],
+      "video_id": "6XdnFjwCwF4",
+      "minutos": 12.3
+    },
+    {
+      "order": 7,
+      "section": "Ponerte en su lugar",
+      "type": "video",
+      "title": "Empatía: qué es y cuáles son sus dimensiones",
+      "author": "Psicóloga Esther Blázquez",
+      "why": "La empatía tiene partes distintas.",
+      "concepts": [
+        "empatía cognitiva",
+        "empatía emocional"
+      ],
+      "video_id": "SPm-ehi-vYY",
+      "minutos": 14.1
+    },
+    {
+      "order": 8,
+      "section": "Ponerte en su lugar",
+      "type": "video",
+      "title": "¿Qué es la empatía y para qué sirve?",
+      "author": "Dr. Luis Moya Albiol Psicología Neurocriminología ",
+      "why": "Un investigador de la empatía lo explica.",
+      "concepts": [
+        "empatía",
+        "conducta social"
+      ],
+      "video_id": "PrF8C2tTDxc",
+      "minutos": 14.7
+    },
+    {
+      "order": 9,
+      "section": "Ponerte en su lugar",
+      "type": "video",
+      "title": "Las cuatro claves de la empatía",
+      "author": "Enlace Psicología",
+      "why": "De entender a acompañar.",
+      "concepts": [
+        "escucha",
+        "validación"
+      ],
+      "video_id": "fhBolLoA6ig",
+      "minutos": 14.8
+    },
+    {
+      "order": 10,
+      "section": "Decirlo bien",
+      "type": "video",
+      "title": "Asertividad: algo más que saber decir no",
+      "author": "Entiende Tu Mente",
+      "why": "Qué es ser asertivo de verdad.",
+      "concepts": [
+        "asertividad",
+        "límites"
+      ],
+      "video_id": "lvDkZpbzJWo",
+      "minutos": 18.0
+    },
+    {
+      "order": 11,
+      "section": "Decirlo bien",
+      "type": "video",
+      "title": "Aprende a decir lo que piensas: siete claves",
+      "author": "Ram Talks",
+      "why": "Frases y actitudes para decirlo bien.",
+      "concepts": [
+        "comunicación asertiva"
+      ],
+      "video_id": "xSDXuyTVFCs",
+      "minutos": 12.7
+    },
+    {
+      "order": 12,
+      "section": "Decirlo bien",
+      "type": "video",
+      "title": "Técnicas de comunicación asertiva con ejemplos",
+      "author": "Melanie Amaya",
+      "why": "Técnicas concretas para conversaciones difíciles.",
+      "concepts": [
+        "técnicas",
+        "ejemplos"
+      ],
+      "video_id": "g2mABsI-MZQ",
+      "minutos": 15.5
+    }
+  ]
+}

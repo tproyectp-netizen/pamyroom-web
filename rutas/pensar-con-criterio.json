@@ -1,0 +1,185 @@
+{
+  "slug": "pensar-con-criterio",
+  "titulo": "Pensar con criterio",
+  "resumen": "Los atajos con los que la mente se equivoca, los argumentos que fallan, cómo comprobar lo que lees y cómo decidir mejor.",
+  "nivel": "Principiante",
+  "ritmo": "oro",
+  "estante": "fundamentos",
+  "revisada": "2026-10-22",
+  "time_advice": "Veinte minutos al día, cuatro días por semana.",
+  "recommended_method": {
+    "name": "Método 2357",
+    "reason": "Repasar los días 2, 3, 5 y 7 fija lo que ves."
+  },
+  "criterios": {
+    "Los atajos de la mente": "Puedo reconocer tres sesgos cuando aparecen en mí.",
+    "Argumentos que fallan": "Puedo detectar una falacia en una discusión.",
+    "¿Es verdad?": "Puedo comprobar una noticia antes de compartirla.",
+    "Decidir mejor": "Puedo tomar una decisión importante con un método y no por impulso."
+  },
+  "steps": [
+    {
+      "order": 1,
+      "section": "Los atajos de la mente",
+      "type": "video",
+      "title": "Heurísticas y sesgos: Kahneman y Tversky",
+      "author": "La Travesía",
+      "why": "De dónde viene la idea de los sesgos.",
+      "concepts": [
+        "heurísticas",
+        "sesgos"
+      ],
+      "video_id": "6lFERGQ0Im4",
+      "minutos": 13.8
+    },
+    {
+      "order": 2,
+      "section": "Los atajos de la mente",
+      "type": "video",
+      "title": "Los sesgos cognitivos explicados",
+      "author": "Dato Visual",
+      "why": "Un mapa visual de los sesgos más comunes.",
+      "concepts": [
+        "sesgos cognitivos"
+      ],
+      "video_id": "ow7zkYXg-y8",
+      "minutos": 16.3
+    },
+    {
+      "order": 3,
+      "section": "Los atajos de la mente",
+      "type": "video",
+      "title": "El sesgo de confirmación",
+      "author": "Psiconociendo | Isaac Toiz",
+      "why": "El sesgo que más nos engaña.",
+      "concepts": [
+        "sesgo de confirmación"
+      ],
+      "video_id": "HyitALVLFIQ",
+      "minutos": 12.6
+    },
+    {
+      "order": 4,
+      "section": "Argumentos que fallan",
+      "type": "video",
+      "title": "Qué son las falacias y cómo identificarlas",
+      "author": "Astraway",
+      "why": "Tipos de falacias con ejemplos.",
+      "concepts": [
+        "falacias",
+        "argumentos"
+      ],
+      "video_id": "snrFBHVNTk0",
+      "minutos": 12.0
+    },
+    {
+      "order": 5,
+      "section": "Argumentos que fallan",
+      "type": "video",
+      "title": "Las diez falacias más comunes",
+      "author": "Nacho Tellez",
+      "why": "Las que más oirás en una discusión.",
+      "concepts": [
+        "falacias comunes"
+      ],
+      "video_id": "2o_IH0VEDUs",
+      "minutos": 16.3
+    },
+    {
+      "order": 6,
+      "section": "Argumentos que fallan",
+      "type": "video",
+      "title": "¿Cuál es tu nivel detectando falacias?",
+      "author": "Roxana Kreimer",
+      "why": "Una filósofa te pone a prueba.",
+      "concepts": [
+        "práctica",
+        "lógica"
+      ],
+      "video_id": "mY1NJr9_VJU",
+      "minutos": 19.4
+    },
+    {
+      "order": 7,
+      "section": "¿Es verdad?",
+      "type": "video",
+      "title": "Cómo identificar noticias falsas",
+      "author": "GizTab",
+      "why": "Señales de una noticia falsa en WhatsApp y redes.",
+      "concepts": [
+        "noticias falsas",
+        "verificación"
+      ],
+      "video_id": "_MCLCIHspPE",
+      "minutos": 13.9
+    },
+    {
+      "order": 8,
+      "section": "¿Es verdad?",
+      "type": "video",
+      "title": "Guía para identificar noticias falsas",
+      "author": "SafetYA",
+      "why": "Pasos para comprobar antes de compartir.",
+      "concepts": [
+        "fuentes",
+        "comprobar"
+      ],
+      "video_id": "14tgoAFm9vE",
+      "minutos": 14.3
+    },
+    {
+      "order": 9,
+      "section": "¿Es verdad?",
+      "type": "video",
+      "title": "Sesgos, datos y una realidad a tu medida",
+      "author": "TEDx Talks",
+      "why": "Cómo los algoritmos refuerzan lo que ya crees.",
+      "concepts": [
+        "burbuja de filtro",
+        "algoritmos"
+      ],
+      "video_id": "bk08SfyXZz8",
+      "minutos": 14.5
+    },
+    {
+      "order": 10,
+      "section": "Decidir mejor",
+      "type": "video",
+      "title": "Cómo tomar mejores decisiones",
+      "author": "CuriosaMente",
+      "why": "Estrategias para pensar antes de elegir.",
+      "concepts": [
+        "toma de decisiones"
+      ],
+      "video_id": "3Ak5LjvNIME",
+      "minutos": 15.8
+    },
+    {
+      "order": 11,
+      "section": "Decidir mejor",
+      "type": "video",
+      "title": "Las distorsiones cognitivas",
+      "author": "Roxana Kreimer",
+      "why": "Errores de pensamiento que tuercen las decisiones.",
+      "concepts": [
+        "distorsiones cognitivas"
+      ],
+      "video_id": "oIoOtmxwmR8",
+      "minutos": 16.4
+    },
+    {
+      "order": 12,
+      "section": "Decidir mejor",
+      "type": "video",
+      "title": "Los sesgos cognitivos y la intolerancia",
+      "author": "TEDx Talks",
+      "why": "Ramón Ferro, sobre sesgos y desacuerdos.",
+      "concepts": [
+        "intolerancia",
+        "diálogo"
+      ],
+      "video_id": "GeqSIg9eN4M",
+      "minutos": 16.8
+    }
+  ]
+}

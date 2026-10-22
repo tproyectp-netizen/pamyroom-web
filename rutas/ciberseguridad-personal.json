@@ -1,0 +1,186 @@
+{
+  "slug": "ciberseguridad-personal",
+  "titulo": "Ciberseguridad personal",
+  "resumen": "Contraseñas que aguantan, estafas que se reconocen a tiempo y cuentas y datos protegidos, sin ser informático.",
+  "nivel": "Principiante",
+  "ritmo": "oro",
+  "estante": "tendencia",
+  "revisada": "2026-10-22",
+  "time_advice": "Veinte minutos al día, cuatro días por semana.",
+  "recommended_method": {
+    "name": "Técnica Pomodoro",
+    "reason": "Bloques cortos para practicar sin cansarte."
+  },
+  "criterios": {
+    "Contraseñas": "Puedo crear contraseñas fuertes y guardarlas en un gestor.",
+    "Estafas": "Puedo reconocer un mensaje falso antes de tocar nada.",
+    "Tus cuentas": "Puedo proteger mis cuentas con la verificación en dos pasos.",
+    "Tus datos": "Puedo reducir la información mía que está a la vista."
+  },
+  "steps": [
+    {
+      "order": 1,
+      "section": "Contraseñas",
+      "type": "video",
+      "title": "Tres errores con las contraseñas que comete casi todo el mundo",
+      "author": "María Aperador | Criminología y Ciberseguridad",
+      "why": "Una criminóloga explica los fallos más comunes.",
+      "concepts": [
+        "contraseñas",
+        "reutilizar"
+      ],
+      "video_id": "qcdOv9Isrtc",
+      "minutos": 14.2
+    },
+    {
+      "order": 2,
+      "section": "Contraseñas",
+      "type": "video",
+      "title": "Bitwarden desde cero: un gestor de contraseñas",
+      "author": "Tutos PC",
+      "why": "Guardar todas tus contraseñas en un sitio seguro.",
+      "concepts": [
+        "gestor de contraseñas"
+      ],
+      "video_id": "oR9LSlFEjUM",
+      "minutos": 15.4
+    },
+    {
+      "order": 3,
+      "section": "Contraseñas",
+      "type": "video",
+      "title": "Las mejores apps para guardar contraseñas",
+      "author": "La Manzana Mordida - Todo sobre Apple",
+      "why": "Comparativa para elegir la tuya.",
+      "concepts": [
+        "apps",
+        "comparativa"
+      ],
+      "video_id": "335et46hdNg",
+      "minutos": 16.7
+    },
+    {
+      "order": 4,
+      "section": "Estafas",
+      "type": "video",
+      "title": "Phishing, vishing y smishing: cómo prevenirlos",
+      "author": "Radar del Fraude",
+      "why": "Las estafas por correo, llamada y mensaje.",
+      "concepts": [
+        "phishing",
+        "smishing"
+      ],
+      "video_id": "cj8t5IDPjM8",
+      "minutos": 14.9
+    },
+    {
+      "order": 5,
+      "section": "Estafas",
+      "type": "video",
+      "title": "Un PDF malicioso en el correo: cómo detectarlo",
+      "author": "El Pingüino de Mario",
+      "why": "Un caso real, paso a paso.",
+      "concepts": [
+        "adjuntos",
+        "malware"
+      ],
+      "video_id": "eTb05tY6Txk",
+      "minutos": 12.0
+    },
+    {
+      "order": 6,
+      "section": "Estafas",
+      "type": "video",
+      "title": "Cómo evitar que te hackeen",
+      "author": "SupraPixel",
+      "why": "Hábitos que cierran las puertas más comunes.",
+      "concepts": [
+        "prevención"
+      ],
+      "video_id": "9_Kg5hWMxSI",
+      "minutos": 15.6
+    },
+    {
+      "order": 7,
+      "section": "Tus cuentas",
+      "type": "video",
+      "title": "Cómo proteger tu cuenta de WhatsApp",
+      "author": "María Aperador | Criminología y Ciberseguridad",
+      "why": "Ajustes que evitan que te roben la cuenta.",
+      "concepts": [
+        "WhatsApp",
+        "verificación en dos pasos"
+      ],
+      "video_id": "LgxKC8fZNRw",
+      "minutos": 15.4
+    },
+    {
+      "order": 8,
+      "section": "Tus cuentas",
+      "type": "video",
+      "title": "Mejorar la seguridad de tu Facebook",
+      "author": "ChicaGeek",
+      "why": "Ajustes de seguridad, uno a uno.",
+      "concepts": [
+        "Facebook",
+        "ajustes"
+      ],
+      "video_id": "BYX4PuIFv-E",
+      "minutos": 12.7
+    },
+    {
+      "order": 9,
+      "section": "Tus cuentas",
+      "type": "video",
+      "title": "Privacidad y autenticación en dos pasos en Facebook",
+      "author": "Thanta Teach & Doc",
+      "why": "Activar la segunda llave de tu cuenta.",
+      "concepts": [
+        "autenticación en dos pasos"
+      ],
+      "video_id": "-ara8dCku7I",
+      "minutos": 15.8
+    },
+    {
+      "order": 10,
+      "section": "Tus datos",
+      "type": "video",
+      "title": "Cómo proteger tu información personal",
+      "author": "María Aperador | Criminología y Ciberseguridad",
+      "why": "Qué datos tuyos buscan y cómo esconderlos.",
+      "concepts": [
+        "datos personales"
+      ],
+      "video_id": "ma0r-hfo22w",
+      "minutos": 18.4
+    },
+    {
+      "order": 11,
+      "section": "Tus datos",
+      "type": "video",
+      "title": "Consejos y herramientas para proteger tu PC y tus cuentas",
+      "author": "Tutos PC",
+      "why": "El equipo también es una puerta.",
+      "concepts": [
+        "actualizaciones",
+        "antivirus"
+      ],
+      "video_id": "rwLgOmiqlTw",
+      "minutos": 12.3
+    },
+    {
+      "order": 12,
+      "section": "Tus datos",
+      "type": "video",
+      "title": "Ciberseguridad básica: protege tu dinero y tus datos",
+      "author": "Unlock Summit",
+      "why": "Un repaso para cerrar la ruta.",
+      "concepts": [
+        "banca",
+        "resumen"
+      ],
+      "video_id": "DHMdlF9_v0Q",
+      "minutos": 20.0
+    }
+  ]
+}
