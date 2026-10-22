@@ -310,7 +310,7 @@ a:hover { color: var(--titulo); }
 
 /* ── Las rutas listas (2026-10-22) ──────────────────────────────────────── */
 
-/* Los estantes reutilizan .papeles y .papel; cada uno con su nombre y su línea. */
+/* Los estantes del índice reutilizan .papeles y .papel; cada uno con su nombre y su línea. */
 .estante { margin-top: 3rem; }
 .estante h2 { margin-bottom: .3rem; }
 .estante-linea { margin: 0 0 1.4rem; color: var(--bruma); }
@@ -325,34 +325,102 @@ a:hover { color: var(--titulo); }
 .chip.ritmo-oro { color: var(--oro); border-color: var(--oro); background: var(--oro-fondo); }
 .chip.ritmo-obsidiana { color: var(--texto); border-color: var(--obsidiana); background: var(--obsidiana-fondo); }
 
-/* El envío: el botón y lo que pasa al tocarlo, dicho debajo. */
+.ruta { padding-block: 2rem 4rem; }
+.volver.arriba { display: inline-block; margin: 0 0 1.5rem; }
+.borrador {
+  margin: 0 0 1.5rem; padding: .7rem 1rem; max-width: var(--lectura);
+  border: 1px dashed var(--brasa); border-radius: 12px; color: var(--brasa); font-weight: 600;
+}
+
+/* LA PORTADA: el título en grande con la luz de la geoda detrás, como PAMY en la portada. */
+.ruta-portada { position: relative; isolation: isolate; padding-bottom: 1rem; }
+.ruta-portada::before {
+  content: ""; position: absolute; z-index: -1; pointer-events: none;
+  top: -4rem; right: 0; width: min(40rem, 100%); aspect-ratio: 1;   /* dentro de su caja: fuera, ensanchaba la página */
+  background: radial-gradient(closest-side,
+    rgba(255, 106, 0, .26), rgba(255, 46, 136, .13) 50%, rgba(123, 63, 242, .07) 75%, rgba(123, 63, 242, 0) 100%);
+  animation: respira 9s ease-in-out infinite;
+}
+.ruta-portada h1 {
+  margin: .3rem 0 0; color: var(--titulo); font-weight: 700;
+  font-size: clamp(2.6rem, 9vw, 5.4rem); line-height: .97; letter-spacing: -.045em;
+  max-width: 13ch; text-wrap: balance;
+}
+.ruta-portada .bajada { max-width: 38rem; margin: 1.2rem 0 0; font-size: 1.15rem; }
+
+/* La constelación de los módulos: el progreso de la app (puntos y la luz al final), quieto. */
+.constelacion { display: block; width: 100%; max-width: 40rem; height: auto; margin: 1.6rem 0 .2rem; overflow: visible; }
+.cons-linea { fill: none; stroke: var(--bruma); stroke-opacity: .5; stroke-width: 2.5; stroke-dasharray: 1 11; stroke-linecap: round; }
+.cons-nodo { fill: var(--piedra); stroke: var(--bruma); stroke-opacity: .45; stroke-width: 2; }
+.cons-alma { fill: var(--brasa); }
+.alma-a { stop-color: var(--brasa); stop-opacity: .8; }
+.alma-b { stop-color: var(--magenta); stop-opacity: 0; }
+
+/* El envío: el botón y lo que pasa al tocarlo, dicho debajo. Fuera de Android, el QR. */
 .envio {
-  margin: 2rem 0 1rem; padding: 1.4rem 1.5rem; max-width: var(--lectura);
+  margin: 1.4rem 0 0; padding: 1.4rem 1.5rem; max-width: var(--lectura);
   background: var(--piedra); border: 1px solid var(--veta); border-radius: var(--radio);
 }
 .envio .boton { font-size: 1.05rem; padding-inline: 1.6rem; }
 .envio-nota { margin: .8rem 0 0; color: var(--bruma); font-size: .95rem; }
-.otro-aparato { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem; }
-.otro-aparato[hidden], .envio [hidden] { display: none; }
-.otro-aparato p { flex: 1 1 14rem; margin: 0; }
+.envio [hidden], .otro-aparato[hidden] { display: none; }
+.otro-aparato { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem; margin: 0; }
+.otro-aparato > div:last-child { flex: 1 1 14rem; }
+.otro-aparato p { margin: 0; }
+.otro-titulo { margin: 0 0 .3rem !important; color: var(--titulo); font-weight: 600; font-size: 1.1rem; }
 /* El QR sobre blanco: sin contraste, la cámara no lo lee. */
 .qr { width: 9.5rem; padding: .5rem; background: #FFFFFF; border-radius: 12px; flex: none; }
 .qr svg { display: block; width: 100%; height: auto; }
 
-.ruta .modulo { margin-top: 3rem; max-width: var(--lectura); }
-.ruta .modulo h2 { margin: 0 0 1.4rem; font-size: clamp(1.35rem, 2.6vw, 1.75rem); }
+/* EL CAMINO: cada módulo es un nodo de la constelación; el último lleva la luz. */
+.camino { margin-top: 4.5rem; max-width: 46rem; }
+.camino h2 {
+  margin: 0 0 2.2rem; color: var(--titulo); max-width: 24ch;
+  font-size: clamp(1.6rem, 3.6vw, 2.4rem); line-height: 1.12; letter-spacing: -.03em; font-weight: 700;
+}
+.modulos { list-style: none; margin: 0; padding: 0; }
+.modulo { position: relative; display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); gap: 1.2rem; padding-bottom: 2.6rem; }
+.modulo::before { content: ""; position: absolute; left: 1.55rem; top: 3.6rem; bottom: .6rem; border-left: 2px dotted var(--veta); }
+.modulo:last-child { padding-bottom: 0; }
+.modulo:last-child::before { display: none; }
+.nodo {
+  width: 3.2rem; height: 3.2rem; border-radius: 50%; display: grid; place-items: center;
+  background: var(--piedra); border: 1px solid var(--veta);
+  color: var(--titulo); font-weight: 700; font-size: 1rem; letter-spacing: .02em;
+}
+.modulo:last-child .nodo {
+  background: var(--casa); border-color: transparent;
+  box-shadow: 0 0 0 4px var(--noche), 0 0 28px 2px rgba(255, 46, 136, .45);
+}
+.modulo-cuerpo h3 { margin: .45rem 0 0; color: var(--titulo); font-size: 1.4rem; font-weight: 600; letter-spacing: -.015em; }
 /* Lo que la persona podrá hacer al terminar el módulo: la frase que se lleva. */
-.ruta .modulo h2:has(+ .criterio) { margin-bottom: .4rem; }
-.criterio { margin: 0 0 1.4rem; color: var(--oro); font-weight: 600; }
-.recorrido .autor { margin: .15rem 0 0; color: var(--bruma); font-size: .92rem; }
-.recorrido .ver { display: inline-block; margin-top: .35rem; font-weight: 600; font-size: .95rem; }
-.ruta .nota { max-width: var(--lectura); margin-top: 3rem; }
-.ruta .nota ul { margin: .5rem 0; padding-left: 1.2rem; }
-.volver.arriba { margin: 0 0 1.5rem; }
+.criterio { margin: .35rem 0 1rem; color: var(--oro); font-weight: 600; }
+.lecciones { list-style: none; margin: 0; padding: 0; display: grid; gap: .45rem; }
+.lecciones li {
+  position: relative; padding: .75rem 1rem .75rem 2.3rem;
+  background: var(--piedra); border: 1px solid var(--veta); border-radius: 14px;
+  color: var(--texto); font-size: .98rem; line-height: 1.45;
+}
+.lecciones li::before {
+  content: ""; position: absolute; left: 1rem; top: 50%; width: .45rem; height: .45rem; margin-top: -.225rem;
+  border-radius: 50%; background: var(--bruma); opacity: .7;
+}
 
-.borrador {
-  margin: 0 0 1.5rem; padding: .7rem 1rem; max-width: var(--lectura);
-  border: 1px dashed var(--brasa); border-radius: 12px; color: var(--brasa); font-weight: 600;
+.fuentes { max-width: 46rem; margin-top: 3.5rem; }
+.fuentes ul { margin: .5rem 0; padding-left: 1.2rem; }
+
+/* EL CIERRE: la misma acción, al final, con el filo de la casa. */
+.cierre {
+  margin: 4rem 0 2rem; padding: 2rem 1.6rem; max-width: 46rem; border-radius: var(--radio);
+  border: 1px solid transparent;
+  background: linear-gradient(var(--piedra), var(--piedra)) padding-box, var(--casa) border-box;
+}
+.cierre h2 { margin: 0; color: var(--titulo); font-size: clamp(1.7rem, 4vw, 2.4rem); line-height: 1.1; letter-spacing: -.03em; font-weight: 700; }
+.cierre > p { margin: .6rem 0 0; max-width: 36rem; }
+.cierre .envio { background: none; border: 0; padding: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ruta-portada::before { animation: none; }
 }
 
 /* ── Movimiento y pantallas pequeñas ────────────────────────────────────── */
