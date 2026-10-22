@@ -38,6 +38,10 @@
   --violeta: #7B3FF2;      /* PathPrimary */
   --violeta-claro: #A98BFF;/* PathPrimaryBright — enlaces: el violeta base no llega a AA */
   --casa: linear-gradient(120deg, #FF6A00, #FF2E88 55%, #7B3FF2);
+  --oro: #F5C34D;          /* PathGold — el ritmo Oro */
+  --oro-fondo: #26200F;    /* PathGoldBg */
+  --obsidiana: #3A3450;    /* el primer tono de ObsidianBrush (CreateRoutePage) */
+  --obsidiana-fondo: #1A1526;
 
   --ancho: 68rem;
   --lectura: 42rem;
@@ -303,6 +307,53 @@ a:hover { color: var(--titulo); }
 }
 
 .volver { display: inline-block; margin-top: 3rem; }
+
+/* ── Las rutas listas (2026-10-22) ──────────────────────────────────────── */
+
+/* Los estantes reutilizan .papeles y .papel; cada uno con su nombre y su línea. */
+.estante { margin-top: 3rem; }
+.estante h2 { margin-bottom: .3rem; }
+.estante-linea { margin: 0 0 1.4rem; color: var(--bruma); }
+
+/* Las fichas de una ruta: su ritmo, su nivel y su tamaño. El ritmo va en su color de la app. */
+.chips { list-style: none; margin: .6rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .45rem; }
+.chip {
+  padding: .3rem .8rem; border-radius: 999px;
+  border: 1px solid var(--veta); background: var(--piedra);
+  color: var(--texto); font-size: .85rem; font-weight: 600;
+}
+.chip.ritmo-oro { color: var(--oro); border-color: var(--oro); background: var(--oro-fondo); }
+.chip.ritmo-obsidiana { color: var(--texto); border-color: var(--obsidiana); background: var(--obsidiana-fondo); }
+
+/* El envío: el botón y lo que pasa al tocarlo, dicho debajo. */
+.envio {
+  margin: 2rem 0 1rem; padding: 1.4rem 1.5rem; max-width: var(--lectura);
+  background: var(--piedra); border: 1px solid var(--veta); border-radius: var(--radio);
+}
+.envio .boton { font-size: 1.05rem; padding-inline: 1.6rem; }
+.envio-nota { margin: .8rem 0 0; color: var(--bruma); font-size: .95rem; }
+.otro-aparato { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem; }
+.otro-aparato[hidden], .envio [hidden] { display: none; }
+.otro-aparato p { flex: 1 1 14rem; margin: 0; }
+/* El QR sobre blanco: sin contraste, la cámara no lo lee. */
+.qr { width: 9.5rem; padding: .5rem; background: #FFFFFF; border-radius: 12px; flex: none; }
+.qr svg { display: block; width: 100%; height: auto; }
+
+.ruta .modulo { margin-top: 3rem; max-width: var(--lectura); }
+.ruta .modulo h2 { margin: 0 0 1.4rem; font-size: clamp(1.35rem, 2.6vw, 1.75rem); }
+/* Lo que la persona podrá hacer al terminar el módulo: la frase que se lleva. */
+.ruta .modulo h2:has(+ .criterio) { margin-bottom: .4rem; }
+.criterio { margin: 0 0 1.4rem; color: var(--oro); font-weight: 600; }
+.recorrido .autor { margin: .15rem 0 0; color: var(--bruma); font-size: .92rem; }
+.recorrido .ver { display: inline-block; margin-top: .35rem; font-weight: 600; font-size: .95rem; }
+.ruta .nota { max-width: var(--lectura); margin-top: 3rem; }
+.ruta .nota ul { margin: .5rem 0; padding-left: 1.2rem; }
+.volver.arriba { margin: 0 0 1.5rem; }
+
+.borrador {
+  margin: 0 0 1.5rem; padding: .7rem 1rem; max-width: var(--lectura);
+  border: 1px dashed var(--brasa); border-radius: 12px; color: var(--brasa); font-weight: 600;
+}
 
 /* ── Movimiento y pantallas pequeñas ────────────────────────────────────── */
 

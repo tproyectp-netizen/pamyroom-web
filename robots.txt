@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /confirmar/
+Disallow: /cuenta-confirmada/
+
+Sitemap: https://pamyroom.com/sitemap.xml
