@@ -12,15 +12,15 @@
     "reason": "Repasar los días 2, 3, 5 y 7 fija lo que ves."
   },
   "criterios": {
-    "Los atajos de la mente": "Puedo reconocer tres sesgos cuando aparecen en mí.",
-    "Argumentos que fallan": "Puedo detectar una falacia en una discusión.",
+    "Los sesgos": "Puedo reconocer tres sesgos cuando aparecen en mí.",
+    "Las falacias": "Puedo detectar una falacia en una discusión.",
     "¿Es verdad?": "Puedo comprobar una noticia antes de compartirla.",
     "Decidir mejor": "Puedo tomar una decisión importante con un método y no por impulso."
   },
   "steps": [
     {
       "order": 1,
-      "section": "Los atajos de la mente",
+      "section": "Los sesgos",
       "type": "video",
       "title": "Heurísticas y sesgos: Kahneman y Tversky",
       "author": "La Travesía",
@@ -34,7 +34,7 @@
     },
     {
       "order": 2,
-      "section": "Los atajos de la mente",
+      "section": "Los sesgos",
       "type": "video",
       "title": "Los sesgos cognitivos explicados",
       "author": "Dato Visual",
@@ -47,7 +47,7 @@
     },
     {
       "order": 3,
-      "section": "Los atajos de la mente",
+      "section": "Los sesgos",
       "type": "video",
       "title": "El sesgo de confirmación",
       "author": "Psiconociendo | Isaac Toiz",
@@ -60,7 +60,7 @@
     },
     {
       "order": 4,
-      "section": "Argumentos que fallan",
+      "section": "Las falacias",
       "type": "video",
       "title": "Qué son las falacias y cómo identificarlas",
       "author": "Astraway",
@@ -74,7 +74,7 @@
     },
     {
       "order": 5,
-      "section": "Argumentos que fallan",
+      "section": "Las falacias",
       "type": "video",
       "title": "Las diez falacias más comunes",
       "author": "Nacho Tellez",
@@ -87,7 +87,7 @@
     },
     {
       "order": 6,
-      "section": "Argumentos que fallan",
+      "section": "Las falacias",
       "type": "video",
       "title": "¿Cuál es tu nivel detectando falacias?",
       "author": "Roxana Kreimer",

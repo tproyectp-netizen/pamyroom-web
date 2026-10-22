@@ -12,7 +12,7 @@
     "reason": "Bloques cortos para practicar sin cansarte."
   },
   "criterios": {
-    "Cómo funciona un hábito": "Puedo señalar la señal, la rutina y la recompensa de un hábito mío.",
+    "Cómo es un hábito": "Puedo señalar la señal, la rutina y la recompensa de un hábito mío.",
     "Empezar pequeño": "Puedo convertir un propósito grande en un hábito de dos minutos.",
     "Sistemas, no metas": "Puedo diseñar mi entorno para que el hábito cueste menos.",
     "Sostenerlo": "Puedo seguir con un hábito los días que no tengo ganas."
@@ -20,7 +20,7 @@
   "steps": [
     {
       "order": 1,
-      "section": "Cómo funciona un hábito",
+      "section": "Cómo es un hábito",
       "type": "video",
       "title": "La neurobiología del hábito",
       "author": "Jorge Benito",
@@ -35,7 +35,7 @@
     },
     {
       "order": 2,
-      "section": "Cómo funciona un hábito",
+      "section": "Cómo es un hábito",
       "type": "video",
       "title": "Hábitos basados en neurociencia",
       "author": "Estefany Rivv",
@@ -49,7 +49,7 @@
     },
     {
       "order": 3,
-      "section": "Cómo funciona un hábito",
+      "section": "Cómo es un hábito",
       "type": "video",
       "title": "Por qué leer Hábitos atómicos",
       "author": "Psi Mammoliti",

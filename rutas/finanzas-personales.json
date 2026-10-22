@@ -12,15 +12,15 @@
     "reason": "Repasar los días 2, 3, 5 y 7 fija lo que ves."
   },
   "criterios": {
-    "A dónde va tu dinero": "Puedo hacer un presupuesto con mis ingresos y gastos reales.",
+    "Tu dinero hoy": "Puedo hacer un presupuesto con mis ingresos y gastos reales.",
     "Ahorrar sin sufrir": "Puedo calcular y empezar mi fondo de emergencia.",
     "Salir de deudas": "Puedo ordenar mis deudas y elegir cuál pagar primero.",
-    "El tiempo a tu favor": "Puedo explicar el interés compuesto y por qué conviene empezar pronto."
+    "Interés compuesto": "Puedo explicar el interés compuesto y por qué conviene empezar pronto."
   },
   "steps": [
     {
       "order": 1,
-      "section": "A dónde va tu dinero",
+      "section": "Tu dinero hoy",
       "type": "video",
       "title": "Cómo crear un presupuesto personal",
       "author": "Andres Garza",
@@ -34,7 +34,7 @@
     },
     {
       "order": 2,
-      "section": "A dónde va tu dinero",
+      "section": "Tu dinero hoy",
       "type": "video",
       "title": "Hacer un presupuesto desde cero",
       "author": "Luis Mi Negocios",
@@ -48,7 +48,7 @@
     },
     {
       "order": 3,
-      "section": "A dónde va tu dinero",
+      "section": "Tu dinero hoy",
       "type": "video",
       "title": "Cómo organizo mi dinero",
       "author": "Finanzas con Ross",
@@ -144,7 +144,7 @@
     },
     {
       "order": 10,
-      "section": "El tiempo a tu favor",
+      "section": "Interés compuesto",
       "type": "video",
       "title": "El interés compuesto, explicado",
       "author": "Juan Ramón Rallo",
@@ -157,7 +157,7 @@
     },
     {
       "order": 11,
-      "section": "El tiempo a tu favor",
+      "section": "Interés compuesto",
       "type": "video",
       "title": "Interés simple frente a interés compuesto",
       "author": "Andres Garza",
@@ -171,7 +171,7 @@
     },
     {
       "order": 12,
-      "section": "El tiempo a tu favor",
+      "section": "Interés compuesto",
       "type": "video",
       "title": "Arreglar tus finanzas en seis meses",
       "author": "Júlia Marva",

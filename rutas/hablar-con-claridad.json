@@ -15,7 +15,7 @@
     "Ordenar la idea": "Puedo decir mi idea principal en una frase antes de hablar.",
     "Tu voz": "Puedo hablar dos minutos con fluidez y sin muletillas.",
     "Los nervios": "Puedo calmar los nervios antes y durante una exposición.",
-    "Contar una historia": "Puedo contar una historia breve que la gente recuerde."
+    "Contar historias": "Puedo contar una historia breve que la gente recuerde."
   },
   "steps": [
     {
@@ -145,7 +145,7 @@
     },
     {
       "order": 10,
-      "section": "Contar una historia",
+      "section": "Contar historias",
       "type": "video",
       "title": "Storytelling: el personaje eres tú",
       "author": "TEDx Talks",
@@ -159,7 +159,7 @@
     },
     {
       "order": 11,
-      "section": "Contar una historia",
+      "section": "Contar historias",
       "type": "video",
       "title": "Recursos narrativos: cómo contar una historia",
       "author": "Aprendercine.com",
@@ -173,7 +173,7 @@
     },
     {
       "order": 12,
-      "section": "Contar una historia",
+      "section": "Contar historias",
       "type": "video",
       "title": "Comunica, conecta y hazte recordar",
       "author": "TEDx Talks",

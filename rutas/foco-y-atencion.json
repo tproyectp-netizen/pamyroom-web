@@ -12,7 +12,7 @@
     "reason": "Bloques cortos para practicar sin cansarte."
   },
   "criterios": {
-    "Por qué te distraes": "Puedo explicar qué le pasa a mi atención con el móvil y las redes.",
+    "La distracción": "Puedo explicar qué le pasa a mi atención con el móvil y las redes.",
     "Tu entorno": "Puedo preparar mi espacio y mi móvil para una hora sin interrupciones.",
     "Trabajo profundo": "Puedo reservar y proteger un rato de trabajo profundo.",
     "Volver al foco": "Puedo recuperar la concentración cuando la pierdo."
@@ -20,7 +20,7 @@
   "steps": [
     {
       "order": 1,
-      "section": "Por qué te distraes",
+      "section": "La distracción",
       "type": "video",
       "title": "Cómo recuperar tu atención según la neurociencia",
       "author": "DR LA ROSA",
@@ -34,7 +34,7 @@
     },
     {
       "order": 2,
-      "section": "Por qué te distraes",
+      "section": "La distracción",
       "type": "video",
       "title": "La adicción al celular explicada por la neurociencia",
       "author": "Dra Alicia Vargas",
@@ -48,7 +48,7 @@
     },
     {
       "order": 3,
-      "section": "Por qué te distraes",
+      "section": "La distracción",
       "type": "video",
       "title": "Cómo nos manipulan en las redes sociales",
       "author": "TEDx Talks",

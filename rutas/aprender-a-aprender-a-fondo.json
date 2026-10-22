@@ -12,14 +12,14 @@
     "reason": "Repasar los días 2, 3, 5 y 7 fija lo que ves."
   },
   "criterios": {
-    "Cómo aprende el cerebro": "Puedo explicar los pilares que hacen que el cerebro aprenda.",
+    "Cómo aprendemos": "Puedo explicar los pilares que hacen que el cerebro aprenda.",
     "Memoria y estudio": "Puedo elegir cómo estudiar según cómo funciona la memoria.",
-    "Motivación y constancia": "Puedo sostener el estudio cuando la motivación baja."
+    "Seguir con ganas": "Puedo sostener el estudio cuando la motivación baja."
   },
   "steps": [
     {
       "order": 1,
-      "section": "Cómo aprende el cerebro",
+      "section": "Cómo aprendemos",
       "type": "video",
       "title": "Los cuatro pilares del aprendizaje, con Stanislas Dehaene",
       "author": "AprendemosJuntos",
@@ -34,7 +34,7 @@
     },
     {
       "order": 2,
-      "section": "Cómo aprende el cerebro",
+      "section": "Cómo aprendemos",
       "type": "video",
       "title": "Neurociencia y educación, con David Bueno",
       "author": "ISEP ",
@@ -76,7 +76,7 @@
     },
     {
       "order": 5,
-      "section": "Motivación y constancia",
+      "section": "Seguir con ganas",
       "type": "video",
       "title": "La motivación por aprender, con Héctor Ruiz Martín",
       "author": "Fundación Promaestro",
@@ -90,7 +90,7 @@
     },
     {
       "order": 6,
-      "section": "Motivación y constancia",
+      "section": "Seguir con ganas",
       "type": "video",
       "title": "Cómo dejar de procrastinar: conversación con un experto en foco",
       "author": "Tengo un Plan",

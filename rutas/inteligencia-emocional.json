@@ -13,8 +13,8 @@
   },
   "criterios": {
     "Qué es": "Puedo explicar qué es la inteligencia emocional y para qué me sirve.",
-    "Regular lo que sientes": "Puedo bajar la intensidad de una emoción antes de reaccionar.",
-    "Ponerte en su lugar": "Puedo escuchar a alguien entendiendo lo que siente.",
+    "Regular emociones": "Puedo bajar la intensidad de una emoción antes de reaccionar.",
+    "Empatía": "Puedo escuchar a alguien entendiendo lo que siente.",
     "Decirlo bien": "Puedo decir lo que pienso, o un no, sin herir ni callarme."
   },
   "steps": [
@@ -61,7 +61,7 @@
     },
     {
       "order": 4,
-      "section": "Regular lo que sientes",
+      "section": "Regular emociones",
       "type": "video",
       "title": "Regulación emocional: cómo manejar las emociones",
       "author": "Píldoras de Psicología",
@@ -74,7 +74,7 @@
     },
     {
       "order": 5,
-      "section": "Regular lo que sientes",
+      "section": "Regular emociones",
       "type": "video",
       "title": "Autorregulación de tus emociones",
       "author": "TEDx Talks",
@@ -87,7 +87,7 @@
     },
     {
       "order": 6,
-      "section": "Regular lo que sientes",
+      "section": "Regular emociones",
       "type": "video",
       "title": "Usar la respiración para calmar la mente",
       "author": "Jorge Benito",
@@ -101,7 +101,7 @@
     },
     {
       "order": 7,
-      "section": "Ponerte en su lugar",
+      "section": "Empatía",
       "type": "video",
       "title": "Empatía: qué es y cuáles son sus dimensiones",
       "author": "Psicóloga Esther Blázquez",
@@ -115,7 +115,7 @@
     },
     {
       "order": 8,
-      "section": "Ponerte en su lugar",
+      "section": "Empatía",
       "type": "video",
       "title": "¿Qué es la empatía y para qué sirve?",
       "author": "Dr. Luis Moya Albiol Psicología Neurocriminología ",
@@ -129,7 +129,7 @@
     },
     {
       "order": 9,
-      "section": "Ponerte en su lugar",
+      "section": "Empatía",
       "type": "video",
       "title": "Las cuatro claves de la empatía",
       "author": "Enlace Psicología",
