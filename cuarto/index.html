@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>El cuarto por dentro — PamyRoom</title>
+  <meta name="description" content="Recorre el cuarto de PamyRoom: tu ruta, el vivero, tu estudio y la pizarra, cada uno en su sitio.">
+  <meta name="theme-color" content="#0A0A0D">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:url" content="https://pamyroom.com/cuarto/">
+  <meta property="og:title" content="El cuarto de PamyRoom, por dentro">
+  <meta property="og:description" content="Lo que aprendes tiene su sitio. Baja y entra.">
+  <meta property="og:image" content="https://pamyroom.com/img/cuarto-1400.jpg">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+  <link rel="preload" href="v/cuarto.webp" as="image">
+  <link rel="stylesheet" href="../estilos.css">
+</head>
+<body class="cuarto-por-dentro">
+  <!-- EL CUARTO POR DENTRO (2026-10-22). Una página aparte, a la que se entra a propósito
+       desde la portada: el motor de scroll-world ocupa la página entera y NN/g desaconseja
+       secuestrar el scroll de una página que se lee (vault, 03-Backlog/La web nueva de
+       PamyRoom). La cámara de hoy es 2D, hecha con ffmpeg a partir del dibujo de la app
+       (scratchpad: vuelo.py); con «reducir movimiento» el motor no carga los vídeos y
+       enseña los fotogramas quietos. -->
+  <h1 class="solo-lector">El cuarto de PamyRoom, por dentro</h1>
+  <div id="mundo"></div>
+
+  <noscript>
+    <div class="contenedor seccion">
+      <p class="rotulo">El cuarto por dentro</p>
+      <h2>Lo que aprendes tiene su sitio.</h2>
+      <img src="../img/cuarto-1400.jpg" width="1400" height="933"
+           alt="El cuarto de PamyRoom de noche: un escritorio con su monitor, estantes con libros, plantas y un corcho con notas.">
+      <p>Tu ruta en la pantalla, el vivero en la planta, tu estudio en el estante y la pizarra en el corcho.</p>
+      <a class="boton" href="../">Volver al inicio</a>
+    </div>
+  </noscript>
+
+  <script src="../js/scroll-world.js"></script>
+  <script>
+    (function () {
+      var probar = 'mailto:pamyroomsupport@gmail.com?subject=Quiero%20probar%20PamyRoom&body=Hola%3A%0A%0AQuiero%20probar%20PamyRoom%20antes%20de%20que%20salga.%20Te%20escribo%20desde%20el%20correo%20de%20mi%20cuenta%20de%20Google%20(el%20que%20uso%20en%20Play%20Store).%0A';
+      var mundo = document.getElementById('mundo');
+      mountScrollWorld(mundo, {
+        brand: { name: '', href: '../' },
+        cta: { label: 'Quiero probarla', href: probar },
+        hint: 'Baja para entrar',
+        nav: true,
+        atmosphere: true,
+        diveScroll: 1.3,
+        connScroll: 0.9,
+        sections: [
+          { id: 'cuarto', label: 'El cuarto', accent: 'var(--magenta)', scroll: 1.6, linger: 0.4,
+            still: 'v/cuarto.webp', stillMobile: 'v/cuarto-m.webp', clip: 'v/cuarto.mp4', clipMobile: 'v/cuarto-m.mp4',
+            eyebrow: 'Tu cuarto', title: 'Lo que aprendes tiene su sitio.',
+            body: 'Cada objeto guarda una parte de lo que vas cerrando. Baja y entra.' },
+          { id: 'ruta', label: 'Tu ruta', accent: 'var(--brasa)', linger: 0.4,
+            still: 'v/ruta.webp', stillMobile: 'v/ruta-m.webp', clip: 'v/ruta.mp4', clipMobile: 'v/ruta-m.mp4',
+            eyebrow: 'En la pantalla', title: 'Tu ruta.',
+            body: 'La que estás cursando, módulo a módulo. Cada módulo cierra con preguntas que salen de lo que dicen los videos.' },
+          { id: 'vivero', label: 'Vivero', accent: 'var(--verde-claro)', linger: 0.4,
+            still: 'v/vivero.webp', stillMobile: 'v/vivero-m.webp', clip: 'v/vivero.mp4', clipMobile: 'v/vivero-m.mp4',
+            eyebrow: 'En la planta', title: 'El vivero.',
+            body: '¿Viste un video que te sirve? Compártelo con PamyRoom desde YouTube y aquí espera su momento.' },
+          { id: 'estudio', label: 'Estudio', accent: 'var(--violeta-claro)', linger: 0.4,
+            still: 'v/estudio.webp', stillMobile: 'v/estudio-m.webp', clip: 'v/estudio.mp4', clipMobile: 'v/estudio-m.mp4',
+            eyebrow: 'En el estante', title: 'Tu estudio.',
+            body: 'Tus módulos y los exámenes de lo que trajiste, siempre a mano.' },
+          { id: 'pizarra', label: 'Pizarra', accent: 'var(--oro)', scroll: 1.6, linger: 0.3,
+            still: 'v/pizarra.webp', stillMobile: 'v/pizarra-m.webp', clip: 'v/pizarra.mp4', clipMobile: 'v/pizarra-m.mp4',
+            eyebrow: 'En el corcho', title: 'La pizarra.',
+            body: 'Las palabras clave de cada video, a la vista. Lo que te cuesta vuelve en un repaso.',
+            cta: { primary: { label: 'Quiero probarla', href: probar }, secondary: { label: 'Volver al inicio', href: '../' } } }
+        ],
+        connectors: ['v/puente-0.mp4', 'v/puente-1.mp4', 'v/puente-2.mp4', 'v/puente-3.mp4'],
+        connectorsMobile: ['v/puente-0-m.mp4', 'v/puente-1-m.mp4', 'v/puente-2-m.mp4', 'v/puente-3-m.mp4']
+      });
+      // La marca la pinta el CSS («PAMY» + «ROOM»); el enlace necesita su nombre para el lector.
+      var marca = mundo.querySelector('.sw-brand');
+      if (marca) marca.setAttribute('aria-label', 'PamyRoom, inicio');
+    })();
+  </script>
+</body>
+</html>

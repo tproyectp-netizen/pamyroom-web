@@ -42,6 +42,12 @@
   --oro-fondo: #26200F;    /* PathGoldBg */
   --obsidiana: #3A3450;    /* el primer tono de ObsidianBrush (CreateRoutePage) */
   --obsidiana-fondo: #1A1526;
+  --verde-claro: #5DD39E;  /* PathSuccess — el acierto y el estante «Carreras con futuro» */
+  /* Las piedras teñidas de la app (BannerPamy): el fondo de cada bloque de color. */
+  --tinte-brasa: #2A1608;   /* PathEmberBg */
+  --tinte-verde: #182A20;   /* PathSuccessBg */
+  --tinte-violeta: #251532; /* PathCourseBg */
+  --tinte-magenta: #2A1A1E; /* PathVideoBg */
 
   --ancho: 68rem;
   --lectura: 42rem;
@@ -149,15 +155,17 @@ a:hover { color: var(--titulo); }
   max-width: 34rem; margin: 1.4rem 0 0; color: var(--texto); font-size: 1.125rem;
 }
 
-.descarga {
-  display: inline-flex; align-items: center; gap: .7rem;
-  margin-top: 2rem; padding: .85rem 1.4rem;
-  border: 1px solid var(--veta); border-radius: 999px;
-  background: var(--piedra);
-  color: var(--titulo); font-weight: 600; font-size: 1rem;
+/* Una sola acción arriba; lo secundario va en texto, no en otro botón. */
+.cta-portada {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: .5rem 1.4rem; margin-top: 2rem;
 }
-.descarga svg { width: 1.25rem; height: 1.25rem; flex: none; }
-.descarga-nota { margin: .7rem 0 0; color: var(--bruma); font-size: .9rem; }
+.enlace-suave {
+  display: inline-block; padding: .8rem .2rem;          /* 48 px de dedo */
+  color: var(--texto); font-weight: 600; text-decoration-color: var(--veta);
+}
+.enlace-suave:hover { color: var(--titulo); text-decoration-color: currentColor; }
+.cta-nota { margin: .6rem 0 0; max-width: 30rem; color: var(--bruma); font-size: .95rem; }
 
 /* ── LA GRIETA ──────────────────────────────────────────────────────────── */
 
@@ -227,8 +235,6 @@ a:hover { color: var(--titulo); }
 .papel span { font-size: .95rem; }
 .papel .flecha { margin-top: auto; padding-top: .8rem; color: var(--violeta-claro); font-weight: 600; font-size: .95rem; }
 
-.contacto { color: var(--texto); }
-
 /* ── El pie ─────────────────────────────────────────────────────────────── */
 
 .pie {
@@ -290,7 +296,18 @@ a:hover { color: var(--titulo); }
   text-decoration: none; cursor: pointer;
 }
 .boton:hover { border-color: #33333F; color: var(--titulo); }
-.boton.fuerte { background: var(--casa); border-color: transparent; color: #FFFFFF; }
+/* El botón de la acción principal: el degradado de la casa con tinta NOCHE, como el CTA
+   del hero de la app (MASTER.md). El blanco no llega al contraste sobre la brasa (2,9:1);
+   la noche da 3,6:1 en el extremo violeta y 7:1 en la brasa, y con texto grande en negrita
+   (19 px) eso es AA. */
+.boton.fuerte {
+  background: var(--casa); border-color: transparent; color: var(--noche);
+  font-weight: 700; font-size: 1.2rem; min-height: 56px; padding-inline: 1.8rem;
+  box-shadow: 0 10px 30px -12px rgba(255, 46, 136, .6);
+}
+.boton.fuerte:hover { color: var(--noche); filter: brightness(1.07); }
+.boton { transition: transform .2s cubic-bezier(.32, .72, 0, 1), border-color .2s ease, filter .2s ease; }
+.boton:active { transform: scale(.98); }
 
 .documento h2 {
   margin: 2.5rem 0 .6rem; color: var(--violeta-claro);
@@ -423,17 +440,612 @@ a:hover { color: var(--titulo); }
   .ruta-portada::before { animation: none; }
 }
 
+/* ── La portada: la pregunta, los pasos, el cuarto (2026-10-22) ─────────── */
+
+/* Por qué es así, con sus fuentes: vault, 03-Backlog/La web nueva de PamyRoom.
+   La regla que manda: NADA de texto que aparece al hacer scroll (NN/g, 2017: la gente
+   lo vive como una espera). Lo que se mueve responde a un toque o es la luz de PAMY. */
+
+/* LA PREGUNTA: la opción de un examen de la app (QuizUi) — elegida y destapada. */
+.quiz {
+  max-width: var(--lectura); padding: 1.6rem 1.4rem;
+  background: var(--piedra); border: 1px solid var(--veta); border-radius: var(--radio);
+}
+.quiz-enunciado {
+  margin: 0 0 1.2rem; color: var(--titulo);
+  font-size: 1.25rem; font-weight: 600; line-height: 1.4; letter-spacing: -.01em;
+}
+.quiz-opciones { display: grid; gap: .6rem; }
+.opcion {
+  display: flex; align-items: center; gap: .9rem; width: 100%; min-height: 56px;
+  padding: .7rem 1rem; text-align: left;
+  background: var(--noche); border: 1px solid var(--veta); border-radius: 14px;
+  color: var(--texto); font: inherit; font-size: 1rem; line-height: 1.4; cursor: pointer;
+  transition: border-color .2s ease, background-color .2s ease, opacity .2s ease,
+              transform .2s cubic-bezier(.32, .72, 0, 1);
+}
+.opcion:hover { border-color: #33333F; color: var(--titulo); }
+.opcion:active { transform: scale(.99); }
+.opcion-letra {
+  flex: none; display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%;
+  background: var(--piedra); border: 1px solid var(--veta);
+  color: var(--bruma); font-weight: 700; font-size: .9rem;
+}
+/* Al contestar: la buena en verde y la elegida marcada. La equivocada NO va en rojo:
+   elegir releer es lo que hace casi todo el mundo, y la app no juzga (La voz de PAMY). */
+.contestado .opcion { cursor: default; }
+.contestado .opcion:active { transform: none; }
+.contestado .opcion:not(.correcta):not(.elegida) { opacity: .5; }
+.opcion.elegida { border-color: var(--bruma); color: var(--titulo); }
+.opcion.correcta { border-color: var(--verde-claro); background: var(--tinte-verde); color: var(--titulo); }
+.opcion.correcta .opcion-letra { background: var(--verde-claro); border-color: transparent; color: var(--noche); }
+.quiz-cuerpo {
+  margin-top: 1.4rem; padding-top: 1.2rem; border-top: 1px solid var(--veta);
+  animation: destapa .4s cubic-bezier(.32, .72, 0, 1);
+}
+.quiz-cuerpo p, .quiz noscript p { margin: 0 0 .7rem; }
+.quiz-veredicto { color: var(--titulo); font-weight: 600; font-size: 1.1rem; }
+.quiz-moraleja { color: var(--oro); font-weight: 600; }
+.fuente { color: var(--bruma); font-size: .9rem; }
+.quiz-cuerpo .fuente { margin-bottom: 0; }
+@keyframes destapa { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+/* LOS PASOS: piedras teñidas, una por color de la casa, con su número grande y la
+   pantalla de verdad dibujada arriba. Radio anidado: 20 de la piedra − 8 de margen = 12. */
+.pasos { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+@media (min-width: 52rem) { .pasos { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.paso {
+  --acento: var(--brasa); --tinte: var(--tinte-brasa);
+  display: flex; flex-direction: column;
+  padding: .5rem .5rem 1.5rem; border-radius: var(--radio);
+  background: var(--tinte);
+  border: 1px solid var(--veta);
+  border-color: color-mix(in srgb, var(--acento) 24%, transparent);
+}
+.paso-verde { --acento: var(--verde-claro); --tinte: var(--tinte-verde); }
+.paso-violeta { --acento: var(--violeta-claro); --tinte: var(--tinte-violeta); }
+.escena {
+  height: 11rem; margin-bottom: 1.2rem; padding: 1rem 1.1rem;
+  display: flex; flex-direction: column; justify-content: center; gap: .55rem;
+  background: var(--noche); border-radius: 12px;
+}
+.paso-numero {
+  margin: 0 1rem .3rem; color: var(--acento);
+  font-weight: 700; font-size: 2.25rem; line-height: 1; letter-spacing: -.03em;
+}
+.paso h3 { margin: 0 1rem; color: var(--titulo); font-size: 1.2rem; font-weight: 600; line-height: 1.3; letter-spacing: -.01em; }
+.paso h3 + p { margin: .45rem 1rem 0; }
+
+/* 1 · la ruta: el campo donde se escribe y la constelación que sale. */
+.mock-campo {
+  display: grid; gap: .1rem; padding: .55rem .8rem;
+  background: var(--piedra); border: 1px solid var(--veta); border-radius: 10px;
+}
+.mock-etiqueta { color: var(--bruma); font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; line-height: 1.4; }
+.mock-texto { color: var(--titulo); font-weight: 600; font-size: .95rem; line-height: 1.4; }
+.mock-cursor {
+  display: inline-block; width: 2px; height: 1.05em; margin-left: 2px; vertical-align: -.18em;
+  background: var(--brasa); animation: parpadeo 1.1s steps(1) infinite;
+}
+@keyframes parpadeo { 50% { opacity: 0; } }
+.mock-cons { display: block; width: 100%; height: auto; overflow: visible; }
+.mock-cons polyline { fill: none; stroke: var(--bruma); stroke-opacity: .55; stroke-width: 2; stroke-dasharray: 1 7; stroke-linecap: round; }
+.mock-cons circle { fill: var(--piedra); stroke: var(--bruma); stroke-opacity: .5; stroke-width: 1.5; }
+.mock-cons .mock-alma-luz { fill: var(--brasa); fill-opacity: .25; stroke: none; }
+.mock-cons .mock-alma { fill: var(--brasa); stroke: none; }
+
+/* 2 · compartir: la hoja de Android con PamyRoom encendido entre las demás apps. */
+.mock-hoja-titulo { margin: 0 0 .2rem; color: var(--bruma); font-size: .8rem; font-weight: 600; }
+.mock-hoja { display: flex; align-items: center; gap: .7rem; padding-bottom: 1.4rem; }
+.mock-app { flex: none; width: 2.6rem; height: 2.6rem; border-radius: 50%; background: var(--veta); }
+.mock-pamy {
+  position: relative; display: grid; place-items: center; width: 3.1rem; height: 3.1rem;
+  background: var(--piedra);
+  box-shadow: 0 0 0 2px var(--verde-claro), 0 0 22px rgba(93, 211, 158, .45);
+}
+.mock-pamy img { width: 80%; height: auto; }
+.mock-pamy::after {
+  content: "PamyRoom"; position: absolute; top: calc(100% + .45rem); left: 50%; translate: -50% 0;
+  color: var(--verde-claro); font-size: .8rem; font-weight: 600; white-space: nowrap; line-height: 1;
+}
+
+/* 3 · el examen: la pregunta y la opción buena destapada, como en la app. */
+.mock-linea { display: block; height: .55rem; width: 85%; border-radius: 99px; background: var(--veta); }
+.mock-linea.corta { width: 55%; margin-bottom: .25rem; }
+.mock-opcion {
+  display: flex; align-items: center; justify-content: space-between; gap: .5rem;
+  padding: .45rem .75rem; border-radius: 10px;
+  background: var(--piedra); border: 1px solid var(--veta);
+  color: var(--texto); font-size: .85rem; font-weight: 600; line-height: 1.3;
+}
+.mock-opcion.bien { border-color: var(--verde-claro); background: var(--tinte-verde); color: var(--titulo); }
+.mock-opcion svg { flex: none; width: 1.1rem; height: 1.1rem; fill: none; stroke: var(--verde-claro); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+
+/* EL CUARTO: el arte de la app con los puntos de luz de RoomStage, y lo que dice cada
+   uno en la leyenda (nada escondido detrás de un toque). */
+.cuarto { margin: 0; }
+.cuarto-escena {
+  position: relative; overflow: hidden;
+  background: var(--piedra); border: 1px solid var(--veta); border-radius: var(--radio);
+}
+.cuarto-escena img { width: 100%; height: auto; }
+.punto {
+  position: absolute; left: calc(var(--x) * 100%); top: calc(var(--y) * 100%); translate: -50% -50%;
+  display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%;
+  background: rgba(10, 10, 13, .72); border: 2px solid var(--brasa);
+  color: var(--titulo); font-weight: 700; font-size: .9rem; line-height: 1;
+  box-shadow: 0 0 0 4px rgba(255, 106, 0, .18), 0 0 24px rgba(255, 106, 0, .55);
+}
+@media (min-width: 48rem) { .punto { width: 2.5rem; height: 2.5rem; font-size: 1rem; } }
+.leyenda {
+  list-style: none; counter-reset: punto; margin: 1.3rem 0 0; padding: 0;
+  display: grid; gap: .9rem 1.5rem;
+}
+@media (min-width: 40rem) { .leyenda { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 62rem) { .leyenda { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.leyenda li { counter-increment: punto; position: relative; padding-left: 2.7rem; font-size: .98rem; line-height: 1.5; }
+.leyenda li::before {
+  content: counter(punto); position: absolute; left: 0; top: .1rem;
+  display: grid; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: 50%;
+  border: 2px solid var(--brasa); color: var(--titulo); font-weight: 700; font-size: .85rem;
+}
+.leyenda strong { display: block; color: var(--titulo); font-weight: 600; }
+
+/* LAS CARTAS DE RUTA (rehechas el 2026-10-23: «que se vean brutales, que llamen la atención»).
+   Arriba, una VENTANA con la figura de la ruta moviéndose (o su constelación), sobre una mesa
+   de puntos y con la luz de su estante detrás; un sello con el estante; debajo, el título
+   grande, de qué va, sus fichas y un botón en su color. Al pasar: sube, se enciende su borde,
+   la figura se pone en marcha y un brillo cruza la carta. Cada estante con su color: lo que en
+   fireship.dev es un color por curso, aquí en piedra de noche con la luz del estante. */
+.cartas { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 18.5rem), 1fr)); margin-bottom: 1.6rem; }
+.carta {
+  --acento: var(--violeta-claro); --tinte: var(--tinte-violeta);
+  position: relative; isolation: isolate; overflow: hidden;
+  display: flex; flex-direction: column; gap: .5rem;
+  padding: 0 1.4rem 1.3rem; border-radius: 24px;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--acento) 15%, #14121D) 0%, #100F17 100%);
+  border: 1px solid var(--veta);
+  border-color: color-mix(in srgb, var(--acento) 34%, transparent);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .06), 0 18px 40px -28px color-mix(in srgb, var(--acento) 80%, transparent);
+  color: var(--texto); text-decoration: none;
+  transition: transform .45s cubic-bezier(.32, .72, 0, 1), border-color .3s ease, box-shadow .45s ease;
+}
+/* Una carta sin ventana (las de la portada, escritas a mano) conserva su aire arriba. */
+.carta:not(:has(.carta-ventana)) { padding-top: 1.4rem; }
+.carta::after {                                     /* el brillo que cruza al pasar */
+  content: ""; position: absolute; inset: 0; z-index: 3; pointer-events: none;
+  background: linear-gradient(115deg, transparent 38%, rgba(255, 255, 255, .09) 50%, transparent 62%);
+  transform: translateX(-120%); transition: transform 1s cubic-bezier(.32, .72, 0, 1);
+}
+.carta:hover, .carta:focus-visible {
+  transform: translateY(-6px); color: var(--texto);
+  border-color: var(--acento);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .08), 0 34px 60px -26px color-mix(in srgb, var(--acento) 85%, transparent);
+}
+.carta:hover::after, .carta:focus-visible::after { transform: translateX(120%); }
+.carta:active { transform: translateY(-2px) scale(.99); }
+.estante-violeta { --acento: var(--violeta-claro); --tinte: var(--tinte-violeta); }
+.estante-magenta { --acento: var(--magenta); --tinte: var(--tinte-magenta); }
+.estante-verde { --acento: var(--verde-claro); --tinte: var(--tinte-verde); }
+
+.carta-ventana {
+  position: relative; margin: 0 -1.4rem .6rem; aspect-ratio: 600 / 340; overflow: hidden;
+  background:
+    radial-gradient(70% 80% at 50% 62%, color-mix(in srgb, var(--acento) 32%, transparent), transparent 72%),
+    radial-gradient(circle, rgba(255, 255, 255, .07) 1px, transparent 1.6px) 0 0 / 16px 16px,
+    #0C0B12;
+  border-bottom: 1px solid color-mix(in srgb, var(--acento) 26%, transparent);
+}
+.carta-ventana .figura .iso-svg, .carta-ventana .arte { display: block; width: 100%; height: auto; }
+.carta-sello {
+  display: inline-block; padding: .28rem .65rem; border-radius: 999px;
+  background: var(--acento); color: var(--noche);
+  font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; line-height: 1.3;
+}
+.carta-ventana .carta-sello { position: absolute; z-index: 2; top: .85rem; left: .85rem; }
+.carta-estante { color: var(--acento); font-size: .8rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+.carta strong { color: var(--titulo); font-size: 1.45rem; font-weight: 700; line-height: 1.2; letter-spacing: -.02em; text-wrap: balance; }
+.carta-texto {
+  font-size: .95rem; line-height: 1.55;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden;
+}
+.carta-datos { margin-top: auto; padding-top: .7rem; color: var(--acento); font-size: .9rem; font-weight: 600; }
+.carta .chips { gap: .35rem; margin-top: .3rem; }
+.carta .chip { padding: .2rem .6rem; font-size: .78rem; }
+.carta-pie { margin-top: auto; padding-top: .9rem; display: flex; }
+.carta-ir {
+  display: inline-flex; align-items: center; gap: .45rem; min-height: 44px; padding: .55rem 1.05rem;
+  border-radius: 999px; background: var(--acento); color: var(--noche); font-weight: 700; font-size: .95rem;
+}
+.carta-ir span { display: inline-block; transition: transform .3s cubic-bezier(.32, .72, 0, 1); }
+.carta:hover .carta-ir span { transform: translateX(4px); }
+
+/* LA CONSTELACIÓN de una ruta sin figura: sus módulos, numerados, y la luz al final. Al pasar,
+   los puntos se encienden uno detrás de otro hasta la luz: la ruta recorrida. */
+.arte-linea { fill: none; stroke: color-mix(in srgb, var(--acento) 55%, transparent); stroke-width: 3; stroke-dasharray: 2 12; stroke-linecap: round; }
+.arte-nodo circle { fill: #14121D; stroke: color-mix(in srgb, var(--acento) 70%, transparent); stroke-width: 2.5; transition: fill .3s ease; }
+.arte-nodo text { fill: var(--texto); font: 700 15px "Poppins", system-ui, sans-serif; text-anchor: middle; }
+.arte-halo { fill: color-mix(in srgb, var(--acento) 30%, transparent); }
+.arte-alma { fill: var(--acento); }
+.anima .carta:hover .arte-nodo circle { animation: nodo 2.4s ease-in-out infinite; animation-delay: calc(var(--i) * .3s); }
+@keyframes nodo { 0%, 100% { fill: #14121D; } 30%, 60% { fill: color-mix(in srgb, var(--acento) 70%, #14121D); } }
+.anima .carta-ventana .arte-halo { animation: respira 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+
+/* LA DESTACADA: la ruta que abre el catálogo, en grande, con su figura moviéndose y la lista de
+   lo que sabrás hacer, que se enciende con el módulo que está contando la figura. */
+.destacada {
+  display: grid; margin: 2.2rem 0 1rem; border-radius: 28px; overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--acento) 45%, transparent);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--acento) 18%, #14121D), #0F0E16 70%);
+  box-shadow: 0 40px 80px -40px color-mix(in srgb, var(--acento) 80%, transparent);
+}
+.destacada .carta-ventana { margin: 0; border-bottom: 1px solid color-mix(in srgb, var(--acento) 26%, transparent); }
+.destacada-texto { padding: 1.6rem 1.5rem 1.8rem; }
+.destacada .rotulo { display: flex; align-items: center; gap: .6rem; color: var(--acento); }
+.destacada h2 { margin: .5rem 0 .2rem; color: var(--titulo); font-size: clamp(2rem, 4.6vw, 3.2rem); line-height: 1.02; letter-spacing: -.035em; text-wrap: balance; }
+.destacada .bajada { margin: .6rem 0 0; max-width: 34rem; }
+.puedes-titulo { margin: 1.3rem 0 .5rem; color: var(--titulo); font-weight: 600; }
+.puedes { list-style: none; margin: 0 0 1.2rem; padding: 0; display: grid; gap: .5rem; }
+.puedes li {
+  position: relative; padding: .55rem .8rem .55rem 2.4rem; border-radius: 12px;
+  border: 1px solid transparent; transition: background-color .35s ease, border-color .35s ease, color .35s ease;
+}
+.puedes li::before {
+  content: ""; position: absolute; left: .85rem; top: .95rem; width: .8rem; height: .45rem;
+  border-left: 2.5px solid var(--acento); border-bottom: 2.5px solid var(--acento); transform: rotate(-45deg);
+}
+.puedes li.ahora { background: color-mix(in srgb, var(--acento) 14%, transparent); border-color: color-mix(in srgb, var(--acento) 45%, transparent); color: var(--titulo); }
+.destacada .boton.fuerte { margin-top: 1.2rem; }
+@media (min-width: 60rem) {
+  .destacada { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); align-items: center; }
+  /* Sin proporción fija: la ventana toma el alto del texto y la figura se centra dentro (con la
+     proporción, ese alto la estiraba a lo ancho por fuera de su columna). */
+  .destacada .carta-ventana { aspect-ratio: auto; border-bottom: 0; border-right: 1px solid color-mix(in srgb, var(--acento) 26%, transparent); height: 100%; display: grid; align-items: center; }
+  .destacada-texto { padding: 2.2rem 2.2rem 2.4rem 1.8rem; }
+}
+
+/* Los estantes: su nombre con la luz de su color delante. */
+.estante h2, .tramo-cabeza h2 { display: flex; align-items: center; gap: .7rem; font-size: clamp(1.7rem, 3.6vw, 2.4rem); letter-spacing: -.03em; }
+.estante h2::before, .tramo-cabeza h2::before { content: ""; flex: none; width: .7rem; height: .7rem; border-radius: 50%; background: var(--acento); box-shadow: 0 0 0 4px color-mix(in srgb, var(--acento) 22%, transparent), 0 0 18px var(--acento); }
+
+/* ── EL CAMINO (2026-10-23): el catálogo como una ruta de cursos ─────────
+   El mismo lenguaje que el camino de módulos de cada ruta (.modulos / .nodo): paradas numeradas
+   unidas por una línea de puntos, y la luz al final. En el teléfono la línea va a la izquierda;
+   en ordenador va por el centro y las paradas se alternan a un lado y al otro, escalonadas. */
+.camino-rutas, .paradas { list-style: none; margin: 0; padding: 0; }
+.camino-rutas { margin-top: 2.4rem; }
+.tramo { margin-bottom: 2.6rem; }
+.tramo-cabeza { margin-bottom: 1.6rem; }
+.tramo-num {
+  display: inline-block; margin: 0 0 .6rem; padding: .25rem .7rem; border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--acento) 60%, transparent); color: var(--acento);
+  font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+}
+.tramo-cabeza h2 { margin: 0 0 .3rem; color: var(--titulo); }
+.paradas { position: relative; }
+.paradas::before {                                    /* la línea del camino */
+  content: ""; position: absolute; top: .5rem; bottom: 1rem; left: 1.6rem; translate: -1.5px 0;
+  border-left: 3px dotted color-mix(in srgb, var(--acento) 60%, transparent);
+}
+.parada { position: relative; padding-left: 4.4rem; margin-bottom: 1.4rem; }
+.parada-nodo {
+  position: absolute; z-index: 2; left: 0; top: 1.4rem;
+  display: grid; place-items: center; width: 3.2rem; height: 3.2rem; border-radius: 50%;
+  background: #14121D; border: 2px solid var(--acento);
+  color: var(--titulo); font-weight: 700; font-size: 1rem; letter-spacing: .02em;
+  box-shadow: 0 0 0 5px var(--noche), 0 0 22px color-mix(in srgb, var(--acento) 55%, transparent);
+}
+.parada::after {                                      /* el tramito del nodo a la carta */
+  content: ""; position: absolute; top: 3rem; left: 3.2rem; width: 1.2rem;
+  border-top: 3px dotted color-mix(in srgb, var(--acento) 60%, transparent);
+}
+.parada-grande .parada-nodo { background: var(--casa); border-color: transparent; color: var(--noche); }
+.parada .destacada { margin: 0; }
+
+/* La meta: la luz del final del camino y lo que viene después. */
+.meta { position: relative; padding: 1rem 0 0 4.4rem; }
+.meta-alma {
+  position: absolute; left: 0; top: .6rem; width: 3.2rem; height: 3.2rem; border-radius: 50%;
+  background: var(--casa); box-shadow: 0 0 0 5px var(--noche), 0 0 40px 6px rgba(255, 46, 136, .5);
+}
+.meta-titulo { margin: 0 0 .3rem; color: var(--titulo); font-size: 1.35rem; font-weight: 700; letter-spacing: -.015em; }
+.meta p { margin: 0 0 1rem; max-width: 34rem; }
+.anima .meta-alma { animation: respira 5s ease-in-out infinite; }
+
+@media (min-width: 60rem) {
+  .paradas::before { left: 50%; }
+  .parada { width: calc(50% - 3.2rem); padding-left: 0; margin-bottom: 0; }
+  .parada:nth-child(odd) { margin-right: auto; }
+  .parada:nth-child(even) { margin-left: auto; }
+  .parada + .parada { margin-top: -11rem; }           /* escalonadas: cada una cae entre las dos del otro lado */
+  .parada-grande + .parada { margin-top: 2rem; }
+  .parada:nth-child(odd) .parada-nodo { left: auto; right: -4.8rem; }
+  .parada:nth-child(even) .parada-nodo { left: -4.8rem; }
+  .parada:nth-child(odd)::after { left: auto; right: -3.2rem; width: 3.2rem; }
+  .parada:nth-child(even)::after { left: -3.2rem; width: 3.2rem; }
+  .parada:last-child { margin-bottom: 1rem; }
+  /* La primera, a todo lo ancho, con su nodo encima de la línea. */
+  .parada-grande { width: 100%; margin: 0 0 1rem; padding-top: 4.4rem; }
+  .parada-grande .parada-nodo { left: 50%; right: auto; top: 0; translate: -50% 0; }
+  .parada-grande::after { display: none; }
+  .tramo-cabeza { text-align: center; }
+  .tramo-cabeza h2 { justify-content: center; }
+  .tramo-cabeza .estante-linea { margin-inline: auto; max-width: 40rem; }
+  .meta { padding: 1.5rem 0 0; text-align: center; }
+  .meta-alma { position: relative; display: block; left: auto; top: auto; margin: 0 auto 1.2rem; }
+  .meta p { margin-inline: auto; }
+}
+
+/* La carta como parada: el título es el enlace y cubre la carta entera; la versión a fondo
+   queda por encima, con su propio enlace. */
+.carta h3 { margin: 0; color: var(--titulo); font-size: 1.45rem; font-weight: 700; line-height: 1.2; letter-spacing: -.02em; text-wrap: balance; }
+.carta-enlace { color: inherit; text-decoration: none; }
+.carta-enlace::before { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: inherit; }
+.carta-enlace:focus-visible { outline: none; }
+.carta:focus-within { border-color: var(--acento); outline: 2px solid var(--violeta-claro); outline-offset: 3px; }
+.carta-gancho { margin: 0; color: var(--texto); font-size: 1rem; line-height: 1.5; text-wrap: pretty; }
+.carta-pie { flex-wrap: wrap; align-items: center; gap: .6rem 1rem; }
+.carta-variante {
+  position: relative; z-index: 2; color: var(--texto); font-size: .9rem; font-weight: 600;
+  text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--acento) 50%, transparent); text-underline-offset: 3px;
+}
+.carta-variante:hover { color: var(--titulo); text-decoration-color: var(--acento); }
+.destacada h3 { margin: .5rem 0 .2rem; color: var(--titulo); font-size: clamp(2rem, 4.6vw, 3.2rem); line-height: 1.02; letter-spacing: -.035em; text-wrap: balance; }
+
+/* PROBARLA reutiliza .cierre (el filo de la casa) y .chips, de las rutas listas. */
+.seccion > .cierre { margin: 0; }
+.cierre .chips { margin: 1.2rem 0 1.6rem; }
+
+/* LAS DUDAS: <details> de verdad — se abren con el teclado y el lector las anuncia. */
+.dudas { max-width: var(--lectura); border-top: 1px solid var(--veta); }
+.dudas details { border-bottom: 1px solid var(--veta); }
+.dudas summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  min-height: 56px; padding: .9rem 0; cursor: pointer; list-style: none;
+  color: var(--titulo); font-weight: 600; font-size: 1.08rem; line-height: 1.4;
+}
+.dudas summary::-webkit-details-marker { display: none; }
+.dudas summary::after {
+  content: ""; flex: none; width: .6rem; height: .6rem; margin-right: .3rem;
+  border-right: 2px solid var(--bruma); border-bottom: 2px solid var(--bruma);
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform .25s cubic-bezier(.32, .72, 0, 1);
+}
+.dudas details[open] summary::after { transform: translateY(2px) rotate(-135deg); }
+.dudas details p { margin: 0 0 1.2rem; max-width: 38rem; }
+
+/* El pie de la portada lleva el contacto y que la web no usa cookies. */
+.pie p { margin: 0 0 .35rem; }
+.pie-marca, .sin-cookies { color: var(--bruma); }
+
+.solo-lector {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; border: 0;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+/* ── La portada con vida (2026-10-22) ───────────────────────────────────── */
+
+/* Lo que se mueve es el DIBUJO de cada paso, una vez, cuando llega a la vista: el
+   movimiento cuenta lo que hace la pantalla (escribir → sale la ruta; compartir →
+   llega al vivero; responder → se destapa). El texto NUNCA espera a aparecer (NN/g).
+   `.anima` la pone <head> solo si no se pidió reducir movimiento; sin ella, todo se
+   ve quieto y en su estado final. */
+.escena { position: relative; overflow: hidden; }
+.paso-verde .escena { justify-content: flex-start; }
+
+/* 1 · la ruta: se escribe el tema y se enciende la constelación, punto a punto. */
+.anima .mock-cons > * { opacity: 0; transform-box: fill-box; transform-origin: center; transform: scale(.4);
+  transition: opacity .35s ease, transform .5s cubic-bezier(.34, 1.56, .64, 1); }
+.anima .mock-cons polyline { transform: none; transition: opacity .8s ease; }
+.anima .vivo .mock-cons > * { opacity: 1; transform: none; }
+.anima .vivo .mock-cons polyline { transition-delay: 1.3s; }
+.anima .vivo .mock-cons circle:nth-of-type(1) { transition-delay: 1.35s; }
+.anima .vivo .mock-cons circle:nth-of-type(2) { transition-delay: 1.55s; }
+.anima .vivo .mock-cons circle:nth-of-type(3) { transition-delay: 1.75s; }
+.anima .vivo .mock-cons circle:nth-of-type(4), .anima .vivo .mock-cons circle:nth-of-type(5) { transition-delay: 2s; }
+.anima .vivo .mock-alma-luz { animation: alma 2.6s ease-in-out 2.4s infinite; }
+@keyframes alma { 50% { fill-opacity: .45; } }
+
+/* 2 · compartir: aparecen las apps, se toca PamyRoom y llega el aviso del vivero. */
+.anima .mock-hoja > .mock-app { opacity: 0; transform: translateY(8px);
+  transition: opacity .3s ease, transform .4s cubic-bezier(.32, .72, 0, 1); }
+.anima .vivo .mock-hoja > .mock-app { opacity: 1; transform: none; }
+.anima .vivo .mock-hoja > .mock-app:nth-child(2) { transition-delay: .08s; }
+.anima .vivo .mock-hoja > .mock-app:nth-child(3) { transition-delay: .16s; }
+.anima .vivo .mock-hoja > .mock-app:nth-child(4) { transition-delay: .24s; }
+.anima .vivo .mock-pamy { animation: toque .5s cubic-bezier(.32, .72, 0, 1) .9s both; }
+@keyframes toque { 40% { transform: scale(.88); } 100% { transform: none; } }
+.mock-aviso {
+  position: absolute; left: .8rem; right: .8rem; bottom: .7rem;
+  display: flex; align-items: center; gap: .5rem; padding: .45rem .7rem;
+  background: var(--tinte-verde); border: 1px solid var(--verde-claro); border-radius: 10px;
+  color: var(--titulo); font-size: .8rem; font-weight: 600; line-height: 1.3;
+}
+.mock-aviso svg { flex: none; width: 1rem; height: 1rem; fill: none; stroke: var(--verde-claro); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.anima .mock-aviso { opacity: 0; transform: translateY(120%); transition: opacity .3s ease, transform .5s cubic-bezier(.32, .72, 0, 1); }
+.anima .vivo .mock-aviso { opacity: 1; transform: none; transition-delay: 1.4s; }
+
+/* 3 · el examen: se duda en la primera y se elige la buena, que se destapa en verde. */
+.mock-opcion svg path { stroke-dasharray: 22; stroke-dashoffset: 0; }
+.anima .mock-opcion { transition: border-color .25s ease, background-color .25s ease, color .25s ease; }
+.anima .paso:not(.vivo) .mock-opcion.bien,
+.anima .vivo .mock-opcion.bien:not(.destapada) { border-color: var(--veta); background: var(--piedra); color: var(--texto); }
+.anima .mock-opcion.bien svg path { stroke-dashoffset: 22; transition: stroke-dashoffset .45s ease .15s; }
+.anima .mock-opcion.bien.destapada svg path { stroke-dashoffset: 0; }
+.anima .mock-opcion.dudada { border-color: var(--bruma); }
+
+/* Los puntos del cuarto llaman la vista con un pulso de luz, cada uno a su tiempo. */
+.anima .punto::after {
+  content: ""; position: absolute; inset: -2px; border-radius: 50%;
+  border: 2px solid var(--brasa); opacity: 0;
+  animation: pulso 3.2s ease-out infinite;
+}
+.anima .punto:nth-of-type(2)::after { animation-delay: .8s; }
+.anima .punto:nth-of-type(3)::after { animation-delay: 1.6s; }
+.anima .punto:nth-of-type(4)::after { animation-delay: 2.4s; }
+@keyframes pulso { 0% { opacity: .7; transform: scale(1); } 70%, 100% { opacity: 0; transform: scale(2); } }
+.cuarto-puerta { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1.2rem; margin-top: 1.6rem; }
+.cuarto-puerta p { margin: 0; color: var(--bruma); font-size: .95rem; }
+
+/* El cielo de la portada: estrellas quietas que titilan despacio detrás de PAMY. */
+.portada { position: relative; isolation: isolate; }
+.portada::before, .portada::after {
+  content: ""; position: absolute; z-index: -2; top: 0; left: 50%; width: 1px; height: 1px; border-radius: 50%;
+  pointer-events: none;
+}
+.portada::before {
+  box-shadow:
+    -28rem 3rem rgba(255,255,255,.55), -21rem 9rem rgba(255,255,255,.35), -14rem 2rem rgba(255,255,255,.45),
+    -9rem 12rem rgba(255,255,255,.3), 10rem 4rem rgba(255,255,255,.5), 16rem 11rem rgba(255,255,255,.35),
+    23rem 2.5rem rgba(255,255,255,.45), 29rem 8rem rgba(255,255,255,.3), -31rem 15rem rgba(255,255,255,.3),
+    33rem 16rem rgba(255,255,255,.4), -6rem 1rem rgba(255,255,255,.35), 5rem 14rem rgba(255,255,255,.25);
+}
+.portada::after {
+  width: 2px; height: 2px;
+  box-shadow:
+    -24rem 6rem rgba(255,255,255,.7), -17rem 14rem rgba(169,139,255,.6), 13rem 7rem rgba(255,255,255,.65),
+    20rem 13rem rgba(255,106,0,.55), 27rem 5rem rgba(255,255,255,.6), -11rem 6rem rgba(255,46,136,.5);
+}
+.anima .portada::after { animation: titila 5s ease-in-out infinite; }
+@keyframes titila { 50% { opacity: .35; } }
+
+/* ── Las figuras de las rutas (anatomy), en la piedra de la casa ────────── */
+
+/* El kit pinta con variables (iso.css); aquí van los tonos de la casa. Cuatro sombras a
+   ~3 % de luz una de otra, líneas que van del hilo (`faint`) al texto (`hi`), y UNA pieza
+   encendida en el acento de su estante: lo que el ojo tiene que seguir. El papel es la
+   piedra, que es el fondo de la escena: así los rellenos tapan sin dejar parches. */
+.figura.iso {
+  --acento: var(--brasa);
+  /* El objeto se tiñe del color de su estante (lo que en fireship.dev es un color por curso),
+     sin dejar de ser piedra de noche: cada tono es la piedra con un poco de acento. */
+  --anatomy-paper: color-mix(in srgb, var(--acento) 7%, #0E0D14);
+  --anatomy-face: color-mix(in srgb, var(--acento) 16%, #24222F);
+  --anatomy-top: color-mix(in srgb, var(--acento) 22%, #2C2A3A);
+  --anatomy-shade-0: color-mix(in srgb, var(--acento) 10%, #16151F);
+  --anatomy-shade-1: color-mix(in srgb, var(--acento) 12%, #1B1A26);
+  --anatomy-shade-2: color-mix(in srgb, var(--acento) 14%, #201F2C);
+  --anatomy-shade-3: color-mix(in srgb, var(--acento) 16%, #262433);
+  --anatomy-lit-top: color-mix(in srgb, var(--acento) 78%, #1A1822);
+  --anatomy-lit-shade: color-mix(in srgb, var(--acento) 48%, #1A1822);
+  --anatomy-hi: color-mix(in srgb, var(--acento) 18%, #EDEBFF);
+  --anatomy-mid: color-mix(in srgb, var(--acento) 40%, #77738F);
+  --anatomy-lo: color-mix(in srgb, var(--acento) 28%, #45425A);
+  --anatomy-faint: color-mix(in srgb, var(--acento) 18%, #2E2C3D);
+  --anatomy-lit: var(--acento);
+  --anatomy-halo: #030305; --anatomy-halo-opacity: .95; --anatomy-dot: var(--texto);
+  --anatomy-weight: .8px;
+  display: block; background: var(--anatomy-paper);
+}
+/* LOS MATERIALES (2026-10-23, «más color, más vida»): cada pieza lleva `mat c-<color>` y aquí
+   ese color se vuelve cara de arriba, cuatro sombras y trazo. Lo claro lleva trazo oscuro; lo
+   oscuro, trazo claro (`--linea`). Lo encendido brilla con su propio color. */
+.figura .mat {
+  --linea: color-mix(in srgb, var(--c) 42%, #08070C);
+  --anatomy-top: color-mix(in srgb, var(--c) 62%, #FFFFFF);
+  --anatomy-shade-3: color-mix(in srgb, var(--c) 88%, #FFFFFF);
+  --anatomy-shade-2: var(--c);
+  --anatomy-shade-1: color-mix(in srgb, var(--c) 80%, #000000);
+  --anatomy-shade-0: color-mix(in srgb, var(--c) 64%, #000000);
+  --anatomy-face: var(--c);
+  --anatomy-lit-top: color-mix(in srgb, var(--c) 40%, #FFFFFF);
+  --anatomy-lit-shade: var(--c);
+  --anatomy-lit: color-mix(in srgb, var(--c) 30%, #FFFFFF);
+  --anatomy-hi: var(--linea);
+  --anatomy-mid: color-mix(in srgb, var(--linea) 72%, var(--c));
+  --anatomy-lo: color-mix(in srgb, var(--linea) 48%, var(--c));
+  --anatomy-faint: color-mix(in srgb, var(--linea) 26%, var(--c));
+  --anatomy-dot: var(--linea);
+}
+.figura .c-brasa { --c: #FF6A00; }          /* PathEmber */
+.figura .c-magenta { --c: #FF2E88; }        /* PathMagenta */
+.figura .c-violeta { --c: #7B3FF2; --linea: #D9CCFF; }   /* PathPrimary */
+.figura .c-lila { --c: #A98BFF; }           /* PathPrimaryBright */
+.figura .c-indigo { --c: #3126FF; --linea: #C9C4FF; }    /* PathIndigo */
+.figura .c-azul { --c: #6A5CFF; --linea: #E4E1FF; }      /* PathIndigoBright */
+.figura .c-verde { --c: #24B26B; }          /* PathCatHealth */
+.figura .c-menta { --c: #5DD39E; }          /* PathSuccess */
+.figura .c-oro { --c: #F5C34D; }            /* PathGold */
+.figura .c-papel {                                        /* las fichas, el papel: claro también de lado */
+  --c: #E9E5F5; --linea: #6B6585;
+  --anatomy-top: #FFFFFF; --anatomy-shade-3: #F1EEFA; --anatomy-shade-2: #E3DEF0;
+  --anatomy-shade-1: #D3CDE4; --anatomy-shade-0: #C2BBD6;
+}
+/* Lo oscuro no se lava arriba: su cara de arriba es la suya con un poco de luz. */
+.figura .c-geoda, .figura .c-noche, .figura .c-cristal { --anatomy-top: color-mix(in srgb, var(--c) 80%, #FFFFFF); --anatomy-shade-3: color-mix(in srgb, var(--c) 92%, #FFFFFF); }
+.figura .c-geoda { --c: #4A3A63; --linea: #B7A6DA; }     /* PathGeodeShell: la piedra de PAMY */
+.figura .c-noche { --c: #1E1A2C; --linea: #7D739C; }
+.figura .c-cristal { --c: #1B1840; --linea: #8C84D8; }   /* PathIndigoBg: pantallas y vidrios */
+/* `intenso`: lo que brilla por dentro (una pantalla, un panel) no se aclara arriba: se satura. */
+.figura .mat.intenso { --anatomy-top: var(--c); --anatomy-lit-top: color-mix(in srgb, var(--c) 82%, #FFFFFF); --anatomy-lit-shade: color-mix(in srgb, var(--c) 80%, #000000); }
+.figura .iso-solid[data-lit] { filter: drop-shadow(0 0 5px color-mix(in srgb, var(--c, var(--acento)) 85%, transparent)); }
+.figura [data-luz] { transition: opacity .35s ease; }
+
+.estante-violeta .figura.iso { --acento: var(--violeta-claro); }
+.estante-magenta .figura.iso { --acento: var(--magenta); }
+.estante-verde .figura.iso { --acento: var(--verde-claro); }
+.figura .iso-svg { width: 100%; height: auto; }
+
+/* En la ventana de una carta o de la destacada, la figura va sobre la mesa de puntos. */
+.carta-ventana .figura.iso { background: transparent; margin: 0; }
+
+/* En la página de la ruta: en el teléfono, la figura justo bajo el título; en ordenador, a su
+   lado, a la altura de todo el bloque de arriba. */
+@media (min-width: 60rem) {
+  .ruta-portada.con-figura { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 31rem); column-gap: 3rem; align-items: start; }
+  .ruta-portada.con-figura > * { grid-column: 1; }
+  .ruta-portada.con-figura > .ruta-figura { grid-column: 2; grid-row: 1 / span 6; margin-top: 2rem; }
+}
+/* La figura grande, con lo que está pasando dicho debajo. */
+.ruta-figura { margin: 1.6rem 0 .4rem; max-width: 40rem; border-radius: var(--radio); overflow: hidden; border: 1px solid var(--veta); }
+.ruta-figura .lectura {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: .2rem 1rem; margin: 0; padding: .7rem 1rem;
+  border-top: 1px solid var(--veta); color: var(--bruma); font-size: .9rem;
+}
+.ruta-figura .lectura strong { color: var(--titulo); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+/* ── El cuarto por dentro: el motor de scroll-world vestido de casa ─────── */
+
+/* El motor mete su CSS en una capa (@layer sw): lo de aquí, sin capa, gana siempre. */
+.cuarto-por-dentro { overflow-x: hidden; }
+.sw-root {
+  --sw-bg: var(--noche); --sw-ink: var(--titulo); --sw-ink-soft: var(--bruma); --sw-accent: var(--brasa);
+  --sw-font-display: "Poppins", system-ui, sans-serif; --sw-font-body: "Poppins", system-ui, sans-serif;
+}
+.sw-brand__mark { display: none; }
+.sw-brand__name { font-weight: 700; font-size: 1.35rem; letter-spacing: -.01em; line-height: 1; }
+.sw-brand__name::before { content: "PAMY"; color: var(--brasa); }
+.sw-brand__name::after { content: "ROOM"; color: var(--violeta); }
+.sw-nav { background: rgba(20, 20, 27, .6); border-color: var(--veta); }
+.sw-nav__item { font-size: .85rem; }
+.sw-nav__item.is-active { color: var(--noche); background: var(--sw-accent); font-weight: 600; }
+.sw-topcta, .sw-btn--primary { color: var(--noche); background: var(--casa); font-weight: 700; }
+.sw-topcta:hover, .sw-btn--primary:hover { color: var(--noche); }
+.sw-btn--ghost { color: var(--titulo); border-color: rgba(255, 255, 255, .25); }
+.sw-btn--ghost:hover { color: var(--titulo); }
+.sw-route__label { color: var(--titulo); background: rgba(20, 20, 27, .85); border-color: var(--veta); }
+.sw-sky__grad { background: linear-gradient(178deg, color-mix(in srgb, var(--sw-accent) 8%, var(--sw-bg)) 0%, var(--sw-bg) 55%); }
+.sw-sky__glow { background: radial-gradient(60% 42% at 74% 16%, color-mix(in srgb, var(--sw-accent) 16%, transparent), transparent 70%); }
+.sw-pt--dot::before { background: radial-gradient(circle, rgba(255, 255, 255, .85), rgba(255, 255, 255, 0) 65%); }
+.sw-copy__body { color: var(--texto); }
+.sw-copy__tags li { color: var(--sw-accent); background: rgba(255, 255, 255, .04); }
+.sw-hint i { border-color: rgba(255, 255, 255, .3); }
+
 /* ── Movimiento y pantallas pequeñas ────────────────────────────────────── */
 
 @media (prefers-reduced-motion: reduce) {
   .geoda::before { animation: none; }
-  .papel { transition: none; }
-  .papel:hover { transform: none; }
+  .papel, .carta, .boton, .opcion { transition: none; }
+  .papel:hover, .carta:hover { transform: none; }
+  .mock-cursor, .quiz-cuerpo { animation: none; }
 }
 
 @media (max-width: 40rem) {
-  .barra { flex-direction: column; align-items: flex-start; }
+  .barra { flex-direction: column; align-items: flex-start; gap: .25rem; padding-block: 1rem .5rem; }
   .seccion { padding-block: 3rem; }
+  /* En el teléfono el botón tiene que verse sin bajar: PAMY más pequeño y menos aire. */
+  .portada { padding-block: 1rem 2.5rem; }
+  .geoda { width: min(8.5rem, 38vw); margin-bottom: 1.25rem; }
 }
 
 /* ── Imprimir / guardar en PDF ──────────────────────────────────────────── */
