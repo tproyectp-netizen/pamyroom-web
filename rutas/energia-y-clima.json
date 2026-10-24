@@ -1,0 +1,188 @@
+{
+  "slug": "energia-y-clima",
+  "titulo": "Energía y clima: de dónde sale tu luz",
+  "resumen": "Cómo llega la electricidad a tu casa y quién pone su precio, por qué la energía calienta el planeta, cómo funcionan el sol y el viento y por qué guardar la energía es el gran reto.",
+  "nivel": "Principiante",
+  "ritmo": "oro",
+  "estante": "tendencia",
+  "revisada": "2026-10-24",
+  "time_advice": "Veinte minutos al día, cuatro días por semana.",
+  "recommended_method": {
+    "name": "Método 2357",
+    "reason": "Repasar los días 2, 3, 5 y 7 fija lo que ves."
+  },
+  "criterios": {
+    "De dónde viene": "Puedo explicar cómo llega la electricidad a mi casa y de qué depende su precio.",
+    "El clima": "Puedo explicar por qué quemar combustibles calienta el planeta.",
+    "Las renovables": "Puedo explicar cómo producen electricidad el sol y el viento.",
+    "Guardar energía": "Puedo explicar por qué guardar la energía es el gran reto de las renovables."
+  },
+  "steps": [
+    {
+      "order": 1,
+      "section": "De dónde viene",
+      "type": "video",
+      "title": "Cómo llega la luz desde la central hasta tu enchufe",
+      "author": "Cómo Funciona Todo",
+      "why": "El viaje entero de la electricidad, de la central a tu casa.",
+      "concepts": [
+        "red eléctrica",
+        "transporte"
+      ],
+      "video_id": "w0w6khZRqRQ",
+      "minutos": 19.9
+    },
+    {
+      "order": 2,
+      "section": "De dónde viene",
+      "type": "video",
+      "title": "Qué es una subestación eléctrica y para qué sirve",
+      "author": "Sígueme la Corriente",
+      "why": "La pieza que cambia la tensión para que la luz viaje lejos.",
+      "concepts": [
+        "subestación",
+        "tensión"
+      ],
+      "video_id": "hz9UKbbEMl8",
+      "minutos": 12.1
+    },
+    {
+      "order": 3,
+      "section": "De dónde viene",
+      "type": "video",
+      "title": "Cómo se fija el precio de la luz",
+      "author": "QuantumFracture",
+      "why": "Por qué la factura sube cuando sube el gas.",
+      "concepts": [
+        "mercado eléctrico",
+        "precio marginal"
+      ],
+      "video_id": "rRWWirKLHAU",
+      "minutos": 12.8
+    },
+    {
+      "order": 4,
+      "section": "El clima",
+      "type": "video",
+      "title": "El efecto invernadero, explicado",
+      "author": "El Reloj de la Ciencia",
+      "why": "Por qué ciertos gases guardan el calor del sol.",
+      "concepts": [
+        "efecto invernadero",
+        "CO2"
+      ],
+      "video_id": "GnTZrUwaxUc",
+      "minutos": 14.2
+    },
+    {
+      "order": 5,
+      "section": "El clima",
+      "type": "video",
+      "title": "La ciencia del cambio climático",
+      "author": "biointeractive",
+      "why": "Cómo se sabe que el planeta se calienta y por qué.",
+      "concepts": [
+        "calentamiento global",
+        "combustibles fósiles"
+      ],
+      "video_id": "mJYojNACls8",
+      "minutos": 16.8
+    },
+    {
+      "order": 6,
+      "section": "El clima",
+      "type": "video",
+      "title": "Las consecuencias reales del cambio climático",
+      "author": "QuantumFracture",
+      "why": "Qué cambia de verdad cuando sube la temperatura.",
+      "concepts": [
+        "consecuencias",
+        "fenómenos extremos"
+      ],
+      "video_id": "4uP9vrJqpG8",
+      "minutos": 12.8
+    },
+    {
+      "order": 7,
+      "section": "Las renovables",
+      "type": "video",
+      "title": "Cinco energías renovables y cómo funciona cada una",
+      "author": "EcologíaVerde",
+      "why": "Sol, viento, agua, calor de la tierra y biomasa, de un vistazo.",
+      "concepts": [
+        "energías renovables"
+      ],
+      "video_id": "E4ZoFhVPqwY",
+      "minutos": 18.7
+    },
+    {
+      "order": 8,
+      "section": "Las renovables",
+      "type": "video",
+      "title": "Cómo funciona un aerogenerador",
+      "author": "Sígueme la Corriente",
+      "why": "Del viento a la electricidad, pieza a pieza.",
+      "concepts": [
+        "aerogenerador",
+        "energía eólica"
+      ],
+      "video_id": "MWuIVVYwRk8",
+      "minutos": 16.4
+    },
+    {
+      "order": 9,
+      "section": "Las renovables",
+      "type": "video",
+      "title": "El iceberg de las energías renovables",
+      "author": "En Teoría",
+      "why": "De lo que todos conocen a lo que casi nadie ha oído.",
+      "concepts": [
+        "energías renovables",
+        "tecnologías emergentes"
+      ],
+      "video_id": "jLWTpvi9558",
+      "minutos": 18.1
+    },
+    {
+      "order": 10,
+      "section": "Guardar energía",
+      "type": "video",
+      "title": "Baterías y otras formas de guardar energía",
+      "author": "DW Español",
+      "why": "Por qué el sol y el viento necesitan dónde guardarse.",
+      "concepts": [
+        "almacenamiento",
+        "baterías"
+      ],
+      "video_id": "9EdpMd0N1Gg",
+      "minutos": 12.2
+    },
+    {
+      "order": 11,
+      "section": "Guardar energía",
+      "type": "video",
+      "title": "Las baterías de flujo",
+      "author": "DW Español",
+      "why": "Una batería pensada para guardar mucha energía durante horas.",
+      "concepts": [
+        "baterías de flujo"
+      ],
+      "video_id": "pht1bmFh9C0",
+      "minutos": 12.9
+    },
+    {
+      "order": 12,
+      "section": "Guardar energía",
+      "type": "video",
+      "title": "La pila de hidrógeno y el hidrógeno verde",
+      "author": "Reacciona Explota",
+      "why": "Cómo se guarda la energía en hidrógeno, con un experimento en casa.",
+      "concepts": [
+        "hidrógeno verde",
+        "electrólisis"
+      ],
+      "video_id": "VwS7Sz833OY",
+      "minutos": 12.7
+    }
+  ]
+}

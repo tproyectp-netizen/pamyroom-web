@@ -1,0 +1,196 @@
+{
+  "slug": "salud-y-cuidados",
+  "titulo": "Salud y cuidados: qué oficio es para ti",
+  "resumen": "Qué oficios tiene la salud más allá del médico, cómo es el día a día de la enfermería y de los cuidados y por dónde se entra en cada uno, con los títulos de España como ejemplo. Una ruta no habilita para ejercer: hacerlo exige una titulación oficial.",
+  "nivel": "Principiante",
+  "ritmo": "oro",
+  "estante": "futuro",
+  "revisada": "2026-10-24",
+  "time_advice": "Veinte minutos al día, cuatro días por semana.",
+  "recommended_method": {
+    "name": "Método 2357",
+    "reason": "Repasar los días 2, 3, 5 y 7 fija lo que ves."
+  },
+  "criterios": {
+    "Los oficios": "Puedo nombrar varios oficios de la salud y qué hace cada uno.",
+    "Enfermería": "Puedo describir el día a día de la enfermería y cómo se llega a ella.",
+    "Los cuidados": "Puedo explicar qué hace quien cuida a pacientes y a personas mayores.",
+    "Cómo se entra": "Puedo elegir por qué estudios empezaría si quisiera un oficio de la salud."
+  },
+  "fuentes": [
+    {
+      "titulo": "BLS (EE. UU.), Employment Projections 2025-2035, nota USDL-26-1422: +41,0 % de enfermeras y enfermeros de práctica avanzada",
+      "url": "https://www.bls.gov/news.release/ecopro.nr0.htm",
+      "fecha": "2026-08-27"
+    },
+    {
+      "titulo": "Foro Económico Mundial, Future of Jobs Report 2025: el envejecimiento hace crecer los empleos de enfermería",
+      "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/digest/",
+      "fecha": "2025"
+    }
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "section": "Los oficios",
+      "type": "video",
+      "title": "Para qué sirve un fisioterapeuta",
+      "author": "Colegio de Fisioterapeutas de Galicia",
+      "why": "Lo que hace la fisioterapia, contado por su colegio profesional.",
+      "concepts": [
+        "fisioterapia"
+      ],
+      "video_id": "eyK1iqpjF1U",
+      "minutos": 14.9
+    },
+    {
+      "order": 2,
+      "section": "Los oficios",
+      "type": "video",
+      "title": "Un día con un equipo de emergencias",
+      "author": "DMAX España",
+      "why": "Cómo trabaja quien llega primero cuando alguien lo necesita.",
+      "concepts": [
+        "emergencias",
+        "técnico en emergencias sanitarias"
+      ],
+      "video_id": "rKFVOBmfLYo",
+      "minutos": 12.0
+    },
+    {
+      "order": 3,
+      "section": "Los oficios",
+      "type": "video",
+      "title": "Documentación y administración sanitarias",
+      "author": "Centro San Valero",
+      "why": "La salud también se trabaja sin bata: los datos y la gestión.",
+      "concepts": [
+        "documentación sanitaria"
+      ],
+      "video_id": "t-ro0XEmxoQ",
+      "minutos": 13.8
+    },
+    {
+      "order": 4,
+      "section": "Enfermería",
+      "type": "video",
+      "title": "La rutina de una enfermera de cardiología",
+      "author": "Alicia Devesa",
+      "why": "Un turno de enfermería, de principio a fin.",
+      "concepts": [
+        "enfermería",
+        "turnos"
+      ],
+      "video_id": "mK2JnkJQQf8",
+      "minutos": 13.4
+    },
+    {
+      "order": 5,
+      "section": "Enfermería",
+      "type": "video",
+      "title": "Lo que conviene saber antes de estudiar enfermería",
+      "author": "Enfermera en apuros",
+      "why": "Lo bueno y lo duro de la carrera, sin adornos.",
+      "concepts": [
+        "grado en enfermería"
+      ],
+      "video_id": "wHfqUQE4W1U",
+      "minutos": 13.3
+    },
+    {
+      "order": 6,
+      "section": "Enfermería",
+      "type": "video",
+      "title": "Trabajar de enfermera: empleo, sueldo y noches",
+      "author": "Mart Acosta",
+      "why": "Cómo es el trabajo cuando ya terminaste de estudiar.",
+      "concepts": [
+        "salidas",
+        "condiciones de trabajo"
+      ],
+      "video_id": "TeRYTebK1-0",
+      "minutos": 13.0
+    },
+    {
+      "order": 7,
+      "section": "Los cuidados",
+      "type": "video",
+      "title": "Qué hace un técnico en cuidados de enfermería",
+      "author": "Oposiciones de Sanidad",
+      "why": "Las funciones del TCAE al lado de la enfermera.",
+      "concepts": [
+        "TCAE",
+        "cuidados básicos"
+      ],
+      "video_id": "5iw1lv16FN4",
+      "minutos": 14.8
+    },
+    {
+      "order": 8,
+      "section": "Los cuidados",
+      "type": "video",
+      "title": "Todo sobre ser auxiliar de enfermería",
+      "author": "Lola Muñoz",
+      "why": "Las dudas reales de quien está pensando en serlo.",
+      "concepts": [
+        "auxiliar de enfermería"
+      ],
+      "video_id": "nLV1H5d5eJI",
+      "minutos": 16.0
+    },
+    {
+      "order": 9,
+      "section": "Los cuidados",
+      "type": "video",
+      "title": "Cómo cuidar bien a una persona mayor",
+      "author": "Geriatria con Sentido",
+      "why": "Lo que distingue a un buen cuidador.",
+      "concepts": [
+        "geriatría",
+        "cuidador"
+      ],
+      "video_id": "ni94ROjkxsc",
+      "minutos": 19.4
+    },
+    {
+      "order": 10,
+      "section": "Cómo se entra",
+      "type": "video",
+      "title": "El grado medio de cuidados de enfermería, por dentro",
+      "author": "higienista.en.practicas",
+      "why": "Qué se estudia y cómo son las prácticas.",
+      "concepts": [
+        "formación profesional",
+        "grado medio"
+      ],
+      "video_id": "QBNDewqZtrw",
+      "minutos": 15.7
+    },
+    {
+      "order": 11,
+      "section": "Cómo se entra",
+      "type": "video",
+      "title": "Si merece la pena estudiar técnico en emergencias",
+      "author": "El friki del fonendo",
+      "why": "Lo que pide y lo que da ese ciclo.",
+      "concepts": [
+        "técnico en emergencias sanitarias"
+      ],
+      "video_id": "3XjwyBc_NJ4",
+      "minutos": 14.1
+    },
+    {
+      "order": 12,
+      "section": "Cómo se entra",
+      "type": "video",
+      "title": "Lo que conviene saber antes de estudiar fisioterapia",
+      "author": "La Fisiopedia",
+      "why": "Treinta cosas que conviene saber antes de elegir la carrera.",
+      "concepts": [
+        "grado en fisioterapia"
+      ],
+      "video_id": "k99cERVENAI",
+      "minutos": 12.3
+    }
+  ]
+}

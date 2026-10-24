@@ -705,8 +705,8 @@ a:hover { color: var(--titulo); }
 }
 
 /* Los estantes: su nombre con la luz de su color delante. */
-.estante h2, .mundo-cabeza h2 { display: flex; align-items: center; gap: .7rem; font-size: clamp(1.7rem, 3.6vw, 2.4rem); letter-spacing: -.03em; }
-.estante h2::before, .mundo-cabeza h2::before { content: ""; flex: none; width: .7rem; height: .7rem; border-radius: 50%; background: var(--acento); box-shadow: 0 0 0 4px color-mix(in srgb, var(--acento) 22%, transparent), 0 0 18px var(--acento); }
+.estante h2, .mundo-cabeza :is(h1, h2) { display: flex; align-items: center; gap: .7rem; font-size: clamp(1.7rem, 3.6vw, 2.4rem); letter-spacing: -.03em; }
+.estante h2::before, .mundo-cabeza :is(h1, h2)::before { content: ""; flex: none; width: .7rem; height: .7rem; border-radius: 50%; background: var(--acento); box-shadow: 0 0 0 4px color-mix(in srgb, var(--acento) 22%, transparent), 0 0 18px var(--acento); }
 
 /* ── LOS TRES MUNDOS (2026-10-23) ─────────────────────────────────────────
    Rutas listas son tres puertas y cada una se siente distinta (Andrés): En tendencia se EXPLORA
@@ -714,35 +714,54 @@ a:hover { color: var(--titulo); }
    Fundamentos va POR TI (lo que te cuesta, en tus palabras). Las piezas son las de antes —la
    carta, la destacada, las fichas, el nodo del camino—; lo nuevo es cómo se juntan. */
 
-/* Las puertas: los tres mundos de un vistazo, arriba de todo. */
-.puertas { display: grid; gap: 1rem; margin: 2.2rem 0 .5rem; }
+/* Las puertas: los tres mundos, en la portada de Rutas listas. Cada una con su figura arriba (se
+   mueve al pasar, como en las cartas), su verbo, su nombre, su línea, lo que hay dentro en fichas
+   y, al pie, cuántas rutas trae y «Entrar». Las compactas, al final de la página de un mundo, son
+   las otras dos, sin figura. */
+.puertas { display: grid; gap: 1.25rem; margin: 2.4rem 0 .5rem; }
 @media (min-width: 52rem) { .puertas { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .puerta {
   position: relative; isolation: isolate; overflow: hidden;
-  display: flex; flex-direction: column; gap: .35rem; min-height: 15rem;
-  padding: 1.4rem 4rem 1.3rem 1.4rem; border-radius: 24px; text-decoration: none; color: var(--texto);
+  display: flex; flex-direction: column; gap: .4rem;
+  padding: 0 1.4rem 1.3rem; border-radius: 26px; text-decoration: none; color: var(--texto);
   background:
-    radial-gradient(120% 90% at 100% 0%, color-mix(in srgb, var(--acento) 36%, transparent), transparent 62%),
-    linear-gradient(180deg, color-mix(in srgb, var(--acento) 14%, #14121D), #100F17);
+    radial-gradient(120% 90% at 100% 0%, color-mix(in srgb, var(--acento) 30%, transparent), transparent 62%),
+    linear-gradient(180deg, color-mix(in srgb, var(--acento) 15%, #14121D), #100F17);
   border: 1px solid color-mix(in srgb, var(--acento) 40%, transparent);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, .06), 0 24px 50px -32px color-mix(in srgb, var(--acento) 90%, transparent);
   transition: transform .45s cubic-bezier(.32, .72, 0, 1), border-color .3s ease, box-shadow .45s ease;
 }
+.puerta:not(:has(.carta-ventana)) { padding-top: 1.4rem; }
+.puerta .carta-ventana { display: block; margin: 0 -1.4rem .7rem; }
 .puerta:hover, .puerta:focus-visible {
-  transform: translateY(-4px); border-color: var(--acento); color: var(--texto);
+  transform: translateY(-5px); border-color: var(--acento); color: var(--texto);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, .08), 0 34px 60px -28px color-mix(in srgb, var(--acento) 90%, transparent);
 }
 .puerta:active { transform: translateY(-1px) scale(.99); }
 .puerta-verbo { color: var(--acento); font-size: .8rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
-.puerta-nombre { color: var(--titulo); font-size: clamp(1.7rem, 3vw, 2.2rem); font-weight: 700; line-height: 1.05; letter-spacing: -.03em; text-wrap: balance; }
+.puerta-nombre { color: var(--titulo); font-size: clamp(1.8rem, 3vw, 2.3rem); font-weight: 700; line-height: 1.05; letter-spacing: -.03em; text-wrap: balance; }
 .puerta-linea { font-size: 1rem; line-height: 1.45; }
-.puerta-cosas { margin-top: auto; padding-top: .9rem; color: var(--bruma); font-size: .88rem; line-height: 1.5; }
-.puerta-ir {
-  position: absolute; right: 1.1rem; top: 1.1rem; display: grid; place-items: center;
-  width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--acento); color: var(--noche); font-weight: 700;
-  transition: transform .3s cubic-bezier(.32, .72, 0, 1);
+.puerta-cosas { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .5rem; }
+.puerta-cosa {
+  padding: .2rem .6rem; border-radius: 999px; font-size: .8rem; font-weight: 600; line-height: 1.4;
+  color: var(--titulo); background: color-mix(in srgb, var(--acento) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--acento) 30%, transparent);
 }
-.puerta:hover .puerta-ir { transform: translateY(3px); }
+.puerta-pie { display: flex; align-items: center; justify-content: space-between; gap: .8rem; margin-top: auto; padding-top: 1rem; }
+.puerta-cuenta { color: var(--bruma); font-size: .88rem; }
+.puerta .carta-ir span { display: inline-block; transition: transform .3s cubic-bezier(.32, .72, 0, 1); }
+.puerta:hover .carta-ir span { transform: translateX(4px); }
+.puerta-compacta .puerta-nombre { font-size: 1.6rem; }
+
+/* La página de un mundo: su cabecera grande, y al final las otras dos puertas. */
+.mundo-pagina { padding-top: 1rem; }
+.mundo-pagina .mundo-cabeza { margin: 1.4rem 0 1.6rem; }
+.mundo-cabeza h1 { margin: 0 0 .4rem; color: var(--titulo); font-size: clamp(2.4rem, 6vw, 3.8rem); line-height: 1.02; letter-spacing: -.035em; }
+.mundo-cuenta { margin: .6rem 0 0; color: var(--acento); font-weight: 600; }
+.otras-puertas { margin-top: 3.6rem; }
+.otras { display: grid; gap: 1rem; }
+@media (min-width: 44rem) { .otras { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.otras-puertas + .meta { margin-top: 3rem; }
 
 /* Cada mundo: su verbo, su nombre con la luz de su color, su línea y el mapa de lo que hay dentro. */
 .mundo { padding-top: 3.6rem; scroll-margin-top: .5rem; }
@@ -782,7 +801,7 @@ a:hover { color: var(--titulo); }
 .fuente-nota a:hover, a.fuente:hover { color: var(--titulo); text-decoration-color: var(--acento); }
 .destacada-extra { margin: 1.1rem 0 0; }
 .mundo .destacada { margin: 0 0 1.4rem; scroll-margin-top: 1rem; }
-.mundo .destacada h3 { font-size: clamp(1.9rem, 3.6vw, 2.7rem); }
+.mundo .destacada :is(h2, h3) { font-size: clamp(1.9rem, 3.6vw, 2.7rem); }
 @media (min-width: 60rem) {
   .mundo .destacada { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); }
   .mundo .destacada.invertida { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); }
@@ -855,7 +874,7 @@ a:hover { color: var(--titulo); }
   scroll-margin-top: 1rem;
 }
 @media (max-width: 30rem) { .carrera { padding: 1.3rem 1rem; } .peldano { padding-left: 3.4rem; } }
-.carrera-cabeza h3 { margin: 0 0 .5rem; color: var(--titulo); font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.05; letter-spacing: -.03em; text-wrap: balance; }
+.carrera-cabeza :is(h2, h3) { margin: 0 0 .5rem; color: var(--titulo); font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.05; letter-spacing: -.03em; text-wrap: balance; }
 .carrera-porque { margin: 0 0 1rem; max-width: 34rem; }
 .carrera-dato {
   display: flex; flex-direction: column; gap: .25rem; max-width: 30rem; margin: 0 0 .5rem; padding: .9rem 1.1rem;
@@ -886,7 +905,7 @@ a:hover { color: var(--titulo); }
 .peldano:last-child .peldano-nodo { background: var(--casa); border-color: transparent; box-shadow: 0 0 0 5px #121019, 0 0 30px 4px rgba(255, 46, 136, .5); }
 .anima .peldano:last-child .peldano-nodo { animation: respira 5s ease-in-out infinite; }
 .peldano > .carta { height: 100%; }
-.peldano .carta h4 { margin: 0; }
+.peldano .carta :is(h3, h4) { margin: 0; }
 .peldano-caja { display: flex; flex-direction: column; gap: .4rem; height: 100%; padding: 1.3rem 1.4rem; border-radius: 24px; }
 .peldano-oficio {
   border: 1px solid transparent;
@@ -919,7 +938,7 @@ a:hover { color: var(--titulo); }
 
 /* La carta: el título es el enlace y cubre la carta entera; la versión a fondo y adónde lleva
    quedan por encima, con su propio enlace. */
-.carta h3, .carta h4 { margin: 0; color: var(--titulo); font-size: 1.45rem; font-weight: 700; line-height: 1.2; letter-spacing: -.02em; text-wrap: balance; }
+.carta :is(h2, h3, h4) { margin: 0; color: var(--titulo); font-size: 1.45rem; font-weight: 700; line-height: 1.2; letter-spacing: -.02em; text-wrap: balance; }
 .carta-enlace { color: inherit; text-decoration: none; }
 .carta-enlace::before { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: inherit; }
 .carta-enlace:focus-visible { outline: none; }
